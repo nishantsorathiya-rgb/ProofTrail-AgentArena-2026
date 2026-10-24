@@ -1,0 +1,19 @@
+# ADR 0003 P3 planning and evidence orchestration
+
+Status: approved P3 scope implemented for owner review on 14 October 2026.
+
+The owner explicitly requested the minimal research-start/status/evidence API in P3, moving those slices forward from the original P5 schedule. A bounded local coordinator preserves the locked 202 response contract. It runs in one process and one Uvicorn worker, stores job state, marks abandoned jobs interrupted at restart, and cancels/records unfinished jobs at shutdown. It does not provide a distributed durable queue or resume a failed job.
+
+LangGraph StateGraph uses validated Pydantic state and explicit nodes/edges: START to Planner, conditional failure to collection summary, success to Researcher, then collection summary to END. Planner calls the existing Mesh adapter through a typed run/model budget port. Researcher is a distinct tool agent, using assigned queries, a task semaphore and P2 Tavily Search/Extract collection. The summary node aggregates IDs, statuses and measured counts. No Verifier, Synthesizer, claim draft or factual report is implemented.
+
+Planner output uses a strict Pydantic schema. Blank/oversized/unknown fields, malformed JSON and over-limit plans fail safely before search. Questions and queries are deduplicated using case, Unicode and punctuation normalization; removals appear in audit metadata. This does not prove semantic uniqueness or planning quality. The effective task limit is the smaller of configured subquestions and the initial search cap.
+
+Default research concurrency is three tasks across a shared runtime. P2's HTTP semaphore, persistent search/fetch reservations, timeouts, bounded transport retries, URL checks, deduplication and cache remain in force. P3 reserves model attempts atomically before calling the model port. SDK retries remain zero. Known preflight failures consume a conservative reserved attempt but record zero outbound calls. Returned usage stays unknown when absent; fixture usage is labeled.
+
+Alembic 0003 adds workflow_states, subquestions, run_events, model_budgets and model_usage. Snapshots and normalized task/audit projections are transactional. Short BEGIN IMMEDIATE writes serialize concurrent task updates and event sequence assignment. P1/P2 runs and evidence remain intact. Only jobs with P3 snapshots are recovered as interrupted; legacy queued fixtures are not treated as active jobs. Application-owned SQL snapshots support audit/restart detection; no LangGraph checkpointer service or durable replay is claimed.
+
+Task outcomes distinguish collected, partial, empty, failed and budget-exhausted. Run execution outcomes distinguish evidence_collected, partial, no_evidence, budget_exhausted, failed and interrupted. `status=completed` means P3 collection ended; every status/evidence response declares verification_status=not_implemented. No report or claim-support verdict is emitted. Timestamps, stage/task durations, request counts, cache hits and actual events remain inspectable.
+
+Original text stays in P2 storage and evidence JSON. It never enters Planner messages, changes task instructions or generates extra queries. P3 renders no page content as HTML. Keys remain outside state/audits; errors are fixed codes and logs use safe metadata. LangSmith tracing is explicitly disabled during graph invocation even when tracing environment variables are enabled. No remote callback or model-provider integration is configured. MeshLLMAdapter remains the only model adapter.
+
+LangGraph 1.2.15 is the only new direct dependency. Its transitive requirements are captured in regenerated Windows Python 3.12 constraints. Installing them enables no cloud service. The implementation follows the official [LangGraph Graph API](https://docs.langchain.com/oss/python/langgraph/graph-api). P4 requires separate owner approval.

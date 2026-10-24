@@ -1,0 +1,8 @@
+{
+  "goal": "Collect independent original-source evidence for this offline fixture question.",
+  "subquestions": [
+    {"question": "What evidence describes alpha?", "search_query": "prooftrail offline alpha", "evidence_requirement": "An exact original-source passage describing alpha."},
+    {"question": "What evidence describes beta?", "search_query": "prooftrail offline beta", "evidence_requirement": "An exact original-source passage describing beta."},
+    {"question": "What evidence describes gamma?", "search_query": "prooftrail offline gamma", "evidence_requirement": "An exact original-source passage describing gamma."}
+  ]
+}

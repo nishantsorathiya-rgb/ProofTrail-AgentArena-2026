@@ -1,0 +1,8 @@
+{
+  "mode": "OFFLINE_READ_ONLY_LEGACY_RECEIPT_COMPATIBILITY",
+  "source": "results/p7_semantic_fixed.json",
+  "receipt_objects_parsed": 5,
+  "unique_receipts": 5,
+  "all_typed_digests_match_original_audit": true,
+  "live_provider_requests": 0
+}

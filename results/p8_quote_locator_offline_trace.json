@@ -1,0 +1,2584 @@
+{
+  "phase": "P8C",
+  "live_provider_requests": 0,
+  "actual_api_cost_usd": 0,
+  "measurement_note": "Graph timing measured locally; model outputs/tokens are fixtures, not live model accuracy. Extract fixtures replay the four exact saved candidate passages as bounded fixture documents with new hashes/timestamps, not complete live webpages. Historical files are unchanged; no lost full response is reconstructed.",
+  "historical_file_sha256_unchanged": {
+    "results/p8_session_b_001_trace.json": "4241ad40be65ae621dee7e1f704d12f46163d820e53910815046f6f4b4a22d92",
+    "results/p8_session_b_001_failure_analysis.json": "fe5d7dbb90797989e728ee1cf4481d037500b16538cf33dc20b058d64a2e3464"
+  },
+  "positive": {
+    "mode": "OFFLINE_RETAINED_HISTORY_RETRIEVAL_AND_SYNTHETIC_SEMANTIC_FIXTURES",
+    "negative_semantic_case": false,
+    "mutation": null,
+    "run": {
+      "run_id": "7aed8e6d-c010-4930-a4bf-9f558ed4007e",
+      "original_question": "According to Python's official documentation, in which Python version was tomllib added to the standard library?",
+      "phase": "P5",
+      "verification_status": "completed",
+      "mode": "offline_fixture",
+      "status": "completed",
+      "execution_status": "report_ready",
+      "research_plan": {
+        "goal": "Determine the Python version in which the tomllib module was added to the standard library according to Python's official documentation.",
+        "subquestions": [
+          {
+            "question": "In which Python version was the tomllib module introduced to the standard library according to the official Python documentation?",
+            "search_query": "tomllib module added to Python standard library version site:docs.python.org",
+            "evidence_requirement": "Official Python documentation or release notes explicitly stating the Python version that introduced the tomllib module to the standard library."
+          }
+        ]
+      },
+      "subquestions": [
+        {
+          "task_id": "a4016ac0-34cc-5a37-8f7f-4bc7439000d2",
+          "assignment": {
+            "question": "In which Python version was the tomllib module introduced to the standard library according to the official Python documentation?",
+            "search_query": "tomllib module added to Python standard library version site:docs.python.org",
+            "evidence_requirement": "Official Python documentation or release notes explicitly stating the Python version that introduced the tomllib module to the standard library."
+          },
+          "parent_task_id": null,
+          "retry_number": 0,
+          "status": "collected",
+          "source_ids": [
+            "5ef25605-752c-5949-8701-682a4034122d",
+            "65d4d8c3-7c9d-5372-a2c4-8938effddc82",
+            "794a250f-b223-51b8-a641-067be5d42960",
+            "a6e8ba68-0528-5a33-8903-2d8c556e79a6"
+          ],
+          "passage_ids": [
+            "5a59924f-e33e-52e2-be8b-0c9ba62a0fc8",
+            "6505f29f-4830-501a-928d-2ba34c7bbc99",
+            "764abd4b-36b1-56aa-8f50-fb6c20af01ae",
+            "8daf966e-d366-5ac5-a26b-d947ad0d3832"
+          ],
+          "warnings": [],
+          "error_code": null,
+          "started_at": "2026-10-18T11:13:34.989808Z",
+          "finished_at": "2026-10-18T11:13:35.235775Z",
+          "duration_seconds": 0.246518
+        }
+      ],
+      "research_task_status": {
+        "a4016ac0-34cc-5a37-8f7f-4bc7439000d2": "collected"
+      },
+      "retrieved_evidence_ids": [
+        "6505f29f-4830-501a-928d-2ba34c7bbc99",
+        "5a59924f-e33e-52e2-be8b-0c9ba62a0fc8",
+        "764abd4b-36b1-56aa-8f50-fb6c20af01ae",
+        "8daf966e-d366-5ac5-a26b-d947ad0d3832"
+      ],
+      "source_references": [
+        {
+          "source_id": "794a250f-b223-51b8-a641-067be5d42960",
+          "original_url": "https://docs.python.org/3.13/library/tomllib.html",
+          "title": "tomllib \u2014 Parse TOML files \u2014 Python 3.13.16 documentation",
+          "retrieved_at": "2026-10-18T11:13:35.074262Z"
+        },
+        {
+          "source_id": "65d4d8c3-7c9d-5372-a2c4-8938effddc82",
+          "original_url": "https://docs.python.org/id/3.15/library/tomllib.html",
+          "title": "tomllib --- Parse TOML files \u2014 Dokumentasi Python 3.15.0",
+          "retrieved_at": "2026-10-18T11:13:35.128432Z"
+        },
+        {
+          "source_id": "a6e8ba68-0528-5a33-8903-2d8c556e79a6",
+          "original_url": "https://docs.python.org/ja/3/library/tomllib.html",
+          "title": "tomllib --- TOML \u30d5\u30a1\u30a4\u30eb\u306e\u89e3\u6790 \u2014 Python 3.15.0 \u30c9\u30ad\u30e5\u30e1\u30f3\u30c8",
+          "retrieved_at": "2026-10-18T11:13:35.154397Z"
+        },
+        {
+          "source_id": "5ef25605-752c-5949-8701-682a4034122d",
+          "original_url": "https://docs.python.org/3/library/tomllib.html",
+          "title": "tomllib \u2014 Parse TOML files \u2014 Python 3.15.0 documentation",
+          "retrieved_at": "2026-10-18T11:13:35.179834Z"
+        }
+      ],
+      "warnings": [],
+      "errors": [],
+      "budgets": {
+        "max_llm_calls": 8,
+        "max_searches": 2,
+        "max_fetches": 10,
+        "model_attempts": 5,
+        "llm_calls": 5,
+        "search_requests": 1,
+        "extract_requests": 4,
+        "fetch_units": 4,
+        "max_research_tasks": 2,
+        "max_retries_per_subquestion": 1,
+        "max_claims": 1
+      },
+      "created_at": "2026-10-18T11:13:33.070233Z",
+      "updated_at": "2026-10-18T11:13:36.138865Z",
+      "started_at": "2026-10-18T11:13:33.108596Z",
+      "finished_at": "2026-10-18T11:13:36.134975Z",
+      "planning_duration_seconds": 1.828835,
+      "research_duration_seconds": 0.288053,
+      "total_duration_seconds": 3.035683,
+      "cache_hits": 0,
+      "prompt_tokens": 50,
+      "completion_tokens": 25,
+      "collection_status": "evidence_collected",
+      "candidate_claim_ids": [
+        "c899b53b-7d6b-5a7c-9eac-e0c35892e8d6"
+      ],
+      "supported_claim_ids": [
+        "c899b53b-7d6b-5a7c-9eac-e0c35892e8d6"
+      ],
+      "verification_counts": {
+        "SUPPORTED": 1
+      },
+      "drafting_duration_seconds": 0.116604,
+      "verification_duration_seconds": 0.326846,
+      "verification_persistence_duration_ms": 30.832,
+      "verification_llm_requests": 2,
+      "verification_failures": 0,
+      "verification_prompt_tokens": 20,
+      "verification_completion_tokens": 10,
+      "research_gaps": [],
+      "retry_history": [],
+      "retry_counts": {
+        "a4016ac0-34cc-5a37-8f7f-4bc7439000d2": 0
+      },
+      "active_retry_ids": [],
+      "eligible_gap_ids": [],
+      "correction_stopped": false,
+      "correction_stop_reason": null,
+      "retry_duration_seconds": 0.0,
+      "synthesis_duration_seconds": 0.093286,
+      "report_validation_duration_seconds": 0.05865,
+      "report_id": "805fae95-f716-5e58-9150-ee094436b025",
+      "pending_report_json": null,
+      "report_generation_status": "ready",
+      "audit_events": [
+        {
+          "event_id": "18b72dd3-7ac7-4c95-9176-f281036dc99c",
+          "sequence": 1,
+          "timestamp": "2026-10-18T11:13:33.080755Z",
+          "agent": "coordinator",
+          "event": "run_queued",
+          "task_id": null,
+          "details": {}
+        },
+        {
+          "event_id": "6f492ddc-289e-49f8-821c-68a752ecaa87",
+          "sequence": 2,
+          "timestamp": "2026-10-18T11:13:33.112596Z",
+          "agent": "planner",
+          "event": "planner_started",
+          "task_id": null,
+          "details": {}
+        },
+        {
+          "event_id": "8fee6cbc-159d-4904-b5d5-9d7734fe100d",
+          "sequence": 3,
+          "timestamp": "2026-10-18T11:13:34.953426Z",
+          "agent": "planner",
+          "event": "planner_completed",
+          "task_id": null,
+          "details": {
+            "task_count": 1,
+            "duplicates_removed": 0
+          }
+        },
+        {
+          "event_id": "2b66d39d-7d06-4422-8e86-35e87927650f",
+          "sequence": 4,
+          "timestamp": "2026-10-18T11:13:34.974711Z",
+          "agent": "researcher",
+          "event": "research_started",
+          "task_id": null,
+          "details": {
+            "task_count": 1
+          }
+        },
+        {
+          "event_id": "4fc3777f-739e-4f1c-8e8a-67b28394ad43",
+          "sequence": 5,
+          "timestamp": "2026-10-18T11:13:34.993350Z",
+          "agent": "researcher",
+          "event": "task_started",
+          "task_id": "a4016ac0-34cc-5a37-8f7f-4bc7439000d2",
+          "details": {
+            "status": "running",
+            "source_ids": [],
+            "passage_ids": [],
+            "duration_seconds": 0,
+            "error_code": ""
+          }
+        },
+        {
+          "event_id": "0eac9568-221b-408c-bf63-be2d14bb9bef",
+          "sequence": 6,
+          "timestamp": "2026-10-18T11:13:35.240257Z",
+          "agent": "researcher",
+          "event": "task_finished",
+          "task_id": "a4016ac0-34cc-5a37-8f7f-4bc7439000d2",
+          "details": {
+            "status": "collected",
+            "source_ids": [
+              "5ef25605-752c-5949-8701-682a4034122d",
+              "65d4d8c3-7c9d-5372-a2c4-8938effddc82",
+              "794a250f-b223-51b8-a641-067be5d42960",
+              "a6e8ba68-0528-5a33-8903-2d8c556e79a6"
+            ],
+            "passage_ids": [
+              "5a59924f-e33e-52e2-be8b-0c9ba62a0fc8",
+              "6505f29f-4830-501a-928d-2ba34c7bbc99",
+              "764abd4b-36b1-56aa-8f50-fb6c20af01ae",
+              "8daf966e-d366-5ac5-a26b-d947ad0d3832"
+            ],
+            "duration_seconds": 0.246518,
+            "error_code": ""
+          }
+        },
+        {
+          "event_id": "e7e2bc32-673b-4870-b749-b8da4b56ef6f",
+          "sequence": 7,
+          "timestamp": "2026-10-18T11:13:35.269940Z",
+          "agent": "researcher",
+          "event": "research_completed",
+          "task_id": null,
+          "details": {}
+        },
+        {
+          "event_id": "6c68bf32-9caa-4728-b894-ef3a72e9e263",
+          "sequence": 8,
+          "timestamp": "2026-10-18T11:13:35.310322Z",
+          "agent": "graph",
+          "event": "collection_summarized",
+          "task_id": null,
+          "details": {
+            "source_count": 4,
+            "passage_count": 4,
+            "verification_status": "pending"
+          }
+        },
+        {
+          "event_id": "4ae13bbc-5158-44fc-b6f6-5aa5ce04f889",
+          "sequence": 9,
+          "timestamp": "2026-10-18T11:13:35.334025Z",
+          "agent": "drafter",
+          "event": "draft_started",
+          "task_id": null,
+          "details": {}
+        },
+        {
+          "event_id": "d489b267-4e67-4fd3-b0c2-ab2efe37ad22",
+          "sequence": 10,
+          "timestamp": "2026-10-18T11:13:35.455583Z",
+          "agent": "drafter",
+          "event": "draft_completed",
+          "task_id": null,
+          "details": {
+            "claim_count": 1
+          }
+        },
+        {
+          "event_id": "f02c40fc-25f0-4402-84e8-1e55958d6354",
+          "sequence": 11,
+          "timestamp": "2026-10-18T11:13:35.478437Z",
+          "agent": "verifier",
+          "event": "verification_started",
+          "task_id": null,
+          "details": {
+            "claim_count": 1
+          }
+        },
+        {
+          "event_id": "77860537-7c5c-4c33-af82-2757ef289f99",
+          "sequence": 12,
+          "timestamp": "2026-10-18T11:13:35.520394Z",
+          "agent": "verifier",
+          "event": "verification_attempt_started",
+          "task_id": null,
+          "details": {
+            "claim_id": "c899b53b-7d6b-5a7c-9eac-e0c35892e8d6",
+            "attempt_id": "73f6af18-8380-43ca-a713-123e8d58cbb1"
+          }
+        },
+        {
+          "event_id": "7af79e73-8702-4923-9cbd-b468618f017e",
+          "sequence": 13,
+          "timestamp": "2026-10-18T11:13:35.608044Z",
+          "agent": "verifier",
+          "event": "quotation_resolution_completed",
+          "task_id": null,
+          "details": {
+            "claim_id": "c899b53b-7d6b-5a7c-9eac-e0c35892e8d6",
+            "attempt_id": "73f6af18-8380-43ca-a713-123e8d58cbb1",
+            "role": "primary",
+            "contract_version": "exact_quotes_v2",
+            "model_usage_id": "a876b51f-7488-4716-b582-49aac5b364b1",
+            "quote_count": 4,
+            "evidence_sha256": "d830b61abd7e0e89b68d26c0158a23e84d1b020b3de79ad83f4051c1e64783d3"
+          }
+        },
+        {
+          "event_id": "5bc63a60-3811-4223-b99a-902ef4a8645d",
+          "sequence": 14,
+          "timestamp": "2026-10-18T11:13:35.629984Z",
+          "agent": "verifier",
+          "event": "support_review_started",
+          "task_id": null,
+          "details": {
+            "claim_id": "c899b53b-7d6b-5a7c-9eac-e0c35892e8d6",
+            "attempt_id": "73f6af18-8380-43ca-a713-123e8d58cbb1"
+          }
+        },
+        {
+          "event_id": "eab7591c-b8d1-481b-9f83-4088297f99ba",
+          "sequence": 15,
+          "timestamp": "2026-10-18T11:13:35.695454Z",
+          "agent": "verifier",
+          "event": "quotation_resolution_completed",
+          "task_id": null,
+          "details": {
+            "claim_id": "c899b53b-7d6b-5a7c-9eac-e0c35892e8d6",
+            "attempt_id": "73f6af18-8380-43ca-a713-123e8d58cbb1",
+            "role": "blind_review",
+            "contract_version": "exact_quotes_v2",
+            "model_usage_id": "aa1f05d5-cc4c-44ee-901e-ed0b9d513766",
+            "quote_count": 4,
+            "evidence_sha256": "d830b61abd7e0e89b68d26c0158a23e84d1b020b3de79ad83f4051c1e64783d3"
+          }
+        },
+        {
+          "event_id": "e12b5325-37d6-4c1c-803b-3bf1a7b01ba6",
+          "sequence": 16,
+          "timestamp": "2026-10-18T11:13:35.716935Z",
+          "agent": "verifier",
+          "event": "support_review_completed",
+          "task_id": null,
+          "details": {
+            "claim_id": "c899b53b-7d6b-5a7c-9eac-e0c35892e8d6",
+            "attempt_id": "73f6af18-8380-43ca-a713-123e8d58cbb1",
+            "receipt_sha256": "5cbbeac3ab671f418b1adfeae5ade99fa4c16a84dd9b063acbbae352719b91a7",
+            "primary_verdict": "SUPPORTED",
+            "review_verdict": "SUPPORTED",
+            "review_usage_id": "aa1f05d5-cc4c-44ee-901e-ed0b9d513766"
+          }
+        },
+        {
+          "event_id": "c052019c-aa3c-4319-8ca5-d7da907ef52e",
+          "sequence": 17,
+          "timestamp": "2026-10-18T11:13:35.781023Z",
+          "agent": "verifier",
+          "event": "verification_attempt_finished",
+          "task_id": null,
+          "details": {
+            "claim_id": "c899b53b-7d6b-5a7c-9eac-e0c35892e8d6",
+            "attempt_id": "73f6af18-8380-43ca-a713-123e8d58cbb1",
+            "verdict": "SUPPORTED",
+            "outcome": "completed",
+            "error_code": "",
+            "evidence_ids": [
+              "5a59924f-e33e-52e2-be8b-0c9ba62a0fc8",
+              "6505f29f-4830-501a-928d-2ba34c7bbc99",
+              "764abd4b-36b1-56aa-8f50-fb6c20af01ae",
+              "8daf966e-d366-5ac5-a26b-d947ad0d3832"
+            ],
+            "previous_verdict": "UNVERIFIED",
+            "research_retry_id": "",
+            "evaluated_evidence_ids": [
+              "5a59924f-e33e-52e2-be8b-0c9ba62a0fc8",
+              "6505f29f-4830-501a-928d-2ba34c7bbc99",
+              "764abd4b-36b1-56aa-8f50-fb6c20af01ae",
+              "8daf966e-d366-5ac5-a26b-d947ad0d3832"
+            ]
+          }
+        },
+        {
+          "event_id": "6fa68533-f2b6-4cc0-b37c-997e330aae04",
+          "sequence": 18,
+          "timestamp": "2026-10-18T11:13:35.805420Z",
+          "agent": "verifier",
+          "event": "verification_completed",
+          "task_id": null,
+          "details": {
+            "claims_processed": 1,
+            "verification_failures": 0
+          }
+        },
+        {
+          "event_id": "641e83b4-093c-474a-b2cf-852767802c6c",
+          "sequence": 19,
+          "timestamp": "2026-10-18T11:13:35.858915Z",
+          "agent": "graph",
+          "event": "verification_summarized",
+          "task_id": null,
+          "details": {
+            "claims_processed": 1,
+            "supported_claim_count": 1,
+            "verification_status": "completed"
+          }
+        },
+        {
+          "event_id": "3b2177f1-0a7c-4573-bbd7-95bd48df0e5c",
+          "sequence": 20,
+          "timestamp": "2026-10-18T11:13:35.912329Z",
+          "agent": "graph",
+          "event": "verification_decision",
+          "task_id": null,
+          "details": {
+            "retryable_gap_ids": [],
+            "stop_reasons": [],
+            "unresolved_gap_count": 0
+          }
+        },
+        {
+          "event_id": "99b956ed-7cb9-44a5-b583-0dca53555cb4",
+          "sequence": 21,
+          "timestamp": "2026-10-18T11:13:35.934252Z",
+          "agent": "synthesizer",
+          "event": "synthesis_started",
+          "task_id": null,
+          "details": {}
+        },
+        {
+          "event_id": "4905d0a5-228e-4ca7-884f-5a3d5c358d42",
+          "sequence": 22,
+          "timestamp": "2026-10-18T11:13:36.035451Z",
+          "agent": "synthesizer",
+          "event": "synthesis_completed",
+          "task_id": null,
+          "details": {
+            "generation_status": "model_organized",
+            "error_code": "",
+            "finding_count": 1
+          }
+        },
+        {
+          "event_id": "8966c9e0-8039-46d7-9f68-b227bc6711e2",
+          "sequence": 23,
+          "timestamp": "2026-10-18T11:13:36.057354Z",
+          "agent": "graph",
+          "event": "report_validation_started",
+          "task_id": null,
+          "details": {}
+        },
+        {
+          "event_id": "4ddd61be-a9d2-4ddb-b19a-7fe37ead90cf",
+          "sequence": 24,
+          "timestamp": "2026-10-18T11:13:36.116446Z",
+          "agent": "graph",
+          "event": "report_validated",
+          "task_id": null,
+          "details": {
+            "report_id": "805fae95-f716-5e58-9150-ee094436b025",
+            "finding_count": 1,
+            "citation_count": 4,
+            "completion_status": "complete"
+          }
+        },
+        {
+          "event_id": "e6c2e071-d9b6-4580-b115-efc659688354",
+          "sequence": 25,
+          "timestamp": "2026-10-18T11:13:36.138865Z",
+          "agent": "graph",
+          "event": "workflow_finished",
+          "task_id": null,
+          "details": {
+            "execution_status": "report_ready",
+            "total_duration_seconds": 3.035683
+          }
+        }
+      ]
+    },
+    "claims": {
+      "run_id": "7aed8e6d-c010-4930-a4bf-9f558ed4007e",
+      "claims": [
+        {
+          "candidate": {
+            "claim_text": "The tomllib module was added to the Python standard library in version 3.11.",
+            "originating_research_task_id": "a4016ac0-34cc-5a37-8f7f-4bc7439000d2",
+            "candidate_evidence_ids": [
+              "5a59924f-e33e-52e2-be8b-0c9ba62a0fc8",
+              "6505f29f-4830-501a-928d-2ba34c7bbc99",
+              "764abd4b-36b1-56aa-8f50-fb6c20af01ae",
+              "8daf966e-d366-5ac5-a26b-d947ad0d3832"
+            ],
+            "claim_id": "c899b53b-7d6b-5a7c-9eac-e0c35892e8d6",
+            "run_id": "7aed8e6d-c010-4930-a4bf-9f558ed4007e",
+            "created_at": "2026-10-18T11:13:35.407085Z",
+            "verification_status": "UNVERIFIED"
+          },
+          "verification_status": "SUPPORTED",
+          "attempts": [
+            {
+              "attempt_id": "73f6af18-8380-43ca-a713-123e8d58cbb1",
+              "claim_id": "c899b53b-7d6b-5a7c-9eac-e0c35892e8d6",
+              "started_at": "2026-10-18T11:13:35.502571Z",
+              "status": "finished",
+              "result": {
+                "attempt_id": "73f6af18-8380-43ca-a713-123e8d58cbb1",
+                "claim_id": "c899b53b-7d6b-5a7c-9eac-e0c35892e8d6",
+                "run_id": "7aed8e6d-c010-4930-a4bf-9f558ed4007e",
+                "verdict": "SUPPORTED",
+                "locked_verdict": "supported",
+                "evidence_ids": [
+                  "5a59924f-e33e-52e2-be8b-0c9ba62a0fc8",
+                  "6505f29f-4830-501a-928d-2ba34c7bbc99",
+                  "764abd4b-36b1-56aa-8f50-fb6c20af01ae",
+                  "8daf966e-d366-5ac5-a26b-d947ad0d3832"
+                ],
+                "exact_supporting_quotes": [
+                  {
+                    "evidence_id": "5a59924f-e33e-52e2-be8b-0c9ba62a0fc8",
+                    "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+                    "start_char": 353,
+                    "end_char": 425,
+                    "source_id": "65d4d8c3-7c9d-5372-a2c4-8938effddc82",
+                    "source_content_sha256": "1f180a0bfe67063e23f0527ffbef2e9077d7d73c3295c826efae4e0c2f60fee5",
+                    "full_content_sha256": "1f180a0bfe67063e23f0527ffbef2e9077d7d73c3295c826efae4e0c2f60fee5",
+                    "locator": "extracted_text:chars:353-425"
+                  },
+                  {
+                    "evidence_id": "6505f29f-4830-501a-928d-2ba34c7bbc99",
+                    "text": "tomllib \u2014 Parse TOML files\u00b6\nAdded in version 3.11.\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1.0.0 (Tom\u2019s Obvious Minimal Language,",
+                    "start_char": 165,
+                    "end_char": 330,
+                    "source_id": "794a250f-b223-51b8-a641-067be5d42960",
+                    "source_content_sha256": "d0d8ab2ee8bc3d540ad8011f62bd3c3826c2640486cf691a5a0cae1b7dc29abb",
+                    "full_content_sha256": "d0d8ab2ee8bc3d540ad8011f62bd3c3826c2640486cf691a5a0cae1b7dc29abb",
+                    "locator": "extracted_text:chars:165-330"
+                  },
+                  {
+                    "evidence_id": "764abd4b-36b1-56aa-8f50-fb6c20af01ae",
+                    "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+                    "start_char": 324,
+                    "end_char": 396,
+                    "source_id": "a6e8ba68-0528-5a33-8903-2d8c556e79a6",
+                    "source_content_sha256": "cbd0b6efff38889689a343904cfac56e4f33a837ce67cacf934c0ce62eabc149",
+                    "full_content_sha256": "cbd0b6efff38889689a343904cfac56e4f33a837ce67cacf934c0ce62eabc149",
+                    "locator": "extracted_text:chars:324-396"
+                  },
+                  {
+                    "evidence_id": "8daf966e-d366-5ac5-a26b-d947ad0d3832",
+                    "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+                    "start_char": 351,
+                    "end_char": 423,
+                    "source_id": "5ef25605-752c-5949-8701-682a4034122d",
+                    "source_content_sha256": "227a49244e1e1e2bd0e795335f49c62e286c563dd2999739b2d49238de319c5d",
+                    "full_content_sha256": "227a49244e1e1e2bd0e795335f49c62e286c563dd2999739b2d49238de319c5d",
+                    "locator": "extracted_text:chars:351-423"
+                  }
+                ],
+                "explanation": "Explicit offline semantic fixture: affirmative source context supports the candidate according to this fixture response.",
+                "confidence": null,
+                "outcome": "completed",
+                "rejection_reason": null,
+                "verification_timestamp": "2026-10-18T11:13:35.733223Z",
+                "verifier_model": "offline-p8c-semantic-fixture",
+                "verification_duration_ms": 237.428,
+                "persistence_duration_ms": 30.832,
+                "llm_requests": 2,
+                "prompt_tokens": 20,
+                "completion_tokens": 10,
+                "estimated_input_tokens": 8760,
+                "research_retry_id": null,
+                "previous_verdict": null,
+                "evaluated_evidence_ids": [
+                  "5a59924f-e33e-52e2-be8b-0c9ba62a0fc8",
+                  "6505f29f-4830-501a-928d-2ba34c7bbc99",
+                  "764abd4b-36b1-56aa-8f50-fb6c20af01ae",
+                  "8daf966e-d366-5ac5-a26b-d947ad0d3832"
+                ],
+                "support_review_receipt": {
+                  "policy": "blind_semantic_support_review_v1",
+                  "primary_usage_id": "a876b51f-7488-4716-b582-49aac5b364b1",
+                  "review_usage_id": "aa1f05d5-cc4c-44ee-901e-ed0b9d513766",
+                  "primary_decision": {
+                    "claim_id": "c899b53b-7d6b-5a7c-9eac-e0c35892e8d6",
+                    "verdict": "SUPPORTED",
+                    "evidence_ids": [
+                      "5a59924f-e33e-52e2-be8b-0c9ba62a0fc8",
+                      "6505f29f-4830-501a-928d-2ba34c7bbc99",
+                      "764abd4b-36b1-56aa-8f50-fb6c20af01ae",
+                      "8daf966e-d366-5ac5-a26b-d947ad0d3832"
+                    ],
+                    "exact_supporting_quotes": [
+                      {
+                        "evidence_id": "5a59924f-e33e-52e2-be8b-0c9ba62a0fc8",
+                        "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+                        "start_char": 353,
+                        "end_char": 425
+                      },
+                      {
+                        "evidence_id": "6505f29f-4830-501a-928d-2ba34c7bbc99",
+                        "text": "tomllib \u2014 Parse TOML files\u00b6\nAdded in version 3.11.\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1.0.0 (Tom\u2019s Obvious Minimal Language,",
+                        "start_char": 165,
+                        "end_char": 330
+                      },
+                      {
+                        "evidence_id": "764abd4b-36b1-56aa-8f50-fb6c20af01ae",
+                        "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+                        "start_char": 324,
+                        "end_char": 396
+                      },
+                      {
+                        "evidence_id": "8daf966e-d366-5ac5-a26b-d947ad0d3832",
+                        "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+                        "start_char": 351,
+                        "end_char": 423
+                      }
+                    ],
+                    "explanation": "Explicit offline semantic fixture: affirmative source context supports the candidate according to this fixture response.",
+                    "confidence": null
+                  },
+                  "review_decision": {
+                    "claim_id": "c899b53b-7d6b-5a7c-9eac-e0c35892e8d6",
+                    "verdict": "SUPPORTED",
+                    "evidence_ids": [
+                      "5a59924f-e33e-52e2-be8b-0c9ba62a0fc8",
+                      "6505f29f-4830-501a-928d-2ba34c7bbc99",
+                      "764abd4b-36b1-56aa-8f50-fb6c20af01ae",
+                      "8daf966e-d366-5ac5-a26b-d947ad0d3832"
+                    ],
+                    "exact_supporting_quotes": [
+                      {
+                        "evidence_id": "5a59924f-e33e-52e2-be8b-0c9ba62a0fc8",
+                        "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+                        "start_char": 353,
+                        "end_char": 425
+                      },
+                      {
+                        "evidence_id": "6505f29f-4830-501a-928d-2ba34c7bbc99",
+                        "text": "tomllib \u2014 Parse TOML files\u00b6\nAdded in version 3.11.\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1.0.0 (Tom\u2019s Obvious Minimal Language,",
+                        "start_char": 165,
+                        "end_char": 330
+                      },
+                      {
+                        "evidence_id": "764abd4b-36b1-56aa-8f50-fb6c20af01ae",
+                        "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+                        "start_char": 324,
+                        "end_char": 396
+                      },
+                      {
+                        "evidence_id": "8daf966e-d366-5ac5-a26b-d947ad0d3832",
+                        "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+                        "start_char": 351,
+                        "end_char": 423
+                      }
+                    ],
+                    "explanation": "Explicit offline semantic fixture: affirmative source context supports the candidate according to this fixture response.",
+                    "confidence": null
+                  },
+                  "review_model": "offline-p8c-semantic-fixture",
+                  "evidence_sha256": "d830b61abd7e0e89b68d26c0158a23e84d1b020b3de79ad83f4051c1e64783d3",
+                  "reviewed_at": "2026-10-18T11:13:35.710009Z"
+                },
+                "primary_decision": {
+                  "claim_id": "c899b53b-7d6b-5a7c-9eac-e0c35892e8d6",
+                  "verdict": "SUPPORTED",
+                  "evidence_ids": [
+                    "5a59924f-e33e-52e2-be8b-0c9ba62a0fc8",
+                    "6505f29f-4830-501a-928d-2ba34c7bbc99",
+                    "764abd4b-36b1-56aa-8f50-fb6c20af01ae",
+                    "8daf966e-d366-5ac5-a26b-d947ad0d3832"
+                  ],
+                  "exact_supporting_quotes": [
+                    {
+                      "evidence_id": "5a59924f-e33e-52e2-be8b-0c9ba62a0fc8",
+                      "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+                      "start_char": 353,
+                      "end_char": 425
+                    },
+                    {
+                      "evidence_id": "6505f29f-4830-501a-928d-2ba34c7bbc99",
+                      "text": "tomllib \u2014 Parse TOML files\u00b6\nAdded in version 3.11.\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1.0.0 (Tom\u2019s Obvious Minimal Language,",
+                      "start_char": 165,
+                      "end_char": 330
+                    },
+                    {
+                      "evidence_id": "764abd4b-36b1-56aa-8f50-fb6c20af01ae",
+                      "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+                      "start_char": 324,
+                      "end_char": 396
+                    },
+                    {
+                      "evidence_id": "8daf966e-d366-5ac5-a26b-d947ad0d3832",
+                      "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+                      "start_char": 351,
+                      "end_char": 423
+                    }
+                  ],
+                  "explanation": "Explicit offline semantic fixture: affirmative source context supports the candidate according to this fixture response.",
+                  "confidence": null
+                }
+              },
+              "evidence_scope_ids": [
+                "5a59924f-e33e-52e2-be8b-0c9ba62a0fc8",
+                "6505f29f-4830-501a-928d-2ba34c7bbc99",
+                "764abd4b-36b1-56aa-8f50-fb6c20af01ae",
+                "8daf966e-d366-5ac5-a26b-d947ad0d3832"
+              ],
+              "research_retry_id": null
+            }
+          ],
+          "current_integrity_error": null
+        }
+      ],
+      "supported_claim_ids": [
+        "c899b53b-7d6b-5a7c-9eac-e0c35892e8d6"
+      ],
+      "note": "Evidence-support decisions and immutable verification history."
+    },
+    "evidence": {
+      "run_id": "7aed8e6d-c010-4930-a4bf-9f558ed4007e",
+      "verification_status": "unverified_source_material",
+      "trust_level": "untrusted_source_text",
+      "sources": [
+        {
+          "source_id": "794a250f-b223-51b8-a641-067be5d42960",
+          "run_id": "7aed8e6d-c010-4930-a4bf-9f558ed4007e",
+          "original_url": "https://docs.python.org/3.13/library/tomllib.html",
+          "normalized_url": "https://docs.python.org/3.13/library/tomllib.html",
+          "title": "tomllib \u2014 Parse TOML files \u2014 Python 3.13.16 documentation",
+          "retrieved_at": "2026-10-18T11:13:35.074262Z",
+          "content": "Navigation\n index\n modules |\n next |\n previous |\n Python \u00bb\n 3.13.16 Documentation \u00bb\n The Python standard library \u00bb\n File Formats \u00bb\n tomllib \u2014 Parse TOML files\n |\n |\ntomllib \u2014 Parse TOML files\u00b6\nAdded in version 3.11.\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1.0.0 (Tom\u2019s Obvious Minimal Language,  This module does not support writing TOML.\nWarning\nBe cautious when parsing data from untrusted sources. A malicious TOML string may cause the decoder to consume considerable CPU and memory resources. Limiting the size of data to be parsed is recommended.\nSee also\nThe Tomli-W package is a TOML writer that can be used in conjunction with this module, providing a write API familiar to users of the standard library marshal.\") and pickle modules.\nSee also\nThe TOML Kit package is a style-preserving TOML library with both read and write capability. It is a recommended replacement for this module for editing already existing TOML files.\nThis module defines the following functions:\ntomllib.load(fp, /, \\, parse\\_float=float)\u00b6\n:   Read a TOML file. The first argument should be a readable and binary file object. Return a dict. Convert TOML types to Python using this conversion table.\nparse\\_float will be called with the string of every TOML float to be decoded. By default, this is equivalent to float(num_str). This can be used to use another datatype or parser for TOML floats (e.g. decimal.Decimal). The callable must not return a dict or a list, else a ValueError is raised.\nA TOMLDecodeError will be raised on an invalid TOML document.\ntomllib.loads(s, /, \\, parse\\_float=float)\u00b6\n:   Load TOML from a str object. Return a dict. Convert TOML types to Python using this conversion table. The parse\\_float argument has the same meaning as in load().\nA TOMLDecodeError will be raised on an invalid TOML document.\nThe following exceptions are available:\nexception tomllib.TOMLDecodeError\u00b6\n:   Subclass of ValueError.\nExamples\u00b6\nParsing a TOML file:\n import  tomllib ",
+          "content_sha256": "d0d8ab2ee8bc3d540ad8011f62bd3c3826c2640486cf691a5a0cae1b7dc29abb",
+          "full_content_sha256": "d0d8ab2ee8bc3d540ad8011f62bd3c3826c2640486cf691a5a0cae1b7dc29abb",
+          "original_chars": 2000
+        },
+        {
+          "source_id": "65d4d8c3-7c9d-5372-a2c4-8938effddc82",
+          "run_id": "7aed8e6d-c010-4930-a4bf-9f558ed4007e",
+          "original_url": "https://docs.python.org/id/3.15/library/tomllib.html",
+          "normalized_url": "https://docs.python.org/id/3.15/library/tomllib.html",
+          "title": "tomllib --- Parse TOML files \u2014 Dokumentasi Python 3.15.0",
+          "retrieved_at": "2026-10-18T11:13:35.128432Z",
+          "content": "Navigasi\n index\n modul |\n berikut |\n sebelum |\n Python \u00bb\n 3.15.0 Documentation \u00bb\n The Python standard library \u00bb\n File Formats \u00bb\n tomllib --- Parse TOML files\n |\n |\ntomllib --- Parse TOML files\u00b6\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1.1.0 (Tom's Obvious Minimal Language,  This module does not support writing TOML.\nAdded in version 3.11: The module was added with support for TOML 1.0.0.\nBerubah pada versi 3.15: Added TOML 1.1.0 support. See the What's New for details.\nPeringatan\nBe cautious when parsing data from untrusted sources. A malicious TOML string may cause the decoder to consume considerable CPU and memory resources. Limiting the size of data to be parsed is recommended.\nLihat juga\nThe Tomli-W package is a TOML writer that can be used in conjunction with this module, providing a write API familiar to users of the standard library marshal.\") and pickle modules.\nLihat juga\nThe TOML Kit package is a style-preserving TOML library with both read and write capability. It is a recommended replacement for this module for editing already existing TOML files.\nThis module defines the following functions:\ntomllib.load(fp, /, \\, parse\\_float=float)\u00b6\n:   Read a TOML file. The first argument should be a readable and binary file object. Return a dict. Convert TOML types to Python using this conversion table.\nparse\\_float will be called with the string of every TOML float to be decoded. By default, this is equivalent to float(num_str). This can be used to use another datatype or parser for TOML floats (e.g. decimal.Decimal). The callable must not return a dict or a list, else a ValueError is raised.\nA TOMLDecodeError will be raised on an invalid TOML document.\ntomllib.loads(s, /, \\, parse\\_float=float)\u00b6\n:   Load TOML from a str object. Return a dict. Convert TOML types to Python using this conversion table. The parse\\_float argument has the same meaning as in load().\nA TOMLDecodeError will be raised on an invalid TOML document.\nThe follow",
+          "content_sha256": "1f180a0bfe67063e23f0527ffbef2e9077d7d73c3295c826efae4e0c2f60fee5",
+          "full_content_sha256": "1f180a0bfe67063e23f0527ffbef2e9077d7d73c3295c826efae4e0c2f60fee5",
+          "original_chars": 2000
+        },
+        {
+          "source_id": "a6e8ba68-0528-5a33-8903-2d8c556e79a6",
+          "run_id": "7aed8e6d-c010-4930-a4bf-9f558ed4007e",
+          "original_url": "https://docs.python.org/ja/3/library/tomllib.html",
+          "normalized_url": "https://docs.python.org/ja/3/library/tomllib.html",
+          "title": "tomllib --- TOML \u30d5\u30a1\u30a4\u30eb\u306e\u89e3\u6790 \u2014 Python 3.15.0 \u30c9\u30ad\u30e5\u30e1\u30f3\u30c8",
+          "retrieved_at": "2026-10-18T11:13:35.154397Z",
+          "content": "\u30ca\u30d3\u30b2\u30fc\u30b7\u30e7\u30f3\n \u7d22\u5f15\n \u30e2\u30b8\u30e5\u30fc\u30eb |\n \u6b21\u3078 |\n \u524d\u3078 |\n Python \u00bb\n 3.15.0 Documentation \u00bb\n The Python standard library \u00bb\n \u30d5\u30a1\u30a4\u30eb\u30d5\u30a9\u30fc\u30de\u30c3\u30c8 \u00bb\n tomllib --- TOML \u30d5\u30a1\u30a4\u30eb\u306e\u89e3\u6790\n |\n |\ntomllib --- TOML \u30d5\u30a1\u30a4\u30eb\u306e\u89e3\u6790\u00b6\n\u30bd\u30fc\u30b9\u30b3\u30fc\u30c9: Lib/tomllib\nThis module provides an interface for parsing TOML 1.1.0 (Tom's Obvious Minimal Language,  This module does not support writing TOML.\nAdded in version 3.11: The module was added with support for TOML 1.0.0.\n\u30d0\u30fc\u30b8\u30e7\u30f3 3.15 \u3067\u5909\u66f4: Added TOML 1.1.0 support. See the What's New for details.\n\u8b66\u544a\nBe cautious when parsing data from untrusted sources. A malicious TOML string may cause the decoder to consume considerable CPU and memory resources. Limiting the size of data to be parsed is recommended.\n\u53c2\u8003\nTomli-W \u30d1\u30c3\u30b1\u30fc\u30b8 \u306fTOML\u306e\u66f8\u304d\u8fbc\u307f\u7528\u306b\u3053\u306e\u30e2\u30b8\u30e5\u30fc\u30eb\u3068\u7d44\u307f\u5408\u308f\u305b\u3066\u4f7f\u7528\u3067\u304d\u3001\u6a19\u6e96\u30e9\u30a4\u30d6\u30e9\u30ea\u306e marshal.\") \u3084 pickle \u30e2\u30b8\u30e5\u30fc\u30eb\u306a\u3069\u3067\u30e6\u30fc\u30b6\u30fc\u306b\u3088\u304f\u77e5\u3089\u308c\u3066\u3044\u308b\u66f8\u304d\u8fbc\u307fAPI\u3092\u63d0\u4f9b\u3057\u307e\u3059\u3002\n\u53c2\u8003\nTOML Kit \u30d1\u30c3\u30b1\u30fc\u30b8 \u306f\u3001\u30b9\u30bf\u30a4\u30eb\u3092\u4fdd\u6301\u3057\u305f\u8aad\u307f\u66f8\u304d\u306b\u5bfe\u5fdc\u3057\u305fTOML\u30e9\u30a4\u30d6\u30e9\u30ea\u3067\u3059\u3002\u5b58\u5728\u3059\u308bTOML\u30d5\u30a1\u30a4\u30eb\u3092\u7de8\u96c6\u3059\u308b\u3068\u304d\u306b\u3053\u306e\u30e2\u30b8\u30e5\u30fc\u30eb\u306e\u4ee3\u308f\u308a\u306b\u4f7f\u7528\u3059\u308b\u3053\u3068\u3092\u63a8\u5968\u3057\u307e\u3059\u3002\n\u3053\u306e\u30e2\u30b8\u30e5\u30fc\u30eb\u306f\u4ee5\u4e0b\u306e\u95a2\u6570\u3092\u5b9a\u7fa9\u3057\u3066\u3044\u307e\u3059:\ntomllib.load(fp, /, \\, parse\\_float=float)\u00b6\n:   TOML\u30d5\u30a1\u30a4\u30eb\u3092\u8aad\u307f\u8fbc\u307f\u307e\u3059\u3002\u7b2c1\u5f15\u6570\u306b\u306f\u8aad\u307f\u8fbc\u307f\u53ef\u80fd\u306a\u30d0\u30a4\u30ca\u30ea\u306e\u30d5\u30a1\u30a4\u30eb\u30aa\u30d6\u30b8\u30a7\u30af\u30c8\u3092\u6307\u5b9a\u3057\u307e\u3059\u3002\u623b\u308a\u5024\u306f dict \u3067\u3059\u3002TOML\u306e\u578b\u306f conversion table \u3092\u4f7f\u7528\u3057\u3066Python\u306e\u30c7\u30fc\u30bf\u578b\u306b\u5909\u63db\u3055\u308c\u307e\u3059\u3002\nparse\\_float \u306f\u3001\u5168\u3066\u306e\u30c7\u30b3\u30fc\u30c9\u3055\u308c\u308b TOML \u306e\u6d6e\u52d5\u5c0f\u6570\u70b9\u6570\u6587\u5b57\u5217\u306b\u5bfe\u3057\u3066\u547c\u3070\u308c\u307e\u3059\u3002\u30c7\u30d5\u30a9\u30eb\u30c8\u3067\u306f\u3001 float(num_str) \u3068\u7b49\u4fa1\u3067\u3059\u3002\u3053\u308c\u306f TOML \u6d6e\u52d5\u5c0f\u6570\u70b9\u6570\u306b\u5bfe\u3057\u3066\u4ed6\u306e\u30c7\u30fc\u30bf\u578b\u3084\u30d1\u30fc\u30b5 (\u305f\u3068\u3048\u3070 decimal.Decimal) \u3092\u4f7f\u3046\u306e\u306b\u4f7f\u3048\u307e\u3059\u3002\u547c\u3073\u51fa\u3057\u53ef\u80fd\u30aa\u30d6\u30b8\u30a7\u30af\u30c8\u306f dict \u3084 list \u4ee5\u5916\u3092\u8fd4\u3059\u5fc5\u8981\u304c\u3042\u308a\u3001\u305d\u3046\u3067\u306a\u3044\u5834\u5408\u306f ValueError \u304c\u9001\u51fa\u3055\u308c\u307e\u3059\u3002\n\u7121\u52b9\u306aTOML\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u306e\u5834\u5408\u306f TOMLDecodeError \u304c\u9001\u51fa\u3055\u308c\u307e\u3059\u3002\ntomllib.loads(s, /, \\, parse\\_float=float)\u00b6\n:   str \u304b\u3089TOML\u3092\u8aad\u307f\u8fbc\u307f\u307e\u3059\u3002\u623b\u308a\u5024\u306f dict \u3067\u3059\u3002TOML\u306e\u578b\u306f conversion table \u3092\u4f7f\u7528\u3057\u3066Python\u306e\u30c7\u30fc\u30bf\u578b\u306b\u5909\u63db\u3055\u308c\u307e\u3059\u3002parse\\_float  \u5f15\u6570\u306f load() \u3068\u540c\u3058\u610f\u5473\u3092\u6301\u3061\u307e\u3059\u3002\n\u7121\u52b9\u306aTOML\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u306e\u5834\u5408\u306f TOMLDecodeError \u304c\u9001\u51fa\u3055\u308c\u307e\u3059\u3002\n\u6b21\u306e\u4f8b\u5916\u304c\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u3059:\nexception tomllib.TOMLDecodeError(msg, doc, pos)\u00b6\n:   ValueError \u306e\u30b5\u30d6\u30af\u30e9\u30b9\u3067\u3001\u4ee5\u4e0b\u306e\u8ffd\u52a0\u306e\u5c5e\u6027\u3092\u6301\u3061\u307e\u3059:\nmsg\u00b6\n:   \u30d5\u30a9\u30fc\u30de\u30c3\u30c8\u3055\u308c\u3066\u3044\u306a\u3044\u30a8\u30e9\u30fc\u30e1\u30c3\u30bb\u30fc\u30b8\u3067\u3059\u3002\ndoc\u00b6\n:   \u30d1\u30fc\u30b9\u5bfe\u8c61\u306e TOML \u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u3067\u3059\u3002\npos\u00b6\n:   doc \u306e\u89e3\u6790\u306b\u5931\u6557\u3057\u305f\u30a4\u30f3\u30c7\u30af\u30b9\u3067\u3059\u3002\nlineno\u00b6\n:   pos \u306b\u5bfe\u5fdc\u3059\u308b\u884c\u3067\u3059\u3002\ncolno\u00b6\n:   pos \u306b\u5bfe\u5fdc\u3059\u308b\u5217\u3067\u3059\u3002\n\u30d0\u30fc\u30b8\u30e7\u30f3 3.14 \u3067\u5909\u66f4: Added the msg, doc and pos parameters. Added the msg, doc, pos, lineno and colno attributes.\n\u30d0\u30fc\u30b8\u30e7\u30f3 3.14 \u3067\u975e\u63a8\u5968: Passing free-form positional arguments is deprecated.\n\u4f7f\u7528\u4f8b\u00b6\nTOML\u30d5\u30a1\u30a4\u30eb\u3092\u89e3\u6790\u3057\u307e\u3059:\n import  tomlli",
+          "content_sha256": "cbd0b6efff38889689a343904cfac56e4f33a837ce67cacf934c0ce62eabc149",
+          "full_content_sha256": "cbd0b6efff38889689a343904cfac56e4f33a837ce67cacf934c0ce62eabc149",
+          "original_chars": 2000
+        },
+        {
+          "source_id": "5ef25605-752c-5949-8701-682a4034122d",
+          "run_id": "7aed8e6d-c010-4930-a4bf-9f558ed4007e",
+          "original_url": "https://docs.python.org/3/library/tomllib.html",
+          "normalized_url": "https://docs.python.org/3/library/tomllib.html",
+          "title": "tomllib \u2014 Parse TOML files \u2014 Python 3.15.0 documentation",
+          "retrieved_at": "2026-10-18T11:13:35.179834Z",
+          "content": "Navigation\n index\n modules |\n next |\n previous |\n Python \u00bb\n 3.15.0 Documentation \u00bb\n The Python standard library \u00bb\n File Formats \u00bb\n tomllib \u2014 Parse TOML files\n |\n |\ntomllib \u2014 Parse TOML files\u00b6\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1.1.0 (Tom\u2019s Obvious Minimal Language,  This module does not support writing TOML.\nAdded in version 3.11: The module was added with support for TOML 1.0.0.\nChanged in version 3.15: Added TOML 1.1.0 support. See the What\u2019s New for details.\nWarning\nBe cautious when parsing data from untrusted sources. A malicious TOML string may cause the decoder to consume considerable CPU and memory resources. Limiting the size of data to be parsed is recommended.\nSee also\nThe Tomli-W package is a TOML writer that can be used in conjunction with this module, providing a write API familiar to users of the standard library marshal.\") and pickle modules.\nSee also\nThe TOML Kit package is a style-preserving TOML library with both read and write capability. It is a recommended replacement for this module for editing already existing TOML files.\nThis module defines the following functions:\ntomllib.load(fp, /, \\, parse\\_float=float)\u00b6\n:   Read a TOML file. The first argument should be a readable and binary file object. Return a dict. Convert TOML types to Python using this conversion table.\nparse\\_float will be called with the string of every TOML float to be decoded. By default, this is equivalent to float(num_str). This can be used to use another datatype or parser for TOML floats (e.g. decimal.Decimal). The callable must not return a dict or a list, else a ValueError is raised.\nA TOMLDecodeError will be raised on an invalid TOML document.\ntomllib.loads(s, /, \\, parse\\_float=float)\u00b6\n:   Load TOML from a str object. Return a dict. Convert TOML types to Python using this conversion table. The parse\\_float argument has the same meaning as in load().\nA TOMLDecodeError will be raised on an invalid TOML document.\nThe following excep",
+          "content_sha256": "227a49244e1e1e2bd0e795335f49c62e286c563dd2999739b2d49238de319c5d",
+          "full_content_sha256": "227a49244e1e1e2bd0e795335f49c62e286c563dd2999739b2d49238de319c5d",
+          "original_chars": 2000
+        }
+      ],
+      "passages": [
+        {
+          "passage_id": "6505f29f-4830-501a-928d-2ba34c7bbc99",
+          "source_id": "794a250f-b223-51b8-a641-067be5d42960",
+          "text": "Navigation\n index\n modules |\n next |\n previous |\n Python \u00bb\n 3.13.16 Documentation \u00bb\n The Python standard library \u00bb\n File Formats \u00bb\n tomllib \u2014 Parse TOML files\n |\n |\ntomllib \u2014 Parse TOML files\u00b6\nAdded in version 3.11.\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1.0.0 (Tom\u2019s Obvious Minimal Language,  This module does not support writing TOML.\nWarning\nBe cautious when parsing data from untrusted sources. A malicious TOML string may cause the decoder to consume considerable CPU and memory resources. Limiting the size of data to be parsed is recommended.\nSee also\nThe Tomli-W package is a TOML writer that can be used in conjunction with this module, providing a write API familiar to users of the standard library marshal.\") and pickle modules.\nSee also\nThe TOML Kit package is a style-preserving TOML library with both read and write capability. It is a recommended replacement for this module for editing already existing TOML files.\nThis module defines the following functions:\ntomllib.load(fp, /, \\, parse\\_float=float)\u00b6\n:   Read a TOML file. The first argument should be a readable and binary file object. Return a dict. Convert TOML types to Python using this conversion table.\nparse\\_float will be called with the string of every TOML float to be decoded. By default, this is equivalent to float(num_str). This can be used to use another datatype or parser for TOML floats (e.g. decimal.Decimal). The callable must not return a dict or a list, else a ValueError is raised.\nA TOMLDecodeError will be raised on an invalid TOML document.\ntomllib.loads(s, /, \\, parse\\_float=float)\u00b6\n:   Load TOML from a str object. Return a dict. Convert TOML types to Python using this conversion table. The parse\\_float argument has the same meaning as in load().\nA TOMLDecodeError will be raised on an invalid TOML document.\nThe following exceptions are available:\nexception tomllib.TOMLDecodeError\u00b6\n:   Subclass of ValueError.\nExamples\u00b6\nParsing a TOML file:\n import  tomllib ",
+          "start_char": 0,
+          "end_char": 2000,
+          "locator": "extracted_text:chars:0-2000"
+        },
+        {
+          "passage_id": "5a59924f-e33e-52e2-be8b-0c9ba62a0fc8",
+          "source_id": "65d4d8c3-7c9d-5372-a2c4-8938effddc82",
+          "text": "Navigasi\n index\n modul |\n berikut |\n sebelum |\n Python \u00bb\n 3.15.0 Documentation \u00bb\n The Python standard library \u00bb\n File Formats \u00bb\n tomllib --- Parse TOML files\n |\n |\ntomllib --- Parse TOML files\u00b6\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1.1.0 (Tom's Obvious Minimal Language,  This module does not support writing TOML.\nAdded in version 3.11: The module was added with support for TOML 1.0.0.\nBerubah pada versi 3.15: Added TOML 1.1.0 support. See the What's New for details.\nPeringatan\nBe cautious when parsing data from untrusted sources. A malicious TOML string may cause the decoder to consume considerable CPU and memory resources. Limiting the size of data to be parsed is recommended.\nLihat juga\nThe Tomli-W package is a TOML writer that can be used in conjunction with this module, providing a write API familiar to users of the standard library marshal.\") and pickle modules.\nLihat juga\nThe TOML Kit package is a style-preserving TOML library with both read and write capability. It is a recommended replacement for this module for editing already existing TOML files.\nThis module defines the following functions:\ntomllib.load(fp, /, \\, parse\\_float=float)\u00b6\n:   Read a TOML file. The first argument should be a readable and binary file object. Return a dict. Convert TOML types to Python using this conversion table.\nparse\\_float will be called with the string of every TOML float to be decoded. By default, this is equivalent to float(num_str). This can be used to use another datatype or parser for TOML floats (e.g. decimal.Decimal). The callable must not return a dict or a list, else a ValueError is raised.\nA TOMLDecodeError will be raised on an invalid TOML document.\ntomllib.loads(s, /, \\, parse\\_float=float)\u00b6\n:   Load TOML from a str object. Return a dict. Convert TOML types to Python using this conversion table. The parse\\_float argument has the same meaning as in load().\nA TOMLDecodeError will be raised on an invalid TOML document.\nThe follow",
+          "start_char": 0,
+          "end_char": 2000,
+          "locator": "extracted_text:chars:0-2000"
+        },
+        {
+          "passage_id": "764abd4b-36b1-56aa-8f50-fb6c20af01ae",
+          "source_id": "a6e8ba68-0528-5a33-8903-2d8c556e79a6",
+          "text": "\u30ca\u30d3\u30b2\u30fc\u30b7\u30e7\u30f3\n \u7d22\u5f15\n \u30e2\u30b8\u30e5\u30fc\u30eb |\n \u6b21\u3078 |\n \u524d\u3078 |\n Python \u00bb\n 3.15.0 Documentation \u00bb\n The Python standard library \u00bb\n \u30d5\u30a1\u30a4\u30eb\u30d5\u30a9\u30fc\u30de\u30c3\u30c8 \u00bb\n tomllib --- TOML \u30d5\u30a1\u30a4\u30eb\u306e\u89e3\u6790\n |\n |\ntomllib --- TOML \u30d5\u30a1\u30a4\u30eb\u306e\u89e3\u6790\u00b6\n\u30bd\u30fc\u30b9\u30b3\u30fc\u30c9: Lib/tomllib\nThis module provides an interface for parsing TOML 1.1.0 (Tom's Obvious Minimal Language,  This module does not support writing TOML.\nAdded in version 3.11: The module was added with support for TOML 1.0.0.\n\u30d0\u30fc\u30b8\u30e7\u30f3 3.15 \u3067\u5909\u66f4: Added TOML 1.1.0 support. See the What's New for details.\n\u8b66\u544a\nBe cautious when parsing data from untrusted sources. A malicious TOML string may cause the decoder to consume considerable CPU and memory resources. Limiting the size of data to be parsed is recommended.\n\u53c2\u8003\nTomli-W \u30d1\u30c3\u30b1\u30fc\u30b8 \u306fTOML\u306e\u66f8\u304d\u8fbc\u307f\u7528\u306b\u3053\u306e\u30e2\u30b8\u30e5\u30fc\u30eb\u3068\u7d44\u307f\u5408\u308f\u305b\u3066\u4f7f\u7528\u3067\u304d\u3001\u6a19\u6e96\u30e9\u30a4\u30d6\u30e9\u30ea\u306e marshal.\") \u3084 pickle \u30e2\u30b8\u30e5\u30fc\u30eb\u306a\u3069\u3067\u30e6\u30fc\u30b6\u30fc\u306b\u3088\u304f\u77e5\u3089\u308c\u3066\u3044\u308b\u66f8\u304d\u8fbc\u307fAPI\u3092\u63d0\u4f9b\u3057\u307e\u3059\u3002\n\u53c2\u8003\nTOML Kit \u30d1\u30c3\u30b1\u30fc\u30b8 \u306f\u3001\u30b9\u30bf\u30a4\u30eb\u3092\u4fdd\u6301\u3057\u305f\u8aad\u307f\u66f8\u304d\u306b\u5bfe\u5fdc\u3057\u305fTOML\u30e9\u30a4\u30d6\u30e9\u30ea\u3067\u3059\u3002\u5b58\u5728\u3059\u308bTOML\u30d5\u30a1\u30a4\u30eb\u3092\u7de8\u96c6\u3059\u308b\u3068\u304d\u306b\u3053\u306e\u30e2\u30b8\u30e5\u30fc\u30eb\u306e\u4ee3\u308f\u308a\u306b\u4f7f\u7528\u3059\u308b\u3053\u3068\u3092\u63a8\u5968\u3057\u307e\u3059\u3002\n\u3053\u306e\u30e2\u30b8\u30e5\u30fc\u30eb\u306f\u4ee5\u4e0b\u306e\u95a2\u6570\u3092\u5b9a\u7fa9\u3057\u3066\u3044\u307e\u3059:\ntomllib.load(fp, /, \\, parse\\_float=float)\u00b6\n:   TOML\u30d5\u30a1\u30a4\u30eb\u3092\u8aad\u307f\u8fbc\u307f\u307e\u3059\u3002\u7b2c1\u5f15\u6570\u306b\u306f\u8aad\u307f\u8fbc\u307f\u53ef\u80fd\u306a\u30d0\u30a4\u30ca\u30ea\u306e\u30d5\u30a1\u30a4\u30eb\u30aa\u30d6\u30b8\u30a7\u30af\u30c8\u3092\u6307\u5b9a\u3057\u307e\u3059\u3002\u623b\u308a\u5024\u306f dict \u3067\u3059\u3002TOML\u306e\u578b\u306f conversion table \u3092\u4f7f\u7528\u3057\u3066Python\u306e\u30c7\u30fc\u30bf\u578b\u306b\u5909\u63db\u3055\u308c\u307e\u3059\u3002\nparse\\_float \u306f\u3001\u5168\u3066\u306e\u30c7\u30b3\u30fc\u30c9\u3055\u308c\u308b TOML \u306e\u6d6e\u52d5\u5c0f\u6570\u70b9\u6570\u6587\u5b57\u5217\u306b\u5bfe\u3057\u3066\u547c\u3070\u308c\u307e\u3059\u3002\u30c7\u30d5\u30a9\u30eb\u30c8\u3067\u306f\u3001 float(num_str) \u3068\u7b49\u4fa1\u3067\u3059\u3002\u3053\u308c\u306f TOML \u6d6e\u52d5\u5c0f\u6570\u70b9\u6570\u306b\u5bfe\u3057\u3066\u4ed6\u306e\u30c7\u30fc\u30bf\u578b\u3084\u30d1\u30fc\u30b5 (\u305f\u3068\u3048\u3070 decimal.Decimal) \u3092\u4f7f\u3046\u306e\u306b\u4f7f\u3048\u307e\u3059\u3002\u547c\u3073\u51fa\u3057\u53ef\u80fd\u30aa\u30d6\u30b8\u30a7\u30af\u30c8\u306f dict \u3084 list \u4ee5\u5916\u3092\u8fd4\u3059\u5fc5\u8981\u304c\u3042\u308a\u3001\u305d\u3046\u3067\u306a\u3044\u5834\u5408\u306f ValueError \u304c\u9001\u51fa\u3055\u308c\u307e\u3059\u3002\n\u7121\u52b9\u306aTOML\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u306e\u5834\u5408\u306f TOMLDecodeError \u304c\u9001\u51fa\u3055\u308c\u307e\u3059\u3002\ntomllib.loads(s, /, \\, parse\\_float=float)\u00b6\n:   str \u304b\u3089TOML\u3092\u8aad\u307f\u8fbc\u307f\u307e\u3059\u3002\u623b\u308a\u5024\u306f dict \u3067\u3059\u3002TOML\u306e\u578b\u306f conversion table \u3092\u4f7f\u7528\u3057\u3066Python\u306e\u30c7\u30fc\u30bf\u578b\u306b\u5909\u63db\u3055\u308c\u307e\u3059\u3002parse\\_float  \u5f15\u6570\u306f load() \u3068\u540c\u3058\u610f\u5473\u3092\u6301\u3061\u307e\u3059\u3002\n\u7121\u52b9\u306aTOML\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u306e\u5834\u5408\u306f TOMLDecodeError \u304c\u9001\u51fa\u3055\u308c\u307e\u3059\u3002\n\u6b21\u306e\u4f8b\u5916\u304c\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u3059:\nexception tomllib.TOMLDecodeError(msg, doc, pos)\u00b6\n:   ValueError \u306e\u30b5\u30d6\u30af\u30e9\u30b9\u3067\u3001\u4ee5\u4e0b\u306e\u8ffd\u52a0\u306e\u5c5e\u6027\u3092\u6301\u3061\u307e\u3059:\nmsg\u00b6\n:   \u30d5\u30a9\u30fc\u30de\u30c3\u30c8\u3055\u308c\u3066\u3044\u306a\u3044\u30a8\u30e9\u30fc\u30e1\u30c3\u30bb\u30fc\u30b8\u3067\u3059\u3002\ndoc\u00b6\n:   \u30d1\u30fc\u30b9\u5bfe\u8c61\u306e TOML \u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u3067\u3059\u3002\npos\u00b6\n:   doc \u306e\u89e3\u6790\u306b\u5931\u6557\u3057\u305f\u30a4\u30f3\u30c7\u30af\u30b9\u3067\u3059\u3002\nlineno\u00b6\n:   pos \u306b\u5bfe\u5fdc\u3059\u308b\u884c\u3067\u3059\u3002\ncolno\u00b6\n:   pos \u306b\u5bfe\u5fdc\u3059\u308b\u5217\u3067\u3059\u3002\n\u30d0\u30fc\u30b8\u30e7\u30f3 3.14 \u3067\u5909\u66f4: Added the msg, doc and pos parameters. Added the msg, doc, pos, lineno and colno attributes.\n\u30d0\u30fc\u30b8\u30e7\u30f3 3.14 \u3067\u975e\u63a8\u5968: Passing free-form positional arguments is deprecated.\n\u4f7f\u7528\u4f8b\u00b6\nTOML\u30d5\u30a1\u30a4\u30eb\u3092\u89e3\u6790\u3057\u307e\u3059:\n import  tomlli",
+          "start_char": 0,
+          "end_char": 2000,
+          "locator": "extracted_text:chars:0-2000"
+        },
+        {
+          "passage_id": "8daf966e-d366-5ac5-a26b-d947ad0d3832",
+          "source_id": "5ef25605-752c-5949-8701-682a4034122d",
+          "text": "Navigation\n index\n modules |\n next |\n previous |\n Python \u00bb\n 3.15.0 Documentation \u00bb\n The Python standard library \u00bb\n File Formats \u00bb\n tomllib \u2014 Parse TOML files\n |\n |\ntomllib \u2014 Parse TOML files\u00b6\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1.1.0 (Tom\u2019s Obvious Minimal Language,  This module does not support writing TOML.\nAdded in version 3.11: The module was added with support for TOML 1.0.0.\nChanged in version 3.15: Added TOML 1.1.0 support. See the What\u2019s New for details.\nWarning\nBe cautious when parsing data from untrusted sources. A malicious TOML string may cause the decoder to consume considerable CPU and memory resources. Limiting the size of data to be parsed is recommended.\nSee also\nThe Tomli-W package is a TOML writer that can be used in conjunction with this module, providing a write API familiar to users of the standard library marshal.\") and pickle modules.\nSee also\nThe TOML Kit package is a style-preserving TOML library with both read and write capability. It is a recommended replacement for this module for editing already existing TOML files.\nThis module defines the following functions:\ntomllib.load(fp, /, \\, parse\\_float=float)\u00b6\n:   Read a TOML file. The first argument should be a readable and binary file object. Return a dict. Convert TOML types to Python using this conversion table.\nparse\\_float will be called with the string of every TOML float to be decoded. By default, this is equivalent to float(num_str). This can be used to use another datatype or parser for TOML floats (e.g. decimal.Decimal). The callable must not return a dict or a list, else a ValueError is raised.\nA TOMLDecodeError will be raised on an invalid TOML document.\ntomllib.loads(s, /, \\, parse\\_float=float)\u00b6\n:   Load TOML from a str object. Return a dict. Convert TOML types to Python using this conversion table. The parse\\_float argument has the same meaning as in load().\nA TOMLDecodeError will be raised on an invalid TOML document.\nThe following excep",
+          "start_char": 0,
+          "end_char": 2000,
+          "locator": "extracted_text:chars:0-2000"
+        }
+      ]
+    },
+    "evidence_read_error": null,
+    "report": {
+      "report_id": "805fae95-f716-5e58-9150-ee094436b025",
+      "run_id": "7aed8e6d-c010-4930-a4bf-9f558ed4007e",
+      "research_question": "According to Python's official documentation, in which Python version was tomllib added to the standard library?",
+      "generated_at": "2026-10-18T11:13:36.023791Z",
+      "generation_status": "model_organized",
+      "completion_status": "complete",
+      "mode": "offline_fixture",
+      "executive_summary": [
+        {
+          "claim_id": "c899b53b-7d6b-5a7c-9eac-e0c35892e8d6",
+          "claim_text": "The tomllib module was added to the Python standard library in version 3.11.",
+          "citation_ids": [
+            "e7ef7129-3dad-5d27-b9e3-74f5ed39ac95",
+            "07c38d16-bf5c-51ae-ae0d-f61438ff1b2b",
+            "4bada7ee-b907-5ff8-a457-a9028b1e526e",
+            "d54a2234-08b5-5796-beec-f8ddba4fc75e"
+          ]
+        }
+      ],
+      "verified_findings": [
+        {
+          "claim_id": "c899b53b-7d6b-5a7c-9eac-e0c35892e8d6",
+          "claim_text": "The tomllib module was added to the Python standard library in version 3.11.",
+          "citation_ids": [
+            "e7ef7129-3dad-5d27-b9e3-74f5ed39ac95",
+            "07c38d16-bf5c-51ae-ae0d-f61438ff1b2b",
+            "4bada7ee-b907-5ff8-a457-a9028b1e526e",
+            "d54a2234-08b5-5796-beec-f8ddba4fc75e"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Key findings",
+          "claim_ids": [
+            "c899b53b-7d6b-5a7c-9eac-e0c35892e8d6"
+          ]
+        }
+      ],
+      "supporting_citations": [
+        {
+          "evidence_id": "5a59924f-e33e-52e2-be8b-0c9ba62a0fc8",
+          "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+          "start_char": 353,
+          "end_char": 425,
+          "source_id": "65d4d8c3-7c9d-5372-a2c4-8938effddc82",
+          "source_content_sha256": "1f180a0bfe67063e23f0527ffbef2e9077d7d73c3295c826efae4e0c2f60fee5",
+          "full_content_sha256": "1f180a0bfe67063e23f0527ffbef2e9077d7d73c3295c826efae4e0c2f60fee5",
+          "locator": "extracted_text:chars:353-425",
+          "citation_id": "e7ef7129-3dad-5d27-b9e3-74f5ed39ac95",
+          "claim_id": "c899b53b-7d6b-5a7c-9eac-e0c35892e8d6",
+          "verification_attempt_id": "73f6af18-8380-43ca-a713-123e8d58cbb1",
+          "original_url": "https://docs.python.org/id/3.15/library/tomllib.html",
+          "source_title": "tomllib --- Parse TOML files \u2014 Dokumentasi Python 3.15.0"
+        },
+        {
+          "evidence_id": "6505f29f-4830-501a-928d-2ba34c7bbc99",
+          "text": "tomllib \u2014 Parse TOML files\u00b6\nAdded in version 3.11.\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1.0.0 (Tom\u2019s Obvious Minimal Language,",
+          "start_char": 165,
+          "end_char": 330,
+          "source_id": "794a250f-b223-51b8-a641-067be5d42960",
+          "source_content_sha256": "d0d8ab2ee8bc3d540ad8011f62bd3c3826c2640486cf691a5a0cae1b7dc29abb",
+          "full_content_sha256": "d0d8ab2ee8bc3d540ad8011f62bd3c3826c2640486cf691a5a0cae1b7dc29abb",
+          "locator": "extracted_text:chars:165-330",
+          "citation_id": "07c38d16-bf5c-51ae-ae0d-f61438ff1b2b",
+          "claim_id": "c899b53b-7d6b-5a7c-9eac-e0c35892e8d6",
+          "verification_attempt_id": "73f6af18-8380-43ca-a713-123e8d58cbb1",
+          "original_url": "https://docs.python.org/3.13/library/tomllib.html",
+          "source_title": "tomllib \u2014 Parse TOML files \u2014 Python 3.13.16 documentation"
+        },
+        {
+          "evidence_id": "764abd4b-36b1-56aa-8f50-fb6c20af01ae",
+          "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+          "start_char": 324,
+          "end_char": 396,
+          "source_id": "a6e8ba68-0528-5a33-8903-2d8c556e79a6",
+          "source_content_sha256": "cbd0b6efff38889689a343904cfac56e4f33a837ce67cacf934c0ce62eabc149",
+          "full_content_sha256": "cbd0b6efff38889689a343904cfac56e4f33a837ce67cacf934c0ce62eabc149",
+          "locator": "extracted_text:chars:324-396",
+          "citation_id": "4bada7ee-b907-5ff8-a457-a9028b1e526e",
+          "claim_id": "c899b53b-7d6b-5a7c-9eac-e0c35892e8d6",
+          "verification_attempt_id": "73f6af18-8380-43ca-a713-123e8d58cbb1",
+          "original_url": "https://docs.python.org/ja/3/library/tomllib.html",
+          "source_title": "tomllib --- TOML \u30d5\u30a1\u30a4\u30eb\u306e\u89e3\u6790 \u2014 Python 3.15.0 \u30c9\u30ad\u30e5\u30e1\u30f3\u30c8"
+        },
+        {
+          "evidence_id": "8daf966e-d366-5ac5-a26b-d947ad0d3832",
+          "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+          "start_char": 351,
+          "end_char": 423,
+          "source_id": "5ef25605-752c-5949-8701-682a4034122d",
+          "source_content_sha256": "227a49244e1e1e2bd0e795335f49c62e286c563dd2999739b2d49238de319c5d",
+          "full_content_sha256": "227a49244e1e1e2bd0e795335f49c62e286c563dd2999739b2d49238de319c5d",
+          "locator": "extracted_text:chars:351-423",
+          "citation_id": "d54a2234-08b5-5796-beec-f8ddba4fc75e",
+          "claim_id": "c899b53b-7d6b-5a7c-9eac-e0c35892e8d6",
+          "verification_attempt_id": "73f6af18-8380-43ca-a713-123e8d58cbb1",
+          "original_url": "https://docs.python.org/3/library/tomllib.html",
+          "source_title": "tomllib \u2014 Parse TOML files \u2014 Python 3.15.0 documentation"
+        }
+      ],
+      "evidence_limitations": [
+        "Verification judges supplied evidence support, not truth across all sources.",
+        "Retained source text and research budgets are bounded; coverage is not exhaustive.",
+        "Source text is untrusted; live accuracy and injection resistance remain unproven.",
+        "This is an offline run, not live web research."
+      ],
+      "unresolved_research_gaps": [],
+      "source_disagreements": [],
+      "rejected_claims": [],
+      "insufficient_claims": [],
+      "operational_errors": [],
+      "methodology_summary": "Configured method: Mesh planning, Tavily basic retrieval, exact stored-passage integrity checks, Mesh semantic verification and independent blind support review, bounded insufficient-only research and supported-claim organization. Inspect the audit for the stages and requests that actually executed.",
+      "verification_summary": {
+        "SUPPORTED": 1
+      },
+      "synthesizer_model": "offline-p8c-semantic-fixture",
+      "citation_validation_status": "valid"
+    },
+    "markdown_report": "# ProofTrail research report\n\n## Research question\nAccording to Python&\\#x27;s official documentation, in which Python version was tomllib added to the standard library?\n\nCompletion: **complete**\nMode: offline_fixture\nGeneration: model_organized\n\n## Executive summary\n- The tomllib module was added to the Python standard library in version 3\\.11\\. [C1] [C2] [C3] [C4]\n\n## Verified findings\n\n### Key findings\n- The tomllib module was added to the Python standard library in version 3\\.11\\. [C1] [C2] [C3] [C4]\n\n## Supporting citations\n- C1: tomllib \\-\\-\\- Parse TOML files \u2014 Dokumentasi Python 3\\.15\\.0 \u2014 https://docs\\.python\\.org/id/3\\.15/library/tomllib\\.html\n  Quote: Added in version 3\\.11: The module was added with support for TOML 1\\.0\\.0\\.\n  Evidence: 5a59924f-e33e-52e2-be8b-0c9ba62a0fc8; SHA-256: 1f180a0bfe67063e23f0527ffbef2e9077d7d73c3295c826efae4e0c2f60fee5\n- C2: tomllib \u2014 Parse TOML files \u2014 Python 3\\.13\\.16 documentation \u2014 https://docs\\.python\\.org/3\\.13/library/tomllib\\.html\n  Quote: tomllib \u2014 Parse TOML files\u00b6\nAdded in version 3\\.11\\.\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1\\.0\\.0 \\(Tom\u2019s Obvious Minimal Language,\n  Evidence: 6505f29f-4830-501a-928d-2ba34c7bbc99; SHA-256: d0d8ab2ee8bc3d540ad8011f62bd3c3826c2640486cf691a5a0cae1b7dc29abb\n- C3: tomllib \\-\\-\\- TOML \u30d5\u30a1\u30a4\u30eb\u306e\u89e3\u6790 \u2014 Python 3\\.15\\.0 \u30c9\u30ad\u30e5\u30e1\u30f3\u30c8 \u2014 https://docs\\.python\\.org/ja/3/library/tomllib\\.html\n  Quote: Added in version 3\\.11: The module was added with support for TOML 1\\.0\\.0\\.\n  Evidence: 764abd4b-36b1-56aa-8f50-fb6c20af01ae; SHA-256: cbd0b6efff38889689a343904cfac56e4f33a837ce67cacf934c0ce62eabc149\n- C4: tomllib \u2014 Parse TOML files \u2014 Python 3\\.15\\.0 documentation \u2014 https://docs\\.python\\.org/3/library/tomllib\\.html\n  Quote: Added in version 3\\.11: The module was added with support for TOML 1\\.0\\.0\\.\n  Evidence: 8daf966e-d366-5ac5-a26b-d947ad0d3832; SHA-256: 227a49244e1e1e2bd0e795335f49c62e286c563dd2999739b2d49238de319c5d\n\n## Evidence limitations\n- Verification judges supplied evidence support, not truth across all sources\\.\n- Retained source text and research budgets are bounded; coverage is not exhaustive\\.\n- Source text is untrusted; live accuracy and injection resistance remain unproven\\.\n- This is an offline run, not live web research\\.\n\n## Unresolved research gaps\nNone recorded.\n\n## Source disagreements (unresolved candidates)\nNone recorded.\n\n## Rejected candidates (not verified findings)\nNone recorded.\n\n## Insufficient candidates (not verified findings)\nNone recorded.\n\n## Operational errors\nNone recorded.\n\n## Research methodology\nConfigured method: Mesh planning, Tavily basic retrieval, exact stored\\-passage integrity checks, Mesh semantic verification and independent blind support review, bounded insufficient\\-only research and supported\\-claim organization\\. Inspect the audit for the stages and requests that actually executed\\.\n\n## Verification summary\n\\{&\\#x27;SUPPORTED&\\#x27;: 1\\}\n",
+    "fixture_calls": {
+      "planner": 1,
+      "drafter": 1,
+      "primary": 1,
+      "blind_review": 1,
+      "synthesizer": 1,
+      "search": 1,
+      "extract": 4
+    },
+    "fixture_model_outputs": [
+      {
+        "role": "primary",
+        "output": {
+          "contract_version": "exact_quotes_v2",
+          "claim_id": "c899b53b-7d6b-5a7c-9eac-e0c35892e8d6",
+          "verdict": "SUPPORTED",
+          "evidence_ids": [
+            "5a59924f-e33e-52e2-be8b-0c9ba62a0fc8",
+            "6505f29f-4830-501a-928d-2ba34c7bbc99",
+            "764abd4b-36b1-56aa-8f50-fb6c20af01ae",
+            "8daf966e-d366-5ac5-a26b-d947ad0d3832"
+          ],
+          "exact_supporting_quotes": [
+            {
+              "evidence_id": "5a59924f-e33e-52e2-be8b-0c9ba62a0fc8",
+              "text": "Added in version 3.11: The module was added with support for TOML 1.0.0."
+            },
+            {
+              "evidence_id": "6505f29f-4830-501a-928d-2ba34c7bbc99",
+              "text": "tomllib \u2014 Parse TOML files\u00b6\nAdded in version 3.11.\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1.0.0 (Tom\u2019s Obvious Minimal Language,"
+            },
+            {
+              "evidence_id": "764abd4b-36b1-56aa-8f50-fb6c20af01ae",
+              "text": "Added in version 3.11: The module was added with support for TOML 1.0.0."
+            },
+            {
+              "evidence_id": "8daf966e-d366-5ac5-a26b-d947ad0d3832",
+              "text": "Added in version 3.11: The module was added with support for TOML 1.0.0."
+            }
+          ],
+          "explanation": "Explicit offline semantic fixture: affirmative source context supports the candidate according to this fixture response."
+        }
+      },
+      {
+        "role": "blind_review",
+        "output": {
+          "contract_version": "exact_quotes_v2",
+          "claim_id": "c899b53b-7d6b-5a7c-9eac-e0c35892e8d6",
+          "verdict": "SUPPORTED",
+          "evidence_ids": [
+            "5a59924f-e33e-52e2-be8b-0c9ba62a0fc8",
+            "6505f29f-4830-501a-928d-2ba34c7bbc99",
+            "764abd4b-36b1-56aa-8f50-fb6c20af01ae",
+            "8daf966e-d366-5ac5-a26b-d947ad0d3832"
+          ],
+          "exact_supporting_quotes": [
+            {
+              "evidence_id": "5a59924f-e33e-52e2-be8b-0c9ba62a0fc8",
+              "text": "Added in version 3.11: The module was added with support for TOML 1.0.0."
+            },
+            {
+              "evidence_id": "6505f29f-4830-501a-928d-2ba34c7bbc99",
+              "text": "tomllib \u2014 Parse TOML files\u00b6\nAdded in version 3.11.\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1.0.0 (Tom\u2019s Obvious Minimal Language,"
+            },
+            {
+              "evidence_id": "764abd4b-36b1-56aa-8f50-fb6c20af01ae",
+              "text": "Added in version 3.11: The module was added with support for TOML 1.0.0."
+            },
+            {
+              "evidence_id": "8daf966e-d366-5ac5-a26b-d947ad0d3832",
+              "text": "Added in version 3.11: The module was added with support for TOML 1.0.0."
+            }
+          ],
+          "explanation": "Explicit offline semantic fixture: affirmative source context supports the candidate according to this fixture response."
+        }
+      }
+    ],
+    "graph": {
+      "nodes": [
+        {
+          "id": "__start__",
+          "type": "runnable",
+          "data": {
+            "id": [
+              "langgraph",
+              "_internal",
+              "_runnable",
+              "RunnableCallable"
+            ],
+            "name": "__start__"
+          }
+        },
+        {
+          "id": "plan",
+          "type": "runnable",
+          "data": {
+            "id": [
+              "langgraph",
+              "_internal",
+              "_runnable",
+              "RunnableCallable"
+            ],
+            "name": "plan"
+          }
+        },
+        {
+          "id": "research",
+          "type": "runnable",
+          "data": {
+            "id": [
+              "langgraph",
+              "_internal",
+              "_runnable",
+              "RunnableCallable"
+            ],
+            "name": "research"
+          }
+        },
+        {
+          "id": "collection_summary",
+          "type": "runnable",
+          "data": {
+            "id": [
+              "langgraph",
+              "_internal",
+              "_runnable",
+              "RunnableCallable"
+            ],
+            "name": "collection_summary"
+          }
+        },
+        {
+          "id": "draft",
+          "type": "runnable",
+          "data": {
+            "id": [
+              "langgraph",
+              "_internal",
+              "_runnable",
+              "RunnableCallable"
+            ],
+            "name": "draft"
+          }
+        },
+        {
+          "id": "verify",
+          "type": "runnable",
+          "data": {
+            "id": [
+              "langgraph",
+              "_internal",
+              "_runnable",
+              "RunnableCallable"
+            ],
+            "name": "verify"
+          }
+        },
+        {
+          "id": "verification_summary",
+          "type": "runnable",
+          "data": {
+            "id": [
+              "langgraph",
+              "_internal",
+              "_runnable",
+              "RunnableCallable"
+            ],
+            "name": "verification_summary"
+          }
+        },
+        {
+          "id": "verification_decision",
+          "type": "runnable",
+          "data": {
+            "id": [
+              "langgraph",
+              "_internal",
+              "_runnable",
+              "RunnableCallable"
+            ],
+            "name": "verification_decision"
+          }
+        },
+        {
+          "id": "plan_retry",
+          "type": "runnable",
+          "data": {
+            "id": [
+              "langgraph",
+              "_internal",
+              "_runnable",
+              "RunnableCallable"
+            ],
+            "name": "plan_retry"
+          }
+        },
+        {
+          "id": "retry_research",
+          "type": "runnable",
+          "data": {
+            "id": [
+              "langgraph",
+              "_internal",
+              "_runnable",
+              "RunnableCallable"
+            ],
+            "name": "retry_research"
+          }
+        },
+        {
+          "id": "reverify",
+          "type": "runnable",
+          "data": {
+            "id": [
+              "langgraph",
+              "_internal",
+              "_runnable",
+              "RunnableCallable"
+            ],
+            "name": "reverify"
+          }
+        },
+        {
+          "id": "synthesize",
+          "type": "runnable",
+          "data": {
+            "id": [
+              "langgraph",
+              "_internal",
+              "_runnable",
+              "RunnableCallable"
+            ],
+            "name": "synthesize"
+          }
+        },
+        {
+          "id": "validate_report",
+          "type": "runnable",
+          "data": {
+            "id": [
+              "langgraph",
+              "_internal",
+              "_runnable",
+              "RunnableCallable"
+            ],
+            "name": "validate_report"
+          }
+        },
+        {
+          "id": "__end__"
+        }
+      ],
+      "edges": [
+        {
+          "source": "__start__",
+          "target": "plan"
+        },
+        {
+          "source": "collection_summary",
+          "target": "__end__",
+          "data": "legacy",
+          "conditional": true
+        },
+        {
+          "source": "collection_summary",
+          "target": "draft",
+          "conditional": true
+        },
+        {
+          "source": "collection_summary",
+          "target": "verification_summary",
+          "data": "summary",
+          "conditional": true
+        },
+        {
+          "source": "draft",
+          "target": "verification_summary",
+          "data": "summary",
+          "conditional": true
+        },
+        {
+          "source": "draft",
+          "target": "verify",
+          "conditional": true
+        },
+        {
+          "source": "plan",
+          "target": "collection_summary",
+          "data": "stop",
+          "conditional": true
+        },
+        {
+          "source": "plan",
+          "target": "research",
+          "conditional": true
+        },
+        {
+          "source": "plan_retry",
+          "target": "retry_research",
+          "data": "research",
+          "conditional": true
+        },
+        {
+          "source": "plan_retry",
+          "target": "verification_decision",
+          "data": "decision",
+          "conditional": true
+        },
+        {
+          "source": "research",
+          "target": "collection_summary"
+        },
+        {
+          "source": "retry_research",
+          "target": "reverify"
+        },
+        {
+          "source": "reverify",
+          "target": "verification_summary"
+        },
+        {
+          "source": "synthesize",
+          "target": "validate_report"
+        },
+        {
+          "source": "verification_decision",
+          "target": "plan_retry",
+          "data": "retry",
+          "conditional": true
+        },
+        {
+          "source": "verification_decision",
+          "target": "synthesize",
+          "data": "report",
+          "conditional": true
+        },
+        {
+          "source": "verification_summary",
+          "target": "__end__",
+          "data": "legacy",
+          "conditional": true
+        },
+        {
+          "source": "verification_summary",
+          "target": "verification_decision",
+          "data": "decision",
+          "conditional": true
+        },
+        {
+          "source": "verify",
+          "target": "verification_summary"
+        },
+        {
+          "source": "validate_report",
+          "target": "__end__"
+        }
+      ]
+    },
+    "alembic_head": "0005",
+    "foreign_key_violations": [],
+    "final_repository_validation": "PASSED",
+    "live_provider_requests": 0
+  },
+  "negative": {
+    "mode": "OFFLINE_RETAINED_HISTORY_RETRIEVAL_AND_SYNTHETIC_SEMANTIC_FIXTURES",
+    "negative_semantic_case": true,
+    "mutation": null,
+    "run": {
+      "run_id": "ea6f6c5e-cba9-4b86-af70-87fc0db528a4",
+      "original_question": "According to Python's official documentation, in which Python version was tomllib added to the standard library?",
+      "phase": "P5",
+      "verification_status": "completed",
+      "mode": "offline_fixture",
+      "status": "completed",
+      "execution_status": "report_ready",
+      "research_plan": {
+        "goal": "Determine the Python version in which the tomllib module was added to the standard library according to Python's official documentation.",
+        "subquestions": [
+          {
+            "question": "In which Python version was the tomllib module introduced to the standard library according to the official Python documentation?",
+            "search_query": "tomllib module added to Python standard library version site:docs.python.org",
+            "evidence_requirement": "Official Python documentation or release notes explicitly stating the Python version that introduced the tomllib module to the standard library."
+          }
+        ]
+      },
+      "subquestions": [
+        {
+          "task_id": "b712fd10-8651-521c-aa25-766931020bd8",
+          "assignment": {
+            "question": "In which Python version was the tomllib module introduced to the standard library according to the official Python documentation?",
+            "search_query": "tomllib module added to Python standard library version site:docs.python.org",
+            "evidence_requirement": "Official Python documentation or release notes explicitly stating the Python version that introduced the tomllib module to the standard library."
+          },
+          "parent_task_id": null,
+          "retry_number": 0,
+          "status": "collected",
+          "source_ids": [
+            "011e976f-f671-5238-997a-3995ce1e5812",
+            "6045322a-54aa-5f4a-93a1-6e06ace6aa92",
+            "6b36f614-0792-56bc-91ce-05f7396011a0",
+            "cf36fbf5-4ec9-53e2-94eb-c0d7efa55de0"
+          ],
+          "passage_ids": [
+            "0291a934-2e54-52d1-9058-3d127bc3963e",
+            "27a4065f-aa70-5afd-a175-69588c07b898",
+            "2c3f5969-23e0-53b7-8453-584a8aa14073",
+            "651f23e0-9fb9-549d-8a57-cedf482fc421"
+          ],
+          "warnings": [],
+          "error_code": null,
+          "started_at": "2026-10-18T11:13:36.807232Z",
+          "finished_at": "2026-10-18T11:13:37.036386Z",
+          "duration_seconds": 0.230187
+        }
+      ],
+      "research_task_status": {
+        "b712fd10-8651-521c-aa25-766931020bd8": "collected"
+      },
+      "retrieved_evidence_ids": [
+        "651f23e0-9fb9-549d-8a57-cedf482fc421",
+        "0291a934-2e54-52d1-9058-3d127bc3963e",
+        "27a4065f-aa70-5afd-a175-69588c07b898",
+        "2c3f5969-23e0-53b7-8453-584a8aa14073"
+      ],
+      "source_references": [
+        {
+          "source_id": "6b36f614-0792-56bc-91ce-05f7396011a0",
+          "original_url": "https://docs.python.org/3.13/library/tomllib.html",
+          "title": "tomllib \u2014 Parse TOML files \u2014 Python 3.13.16 documentation",
+          "retrieved_at": "2026-10-18T11:13:36.886351Z"
+        },
+        {
+          "source_id": "6045322a-54aa-5f4a-93a1-6e06ace6aa92",
+          "original_url": "https://docs.python.org/ja/3/library/tomllib.html",
+          "title": "tomllib --- TOML \u30d5\u30a1\u30a4\u30eb\u306e\u89e3\u6790 \u2014 Python 3.15.0 \u30c9\u30ad\u30e5\u30e1\u30f3\u30c8",
+          "retrieved_at": "2026-10-18T11:13:36.933682Z"
+        },
+        {
+          "source_id": "011e976f-f671-5238-997a-3995ce1e5812",
+          "original_url": "https://docs.python.org/id/3.15/library/tomllib.html",
+          "title": "tomllib --- Parse TOML files \u2014 Dokumentasi Python 3.15.0",
+          "retrieved_at": "2026-10-18T11:13:36.957512Z"
+        },
+        {
+          "source_id": "cf36fbf5-4ec9-53e2-94eb-c0d7efa55de0",
+          "original_url": "https://docs.python.org/3/library/tomllib.html",
+          "title": "tomllib \u2014 Parse TOML files \u2014 Python 3.15.0 documentation",
+          "retrieved_at": "2026-10-18T11:13:36.980286Z"
+        }
+      ],
+      "warnings": [],
+      "errors": [],
+      "budgets": {
+        "max_llm_calls": 8,
+        "max_searches": 2,
+        "max_fetches": 10,
+        "model_attempts": 4,
+        "llm_calls": 4,
+        "search_requests": 1,
+        "extract_requests": 4,
+        "fetch_units": 4,
+        "max_research_tasks": 2,
+        "max_retries_per_subquestion": 1,
+        "max_claims": 1
+      },
+      "created_at": "2026-10-18T11:13:36.679099Z",
+      "updated_at": "2026-10-18T11:13:37.773753Z",
+      "started_at": "2026-10-18T11:13:36.708527Z",
+      "finished_at": "2026-10-18T11:13:37.770688Z",
+      "planning_duration_seconds": 0.048308,
+      "research_duration_seconds": 0.274534,
+      "total_duration_seconds": 1.064095,
+      "cache_hits": 0,
+      "prompt_tokens": 40,
+      "completion_tokens": 20,
+      "collection_status": "evidence_collected",
+      "candidate_claim_ids": [
+        "e8a0e5b0-b727-5a59-b7c0-f2758d19cec6"
+      ],
+      "supported_claim_ids": [],
+      "verification_counts": {
+        "CONTRADICTED": 1
+      },
+      "drafting_duration_seconds": 0.115992,
+      "verification_duration_seconds": 0.308213,
+      "verification_persistence_duration_ms": 23.671,
+      "verification_llm_requests": 2,
+      "verification_failures": 0,
+      "verification_prompt_tokens": 20,
+      "verification_completion_tokens": 10,
+      "research_gaps": [
+        {
+          "gap_id": "aeb57770-54eb-51c4-954b-a68f6f3c4f78",
+          "root_task_id": "b712fd10-8651-521c-aa25-766931020bd8",
+          "kind": "contradicted",
+          "question": "In which Python version was the tomllib module introduced to the standard library according to the official Python documentation?",
+          "claim_ids": [
+            "e8a0e5b0-b727-5a59-b7c0-f2758d19cec6"
+          ],
+          "reason": "contradicted",
+          "retryable": false,
+          "stop_reason": "contradicted_not_researched"
+        }
+      ],
+      "retry_history": [],
+      "retry_counts": {
+        "b712fd10-8651-521c-aa25-766931020bd8": 0
+      },
+      "active_retry_ids": [],
+      "eligible_gap_ids": [],
+      "correction_stopped": false,
+      "correction_stop_reason": null,
+      "retry_duration_seconds": 0.0,
+      "synthesis_duration_seconds": 0.02298,
+      "report_validation_duration_seconds": 0.030365,
+      "report_id": "5cff6f71-baba-5d39-9a60-9d2d9c67581f",
+      "pending_report_json": null,
+      "report_generation_status": "incomplete",
+      "audit_events": [
+        {
+          "event_id": "92d2f03f-77f3-4ed1-aaa7-a5b9d528722c",
+          "sequence": 1,
+          "timestamp": "2026-10-18T11:13:36.686430Z",
+          "agent": "coordinator",
+          "event": "run_queued",
+          "task_id": null,
+          "details": {}
+        },
+        {
+          "event_id": "0a594d7f-f738-4cba-a340-8150f41134ff",
+          "sequence": 2,
+          "timestamp": "2026-10-18T11:13:36.712158Z",
+          "agent": "planner",
+          "event": "planner_started",
+          "task_id": null,
+          "details": {}
+        },
+        {
+          "event_id": "aea27035-6b75-4d5f-bcd1-44b704f40cd7",
+          "sequence": 3,
+          "timestamp": "2026-10-18T11:13:36.771257Z",
+          "agent": "planner",
+          "event": "planner_completed",
+          "task_id": null,
+          "details": {
+            "task_count": 1,
+            "duplicates_removed": 0
+          }
+        },
+        {
+          "event_id": "0323e97b-8644-4d83-8106-4b49b4f3dec1",
+          "sequence": 4,
+          "timestamp": "2026-10-18T11:13:36.790473Z",
+          "agent": "researcher",
+          "event": "research_started",
+          "task_id": null,
+          "details": {
+            "task_count": 1
+          }
+        },
+        {
+          "event_id": "a4209c47-bc1a-4782-b94d-e1bf96dc5b24",
+          "sequence": 5,
+          "timestamp": "2026-10-18T11:13:36.811276Z",
+          "agent": "researcher",
+          "event": "task_started",
+          "task_id": "b712fd10-8651-521c-aa25-766931020bd8",
+          "details": {
+            "status": "running",
+            "source_ids": [],
+            "passage_ids": [],
+            "duration_seconds": 0,
+            "error_code": ""
+          }
+        },
+        {
+          "event_id": "96c6a9a2-ab53-4815-9202-ee859adde52c",
+          "sequence": 6,
+          "timestamp": "2026-10-18T11:13:37.041008Z",
+          "agent": "researcher",
+          "event": "task_finished",
+          "task_id": "b712fd10-8651-521c-aa25-766931020bd8",
+          "details": {
+            "status": "collected",
+            "source_ids": [
+              "011e976f-f671-5238-997a-3995ce1e5812",
+              "6045322a-54aa-5f4a-93a1-6e06ace6aa92",
+              "6b36f614-0792-56bc-91ce-05f7396011a0",
+              "cf36fbf5-4ec9-53e2-94eb-c0d7efa55de0"
+            ],
+            "passage_ids": [
+              "0291a934-2e54-52d1-9058-3d127bc3963e",
+              "27a4065f-aa70-5afd-a175-69588c07b898",
+              "2c3f5969-23e0-53b7-8453-584a8aa14073",
+              "651f23e0-9fb9-549d-8a57-cedf482fc421"
+            ],
+            "duration_seconds": 0.230187,
+            "error_code": ""
+          }
+        },
+        {
+          "event_id": "45750d6f-3ca3-4f0e-b64f-b308d3a66750",
+          "sequence": 7,
+          "timestamp": "2026-10-18T11:13:37.074110Z",
+          "agent": "researcher",
+          "event": "research_completed",
+          "task_id": null,
+          "details": {}
+        },
+        {
+          "event_id": "6f8abc03-7ded-4c27-b24c-97672beb9a51",
+          "sequence": 8,
+          "timestamp": "2026-10-18T11:13:37.114073Z",
+          "agent": "graph",
+          "event": "collection_summarized",
+          "task_id": null,
+          "details": {
+            "source_count": 4,
+            "passage_count": 4,
+            "verification_status": "pending"
+          }
+        },
+        {
+          "event_id": "b7725729-8871-47b8-9685-620c01fd6a5a",
+          "sequence": 9,
+          "timestamp": "2026-10-18T11:13:37.135501Z",
+          "agent": "drafter",
+          "event": "draft_started",
+          "task_id": null,
+          "details": {}
+        },
+        {
+          "event_id": "b742fed1-f474-4d7b-9d4d-d0195f27563a",
+          "sequence": 10,
+          "timestamp": "2026-10-18T11:13:37.258887Z",
+          "agent": "drafter",
+          "event": "draft_completed",
+          "task_id": null,
+          "details": {
+            "claim_count": 1
+          }
+        },
+        {
+          "event_id": "a901b1ea-2b25-40f5-8543-143bb7b97316",
+          "sequence": 11,
+          "timestamp": "2026-10-18T11:13:37.280603Z",
+          "agent": "verifier",
+          "event": "verification_started",
+          "task_id": null,
+          "details": {
+            "claim_count": 1
+          }
+        },
+        {
+          "event_id": "4a81d3a9-e48f-4a94-aaeb-a2c48a3410ae",
+          "sequence": 12,
+          "timestamp": "2026-10-18T11:13:37.319308Z",
+          "agent": "verifier",
+          "event": "verification_attempt_started",
+          "task_id": null,
+          "details": {
+            "claim_id": "e8a0e5b0-b727-5a59-b7c0-f2758d19cec6",
+            "attempt_id": "ea35c5eb-96b7-4f76-ba5c-823d9e4642c5"
+          }
+        },
+        {
+          "event_id": "bfe3f0d8-222f-44fb-b025-c4b7107952eb",
+          "sequence": 13,
+          "timestamp": "2026-10-18T11:13:37.402916Z",
+          "agent": "verifier",
+          "event": "quotation_resolution_completed",
+          "task_id": null,
+          "details": {
+            "claim_id": "e8a0e5b0-b727-5a59-b7c0-f2758d19cec6",
+            "attempt_id": "ea35c5eb-96b7-4f76-ba5c-823d9e4642c5",
+            "role": "primary",
+            "contract_version": "exact_quotes_v2",
+            "model_usage_id": "f7797ff7-e278-4065-a96b-2fed1cbf98aa",
+            "quote_count": 4,
+            "evidence_sha256": "2e4f10b30581b83314d9275e0bda3ade0bd23414e73550237166d2ea0d9a602e"
+          }
+        },
+        {
+          "event_id": "864f8480-b5cd-4c75-ab6d-094e5a4cce05",
+          "sequence": 14,
+          "timestamp": "2026-10-18T11:13:37.426040Z",
+          "agent": "verifier",
+          "event": "support_review_started",
+          "task_id": null,
+          "details": {
+            "claim_id": "e8a0e5b0-b727-5a59-b7c0-f2758d19cec6",
+            "attempt_id": "ea35c5eb-96b7-4f76-ba5c-823d9e4642c5"
+          }
+        },
+        {
+          "event_id": "b08ad307-2496-4f06-9bc3-d9f6547f042f",
+          "sequence": 15,
+          "timestamp": "2026-10-18T11:13:37.490119Z",
+          "agent": "verifier",
+          "event": "quotation_resolution_completed",
+          "task_id": null,
+          "details": {
+            "claim_id": "e8a0e5b0-b727-5a59-b7c0-f2758d19cec6",
+            "attempt_id": "ea35c5eb-96b7-4f76-ba5c-823d9e4642c5",
+            "role": "blind_review",
+            "contract_version": "exact_quotes_v2",
+            "model_usage_id": "ee8e1abd-d990-4df8-a759-36cd25a4a6bd",
+            "quote_count": 4,
+            "evidence_sha256": "2e4f10b30581b83314d9275e0bda3ade0bd23414e73550237166d2ea0d9a602e"
+          }
+        },
+        {
+          "event_id": "6caa1a06-90dc-4556-b60f-d97baa384282",
+          "sequence": 16,
+          "timestamp": "2026-10-18T11:13:37.512197Z",
+          "agent": "verifier",
+          "event": "support_review_completed",
+          "task_id": null,
+          "details": {
+            "claim_id": "e8a0e5b0-b727-5a59-b7c0-f2758d19cec6",
+            "attempt_id": "ea35c5eb-96b7-4f76-ba5c-823d9e4642c5",
+            "receipt_sha256": "c0974745d0d10d697700e8c172ac813c257740b2930c07bce666d25c7eff08a8",
+            "primary_verdict": "SUPPORTED",
+            "review_verdict": "CONTRADICTED",
+            "review_usage_id": "ee8e1abd-d990-4df8-a759-36cd25a4a6bd"
+          }
+        },
+        {
+          "event_id": "c48cec05-1142-43ea-9d02-1ce72e8045fb",
+          "sequence": 17,
+          "timestamp": "2026-10-18T11:13:37.566275Z",
+          "agent": "verifier",
+          "event": "verification_attempt_finished",
+          "task_id": null,
+          "details": {
+            "claim_id": "e8a0e5b0-b727-5a59-b7c0-f2758d19cec6",
+            "attempt_id": "ea35c5eb-96b7-4f76-ba5c-823d9e4642c5",
+            "verdict": "CONTRADICTED",
+            "outcome": "completed",
+            "error_code": "",
+            "evidence_ids": [
+              "0291a934-2e54-52d1-9058-3d127bc3963e",
+              "27a4065f-aa70-5afd-a175-69588c07b898",
+              "2c3f5969-23e0-53b7-8453-584a8aa14073",
+              "651f23e0-9fb9-549d-8a57-cedf482fc421"
+            ],
+            "previous_verdict": "UNVERIFIED",
+            "research_retry_id": "",
+            "evaluated_evidence_ids": [
+              "0291a934-2e54-52d1-9058-3d127bc3963e",
+              "27a4065f-aa70-5afd-a175-69588c07b898",
+              "2c3f5969-23e0-53b7-8453-584a8aa14073",
+              "651f23e0-9fb9-549d-8a57-cedf482fc421"
+            ]
+          }
+        },
+        {
+          "event_id": "813dfafa-9bb3-44b1-a299-96a1046c209d",
+          "sequence": 18,
+          "timestamp": "2026-10-18T11:13:37.588621Z",
+          "agent": "verifier",
+          "event": "verification_completed",
+          "task_id": null,
+          "details": {
+            "claims_processed": 1,
+            "verification_failures": 0
+          }
+        },
+        {
+          "event_id": "cca8c125-20be-4172-8aac-828245e96df5",
+          "sequence": 19,
+          "timestamp": "2026-10-18T11:13:37.620973Z",
+          "agent": "graph",
+          "event": "verification_summarized",
+          "task_id": null,
+          "details": {
+            "claims_processed": 1,
+            "supported_claim_count": 0,
+            "verification_status": "completed"
+          }
+        },
+        {
+          "event_id": "bde92953-5fbb-49c2-8e80-9330919be1b2",
+          "sequence": 20,
+          "timestamp": "2026-10-18T11:13:37.654730Z",
+          "agent": "graph",
+          "event": "verification_decision",
+          "task_id": null,
+          "details": {
+            "retryable_gap_ids": [],
+            "stop_reasons": [
+              "contradicted_not_researched"
+            ],
+            "unresolved_gap_count": 1
+          }
+        },
+        {
+          "event_id": "2f389437-a825-4a65-b5f9-0309ecd9b069",
+          "sequence": 21,
+          "timestamp": "2026-10-18T11:13:37.675585Z",
+          "agent": "synthesizer",
+          "event": "synthesis_started",
+          "task_id": null,
+          "details": {}
+        },
+        {
+          "event_id": "6e955239-c45b-4ec5-a805-aca7116e6114",
+          "sequence": 22,
+          "timestamp": "2026-10-18T11:13:37.705787Z",
+          "agent": "synthesizer",
+          "event": "synthesis_incomplete",
+          "task_id": null,
+          "details": {
+            "generation_status": "deterministic_incomplete",
+            "error_code": "",
+            "finding_count": 0
+          }
+        },
+        {
+          "event_id": "c7d714b6-7970-43cd-8e84-a1b1125813d2",
+          "sequence": 23,
+          "timestamp": "2026-10-18T11:13:37.724897Z",
+          "agent": "graph",
+          "event": "report_validation_started",
+          "task_id": null,
+          "details": {}
+        },
+        {
+          "event_id": "e2515a8c-26f2-4151-96ba-ba514234b18f",
+          "sequence": 24,
+          "timestamp": "2026-10-18T11:13:37.755353Z",
+          "agent": "graph",
+          "event": "report_validated",
+          "task_id": null,
+          "details": {
+            "report_id": "5cff6f71-baba-5d39-9a60-9d2d9c67581f",
+            "finding_count": 0,
+            "citation_count": 0,
+            "completion_status": "insufficient_evidence"
+          }
+        },
+        {
+          "event_id": "5db9de6f-cfca-44dc-8b77-d713e7d30572",
+          "sequence": 25,
+          "timestamp": "2026-10-18T11:13:37.773753Z",
+          "agent": "graph",
+          "event": "workflow_finished",
+          "task_id": null,
+          "details": {
+            "execution_status": "report_ready",
+            "total_duration_seconds": 1.064095
+          }
+        }
+      ]
+    },
+    "claims": {
+      "run_id": "ea6f6c5e-cba9-4b86-af70-87fc0db528a4",
+      "claims": [
+        {
+          "candidate": {
+            "claim_text": "The tomllib module was not added to the Python standard library in version 3.11.",
+            "originating_research_task_id": "b712fd10-8651-521c-aa25-766931020bd8",
+            "candidate_evidence_ids": [
+              "0291a934-2e54-52d1-9058-3d127bc3963e",
+              "27a4065f-aa70-5afd-a175-69588c07b898",
+              "2c3f5969-23e0-53b7-8453-584a8aa14073",
+              "651f23e0-9fb9-549d-8a57-cedf482fc421"
+            ],
+            "claim_id": "e8a0e5b0-b727-5a59-b7c0-f2758d19cec6",
+            "run_id": "ea6f6c5e-cba9-4b86-af70-87fc0db528a4",
+            "created_at": "2026-10-18T11:13:37.205303Z",
+            "verification_status": "UNVERIFIED"
+          },
+          "verification_status": "CONTRADICTED",
+          "attempts": [
+            {
+              "attempt_id": "ea35c5eb-96b7-4f76-ba5c-823d9e4642c5",
+              "claim_id": "e8a0e5b0-b727-5a59-b7c0-f2758d19cec6",
+              "started_at": "2026-10-18T11:13:37.303162Z",
+              "status": "finished",
+              "result": {
+                "attempt_id": "ea35c5eb-96b7-4f76-ba5c-823d9e4642c5",
+                "claim_id": "e8a0e5b0-b727-5a59-b7c0-f2758d19cec6",
+                "run_id": "ea6f6c5e-cba9-4b86-af70-87fc0db528a4",
+                "verdict": "CONTRADICTED",
+                "locked_verdict": "unsupported",
+                "evidence_ids": [
+                  "0291a934-2e54-52d1-9058-3d127bc3963e",
+                  "27a4065f-aa70-5afd-a175-69588c07b898",
+                  "2c3f5969-23e0-53b7-8453-584a8aa14073",
+                  "651f23e0-9fb9-549d-8a57-cedf482fc421"
+                ],
+                "exact_supporting_quotes": [
+                  {
+                    "evidence_id": "0291a934-2e54-52d1-9058-3d127bc3963e",
+                    "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+                    "start_char": 324,
+                    "end_char": 396,
+                    "source_id": "6045322a-54aa-5f4a-93a1-6e06ace6aa92",
+                    "source_content_sha256": "cbd0b6efff38889689a343904cfac56e4f33a837ce67cacf934c0ce62eabc149",
+                    "full_content_sha256": "cbd0b6efff38889689a343904cfac56e4f33a837ce67cacf934c0ce62eabc149",
+                    "locator": "extracted_text:chars:324-396"
+                  },
+                  {
+                    "evidence_id": "27a4065f-aa70-5afd-a175-69588c07b898",
+                    "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+                    "start_char": 353,
+                    "end_char": 425,
+                    "source_id": "011e976f-f671-5238-997a-3995ce1e5812",
+                    "source_content_sha256": "1f180a0bfe67063e23f0527ffbef2e9077d7d73c3295c826efae4e0c2f60fee5",
+                    "full_content_sha256": "1f180a0bfe67063e23f0527ffbef2e9077d7d73c3295c826efae4e0c2f60fee5",
+                    "locator": "extracted_text:chars:353-425"
+                  },
+                  {
+                    "evidence_id": "2c3f5969-23e0-53b7-8453-584a8aa14073",
+                    "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+                    "start_char": 351,
+                    "end_char": 423,
+                    "source_id": "cf36fbf5-4ec9-53e2-94eb-c0d7efa55de0",
+                    "source_content_sha256": "227a49244e1e1e2bd0e795335f49c62e286c563dd2999739b2d49238de319c5d",
+                    "full_content_sha256": "227a49244e1e1e2bd0e795335f49c62e286c563dd2999739b2d49238de319c5d",
+                    "locator": "extracted_text:chars:351-423"
+                  },
+                  {
+                    "evidence_id": "651f23e0-9fb9-549d-8a57-cedf482fc421",
+                    "text": "tomllib \u2014 Parse TOML files\u00b6\nAdded in version 3.11.\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1.0.0 (Tom\u2019s Obvious Minimal Language,",
+                    "start_char": 165,
+                    "end_char": 330,
+                    "source_id": "6b36f614-0792-56bc-91ce-05f7396011a0",
+                    "source_content_sha256": "d0d8ab2ee8bc3d540ad8011f62bd3c3826c2640486cf691a5a0cae1b7dc29abb",
+                    "full_content_sha256": "d0d8ab2ee8bc3d540ad8011f62bd3c3826c2640486cf691a5a0cae1b7dc29abb",
+                    "locator": "extracted_text:chars:165-330"
+                  }
+                ],
+                "explanation": "Explicit offline semantic fixture: affirmative source context contradicts the negated candidate.",
+                "confidence": null,
+                "outcome": "completed",
+                "rejection_reason": null,
+                "verification_timestamp": "2026-10-18T11:13:37.526315Z",
+                "verifier_model": "offline-p8c-semantic-fixture",
+                "verification_duration_ms": 229.061,
+                "persistence_duration_ms": 23.671,
+                "llm_requests": 2,
+                "prompt_tokens": 20,
+                "completion_tokens": 10,
+                "estimated_input_tokens": 8762,
+                "research_retry_id": null,
+                "previous_verdict": null,
+                "evaluated_evidence_ids": [
+                  "0291a934-2e54-52d1-9058-3d127bc3963e",
+                  "27a4065f-aa70-5afd-a175-69588c07b898",
+                  "2c3f5969-23e0-53b7-8453-584a8aa14073",
+                  "651f23e0-9fb9-549d-8a57-cedf482fc421"
+                ],
+                "support_review_receipt": {
+                  "policy": "blind_semantic_support_review_v1",
+                  "primary_usage_id": "f7797ff7-e278-4065-a96b-2fed1cbf98aa",
+                  "review_usage_id": "ee8e1abd-d990-4df8-a759-36cd25a4a6bd",
+                  "primary_decision": {
+                    "claim_id": "e8a0e5b0-b727-5a59-b7c0-f2758d19cec6",
+                    "verdict": "SUPPORTED",
+                    "evidence_ids": [
+                      "0291a934-2e54-52d1-9058-3d127bc3963e",
+                      "27a4065f-aa70-5afd-a175-69588c07b898",
+                      "2c3f5969-23e0-53b7-8453-584a8aa14073",
+                      "651f23e0-9fb9-549d-8a57-cedf482fc421"
+                    ],
+                    "exact_supporting_quotes": [
+                      {
+                        "evidence_id": "0291a934-2e54-52d1-9058-3d127bc3963e",
+                        "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+                        "start_char": 324,
+                        "end_char": 396
+                      },
+                      {
+                        "evidence_id": "27a4065f-aa70-5afd-a175-69588c07b898",
+                        "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+                        "start_char": 353,
+                        "end_char": 425
+                      },
+                      {
+                        "evidence_id": "2c3f5969-23e0-53b7-8453-584a8aa14073",
+                        "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+                        "start_char": 351,
+                        "end_char": 423
+                      },
+                      {
+                        "evidence_id": "651f23e0-9fb9-549d-8a57-cedf482fc421",
+                        "text": "tomllib \u2014 Parse TOML files\u00b6\nAdded in version 3.11.\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1.0.0 (Tom\u2019s Obvious Minimal Language,",
+                        "start_char": 165,
+                        "end_char": 330
+                      }
+                    ],
+                    "explanation": "Explicit offline semantic fixture: affirmative source context supports the candidate according to this fixture response.",
+                    "confidence": null
+                  },
+                  "review_decision": {
+                    "claim_id": "e8a0e5b0-b727-5a59-b7c0-f2758d19cec6",
+                    "verdict": "CONTRADICTED",
+                    "evidence_ids": [
+                      "0291a934-2e54-52d1-9058-3d127bc3963e",
+                      "27a4065f-aa70-5afd-a175-69588c07b898",
+                      "2c3f5969-23e0-53b7-8453-584a8aa14073",
+                      "651f23e0-9fb9-549d-8a57-cedf482fc421"
+                    ],
+                    "exact_supporting_quotes": [
+                      {
+                        "evidence_id": "0291a934-2e54-52d1-9058-3d127bc3963e",
+                        "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+                        "start_char": 324,
+                        "end_char": 396
+                      },
+                      {
+                        "evidence_id": "27a4065f-aa70-5afd-a175-69588c07b898",
+                        "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+                        "start_char": 353,
+                        "end_char": 425
+                      },
+                      {
+                        "evidence_id": "2c3f5969-23e0-53b7-8453-584a8aa14073",
+                        "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+                        "start_char": 351,
+                        "end_char": 423
+                      },
+                      {
+                        "evidence_id": "651f23e0-9fb9-549d-8a57-cedf482fc421",
+                        "text": "tomllib \u2014 Parse TOML files\u00b6\nAdded in version 3.11.\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1.0.0 (Tom\u2019s Obvious Minimal Language,",
+                        "start_char": 165,
+                        "end_char": 330
+                      }
+                    ],
+                    "explanation": "Explicit offline semantic fixture: affirmative source context contradicts the negated candidate.",
+                    "confidence": null
+                  },
+                  "review_model": "offline-p8c-semantic-fixture",
+                  "evidence_sha256": "2e4f10b30581b83314d9275e0bda3ade0bd23414e73550237166d2ea0d9a602e",
+                  "reviewed_at": "2026-10-18T11:13:37.504924Z"
+                },
+                "primary_decision": {
+                  "claim_id": "e8a0e5b0-b727-5a59-b7c0-f2758d19cec6",
+                  "verdict": "SUPPORTED",
+                  "evidence_ids": [
+                    "0291a934-2e54-52d1-9058-3d127bc3963e",
+                    "27a4065f-aa70-5afd-a175-69588c07b898",
+                    "2c3f5969-23e0-53b7-8453-584a8aa14073",
+                    "651f23e0-9fb9-549d-8a57-cedf482fc421"
+                  ],
+                  "exact_supporting_quotes": [
+                    {
+                      "evidence_id": "0291a934-2e54-52d1-9058-3d127bc3963e",
+                      "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+                      "start_char": 324,
+                      "end_char": 396
+                    },
+                    {
+                      "evidence_id": "27a4065f-aa70-5afd-a175-69588c07b898",
+                      "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+                      "start_char": 353,
+                      "end_char": 425
+                    },
+                    {
+                      "evidence_id": "2c3f5969-23e0-53b7-8453-584a8aa14073",
+                      "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+                      "start_char": 351,
+                      "end_char": 423
+                    },
+                    {
+                      "evidence_id": "651f23e0-9fb9-549d-8a57-cedf482fc421",
+                      "text": "tomllib \u2014 Parse TOML files\u00b6\nAdded in version 3.11.\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1.0.0 (Tom\u2019s Obvious Minimal Language,",
+                      "start_char": 165,
+                      "end_char": 330
+                    }
+                  ],
+                  "explanation": "Explicit offline semantic fixture: affirmative source context supports the candidate according to this fixture response.",
+                  "confidence": null
+                }
+              },
+              "evidence_scope_ids": [
+                "0291a934-2e54-52d1-9058-3d127bc3963e",
+                "27a4065f-aa70-5afd-a175-69588c07b898",
+                "2c3f5969-23e0-53b7-8453-584a8aa14073",
+                "651f23e0-9fb9-549d-8a57-cedf482fc421"
+              ],
+              "research_retry_id": null
+            }
+          ],
+          "current_integrity_error": null
+        }
+      ],
+      "supported_claim_ids": [],
+      "note": "Evidence-support decisions and immutable verification history."
+    },
+    "evidence": {
+      "run_id": "ea6f6c5e-cba9-4b86-af70-87fc0db528a4",
+      "verification_status": "unverified_source_material",
+      "trust_level": "untrusted_source_text",
+      "sources": [
+        {
+          "source_id": "6b36f614-0792-56bc-91ce-05f7396011a0",
+          "run_id": "ea6f6c5e-cba9-4b86-af70-87fc0db528a4",
+          "original_url": "https://docs.python.org/3.13/library/tomllib.html",
+          "normalized_url": "https://docs.python.org/3.13/library/tomllib.html",
+          "title": "tomllib \u2014 Parse TOML files \u2014 Python 3.13.16 documentation",
+          "retrieved_at": "2026-10-18T11:13:36.886351Z",
+          "content": "Navigation\n index\n modules |\n next |\n previous |\n Python \u00bb\n 3.13.16 Documentation \u00bb\n The Python standard library \u00bb\n File Formats \u00bb\n tomllib \u2014 Parse TOML files\n |\n |\ntomllib \u2014 Parse TOML files\u00b6\nAdded in version 3.11.\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1.0.0 (Tom\u2019s Obvious Minimal Language,  This module does not support writing TOML.\nWarning\nBe cautious when parsing data from untrusted sources. A malicious TOML string may cause the decoder to consume considerable CPU and memory resources. Limiting the size of data to be parsed is recommended.\nSee also\nThe Tomli-W package is a TOML writer that can be used in conjunction with this module, providing a write API familiar to users of the standard library marshal.\") and pickle modules.\nSee also\nThe TOML Kit package is a style-preserving TOML library with both read and write capability. It is a recommended replacement for this module for editing already existing TOML files.\nThis module defines the following functions:\ntomllib.load(fp, /, \\, parse\\_float=float)\u00b6\n:   Read a TOML file. The first argument should be a readable and binary file object. Return a dict. Convert TOML types to Python using this conversion table.\nparse\\_float will be called with the string of every TOML float to be decoded. By default, this is equivalent to float(num_str). This can be used to use another datatype or parser for TOML floats (e.g. decimal.Decimal). The callable must not return a dict or a list, else a ValueError is raised.\nA TOMLDecodeError will be raised on an invalid TOML document.\ntomllib.loads(s, /, \\, parse\\_float=float)\u00b6\n:   Load TOML from a str object. Return a dict. Convert TOML types to Python using this conversion table. The parse\\_float argument has the same meaning as in load().\nA TOMLDecodeError will be raised on an invalid TOML document.\nThe following exceptions are available:\nexception tomllib.TOMLDecodeError\u00b6\n:   Subclass of ValueError.\nExamples\u00b6\nParsing a TOML file:\n import  tomllib ",
+          "content_sha256": "d0d8ab2ee8bc3d540ad8011f62bd3c3826c2640486cf691a5a0cae1b7dc29abb",
+          "full_content_sha256": "d0d8ab2ee8bc3d540ad8011f62bd3c3826c2640486cf691a5a0cae1b7dc29abb",
+          "original_chars": 2000
+        },
+        {
+          "source_id": "6045322a-54aa-5f4a-93a1-6e06ace6aa92",
+          "run_id": "ea6f6c5e-cba9-4b86-af70-87fc0db528a4",
+          "original_url": "https://docs.python.org/ja/3/library/tomllib.html",
+          "normalized_url": "https://docs.python.org/ja/3/library/tomllib.html",
+          "title": "tomllib --- TOML \u30d5\u30a1\u30a4\u30eb\u306e\u89e3\u6790 \u2014 Python 3.15.0 \u30c9\u30ad\u30e5\u30e1\u30f3\u30c8",
+          "retrieved_at": "2026-10-18T11:13:36.933682Z",
+          "content": "\u30ca\u30d3\u30b2\u30fc\u30b7\u30e7\u30f3\n \u7d22\u5f15\n \u30e2\u30b8\u30e5\u30fc\u30eb |\n \u6b21\u3078 |\n \u524d\u3078 |\n Python \u00bb\n 3.15.0 Documentation \u00bb\n The Python standard library \u00bb\n \u30d5\u30a1\u30a4\u30eb\u30d5\u30a9\u30fc\u30de\u30c3\u30c8 \u00bb\n tomllib --- TOML \u30d5\u30a1\u30a4\u30eb\u306e\u89e3\u6790\n |\n |\ntomllib --- TOML \u30d5\u30a1\u30a4\u30eb\u306e\u89e3\u6790\u00b6\n\u30bd\u30fc\u30b9\u30b3\u30fc\u30c9: Lib/tomllib\nThis module provides an interface for parsing TOML 1.1.0 (Tom's Obvious Minimal Language,  This module does not support writing TOML.\nAdded in version 3.11: The module was added with support for TOML 1.0.0.\n\u30d0\u30fc\u30b8\u30e7\u30f3 3.15 \u3067\u5909\u66f4: Added TOML 1.1.0 support. See the What's New for details.\n\u8b66\u544a\nBe cautious when parsing data from untrusted sources. A malicious TOML string may cause the decoder to consume considerable CPU and memory resources. Limiting the size of data to be parsed is recommended.\n\u53c2\u8003\nTomli-W \u30d1\u30c3\u30b1\u30fc\u30b8 \u306fTOML\u306e\u66f8\u304d\u8fbc\u307f\u7528\u306b\u3053\u306e\u30e2\u30b8\u30e5\u30fc\u30eb\u3068\u7d44\u307f\u5408\u308f\u305b\u3066\u4f7f\u7528\u3067\u304d\u3001\u6a19\u6e96\u30e9\u30a4\u30d6\u30e9\u30ea\u306e marshal.\") \u3084 pickle \u30e2\u30b8\u30e5\u30fc\u30eb\u306a\u3069\u3067\u30e6\u30fc\u30b6\u30fc\u306b\u3088\u304f\u77e5\u3089\u308c\u3066\u3044\u308b\u66f8\u304d\u8fbc\u307fAPI\u3092\u63d0\u4f9b\u3057\u307e\u3059\u3002\n\u53c2\u8003\nTOML Kit \u30d1\u30c3\u30b1\u30fc\u30b8 \u306f\u3001\u30b9\u30bf\u30a4\u30eb\u3092\u4fdd\u6301\u3057\u305f\u8aad\u307f\u66f8\u304d\u306b\u5bfe\u5fdc\u3057\u305fTOML\u30e9\u30a4\u30d6\u30e9\u30ea\u3067\u3059\u3002\u5b58\u5728\u3059\u308bTOML\u30d5\u30a1\u30a4\u30eb\u3092\u7de8\u96c6\u3059\u308b\u3068\u304d\u306b\u3053\u306e\u30e2\u30b8\u30e5\u30fc\u30eb\u306e\u4ee3\u308f\u308a\u306b\u4f7f\u7528\u3059\u308b\u3053\u3068\u3092\u63a8\u5968\u3057\u307e\u3059\u3002\n\u3053\u306e\u30e2\u30b8\u30e5\u30fc\u30eb\u306f\u4ee5\u4e0b\u306e\u95a2\u6570\u3092\u5b9a\u7fa9\u3057\u3066\u3044\u307e\u3059:\ntomllib.load(fp, /, \\, parse\\_float=float)\u00b6\n:   TOML\u30d5\u30a1\u30a4\u30eb\u3092\u8aad\u307f\u8fbc\u307f\u307e\u3059\u3002\u7b2c1\u5f15\u6570\u306b\u306f\u8aad\u307f\u8fbc\u307f\u53ef\u80fd\u306a\u30d0\u30a4\u30ca\u30ea\u306e\u30d5\u30a1\u30a4\u30eb\u30aa\u30d6\u30b8\u30a7\u30af\u30c8\u3092\u6307\u5b9a\u3057\u307e\u3059\u3002\u623b\u308a\u5024\u306f dict \u3067\u3059\u3002TOML\u306e\u578b\u306f conversion table \u3092\u4f7f\u7528\u3057\u3066Python\u306e\u30c7\u30fc\u30bf\u578b\u306b\u5909\u63db\u3055\u308c\u307e\u3059\u3002\nparse\\_float \u306f\u3001\u5168\u3066\u306e\u30c7\u30b3\u30fc\u30c9\u3055\u308c\u308b TOML \u306e\u6d6e\u52d5\u5c0f\u6570\u70b9\u6570\u6587\u5b57\u5217\u306b\u5bfe\u3057\u3066\u547c\u3070\u308c\u307e\u3059\u3002\u30c7\u30d5\u30a9\u30eb\u30c8\u3067\u306f\u3001 float(num_str) \u3068\u7b49\u4fa1\u3067\u3059\u3002\u3053\u308c\u306f TOML \u6d6e\u52d5\u5c0f\u6570\u70b9\u6570\u306b\u5bfe\u3057\u3066\u4ed6\u306e\u30c7\u30fc\u30bf\u578b\u3084\u30d1\u30fc\u30b5 (\u305f\u3068\u3048\u3070 decimal.Decimal) \u3092\u4f7f\u3046\u306e\u306b\u4f7f\u3048\u307e\u3059\u3002\u547c\u3073\u51fa\u3057\u53ef\u80fd\u30aa\u30d6\u30b8\u30a7\u30af\u30c8\u306f dict \u3084 list \u4ee5\u5916\u3092\u8fd4\u3059\u5fc5\u8981\u304c\u3042\u308a\u3001\u305d\u3046\u3067\u306a\u3044\u5834\u5408\u306f ValueError \u304c\u9001\u51fa\u3055\u308c\u307e\u3059\u3002\n\u7121\u52b9\u306aTOML\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u306e\u5834\u5408\u306f TOMLDecodeError \u304c\u9001\u51fa\u3055\u308c\u307e\u3059\u3002\ntomllib.loads(s, /, \\, parse\\_float=float)\u00b6\n:   str \u304b\u3089TOML\u3092\u8aad\u307f\u8fbc\u307f\u307e\u3059\u3002\u623b\u308a\u5024\u306f dict \u3067\u3059\u3002TOML\u306e\u578b\u306f conversion table \u3092\u4f7f\u7528\u3057\u3066Python\u306e\u30c7\u30fc\u30bf\u578b\u306b\u5909\u63db\u3055\u308c\u307e\u3059\u3002parse\\_float  \u5f15\u6570\u306f load() \u3068\u540c\u3058\u610f\u5473\u3092\u6301\u3061\u307e\u3059\u3002\n\u7121\u52b9\u306aTOML\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u306e\u5834\u5408\u306f TOMLDecodeError \u304c\u9001\u51fa\u3055\u308c\u307e\u3059\u3002\n\u6b21\u306e\u4f8b\u5916\u304c\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u3059:\nexception tomllib.TOMLDecodeError(msg, doc, pos)\u00b6\n:   ValueError \u306e\u30b5\u30d6\u30af\u30e9\u30b9\u3067\u3001\u4ee5\u4e0b\u306e\u8ffd\u52a0\u306e\u5c5e\u6027\u3092\u6301\u3061\u307e\u3059:\nmsg\u00b6\n:   \u30d5\u30a9\u30fc\u30de\u30c3\u30c8\u3055\u308c\u3066\u3044\u306a\u3044\u30a8\u30e9\u30fc\u30e1\u30c3\u30bb\u30fc\u30b8\u3067\u3059\u3002\ndoc\u00b6\n:   \u30d1\u30fc\u30b9\u5bfe\u8c61\u306e TOML \u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u3067\u3059\u3002\npos\u00b6\n:   doc \u306e\u89e3\u6790\u306b\u5931\u6557\u3057\u305f\u30a4\u30f3\u30c7\u30af\u30b9\u3067\u3059\u3002\nlineno\u00b6\n:   pos \u306b\u5bfe\u5fdc\u3059\u308b\u884c\u3067\u3059\u3002\ncolno\u00b6\n:   pos \u306b\u5bfe\u5fdc\u3059\u308b\u5217\u3067\u3059\u3002\n\u30d0\u30fc\u30b8\u30e7\u30f3 3.14 \u3067\u5909\u66f4: Added the msg, doc and pos parameters. Added the msg, doc, pos, lineno and colno attributes.\n\u30d0\u30fc\u30b8\u30e7\u30f3 3.14 \u3067\u975e\u63a8\u5968: Passing free-form positional arguments is deprecated.\n\u4f7f\u7528\u4f8b\u00b6\nTOML\u30d5\u30a1\u30a4\u30eb\u3092\u89e3\u6790\u3057\u307e\u3059:\n import  tomlli",
+          "content_sha256": "cbd0b6efff38889689a343904cfac56e4f33a837ce67cacf934c0ce62eabc149",
+          "full_content_sha256": "cbd0b6efff38889689a343904cfac56e4f33a837ce67cacf934c0ce62eabc149",
+          "original_chars": 2000
+        },
+        {
+          "source_id": "011e976f-f671-5238-997a-3995ce1e5812",
+          "run_id": "ea6f6c5e-cba9-4b86-af70-87fc0db528a4",
+          "original_url": "https://docs.python.org/id/3.15/library/tomllib.html",
+          "normalized_url": "https://docs.python.org/id/3.15/library/tomllib.html",
+          "title": "tomllib --- Parse TOML files \u2014 Dokumentasi Python 3.15.0",
+          "retrieved_at": "2026-10-18T11:13:36.957512Z",
+          "content": "Navigasi\n index\n modul |\n berikut |\n sebelum |\n Python \u00bb\n 3.15.0 Documentation \u00bb\n The Python standard library \u00bb\n File Formats \u00bb\n tomllib --- Parse TOML files\n |\n |\ntomllib --- Parse TOML files\u00b6\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1.1.0 (Tom's Obvious Minimal Language,  This module does not support writing TOML.\nAdded in version 3.11: The module was added with support for TOML 1.0.0.\nBerubah pada versi 3.15: Added TOML 1.1.0 support. See the What's New for details.\nPeringatan\nBe cautious when parsing data from untrusted sources. A malicious TOML string may cause the decoder to consume considerable CPU and memory resources. Limiting the size of data to be parsed is recommended.\nLihat juga\nThe Tomli-W package is a TOML writer that can be used in conjunction with this module, providing a write API familiar to users of the standard library marshal.\") and pickle modules.\nLihat juga\nThe TOML Kit package is a style-preserving TOML library with both read and write capability. It is a recommended replacement for this module for editing already existing TOML files.\nThis module defines the following functions:\ntomllib.load(fp, /, \\, parse\\_float=float)\u00b6\n:   Read a TOML file. The first argument should be a readable and binary file object. Return a dict. Convert TOML types to Python using this conversion table.\nparse\\_float will be called with the string of every TOML float to be decoded. By default, this is equivalent to float(num_str). This can be used to use another datatype or parser for TOML floats (e.g. decimal.Decimal). The callable must not return a dict or a list, else a ValueError is raised.\nA TOMLDecodeError will be raised on an invalid TOML document.\ntomllib.loads(s, /, \\, parse\\_float=float)\u00b6\n:   Load TOML from a str object. Return a dict. Convert TOML types to Python using this conversion table. The parse\\_float argument has the same meaning as in load().\nA TOMLDecodeError will be raised on an invalid TOML document.\nThe follow",
+          "content_sha256": "1f180a0bfe67063e23f0527ffbef2e9077d7d73c3295c826efae4e0c2f60fee5",
+          "full_content_sha256": "1f180a0bfe67063e23f0527ffbef2e9077d7d73c3295c826efae4e0c2f60fee5",
+          "original_chars": 2000
+        },
+        {
+          "source_id": "cf36fbf5-4ec9-53e2-94eb-c0d7efa55de0",
+          "run_id": "ea6f6c5e-cba9-4b86-af70-87fc0db528a4",
+          "original_url": "https://docs.python.org/3/library/tomllib.html",
+          "normalized_url": "https://docs.python.org/3/library/tomllib.html",
+          "title": "tomllib \u2014 Parse TOML files \u2014 Python 3.15.0 documentation",
+          "retrieved_at": "2026-10-18T11:13:36.980286Z",
+          "content": "Navigation\n index\n modules |\n next |\n previous |\n Python \u00bb\n 3.15.0 Documentation \u00bb\n The Python standard library \u00bb\n File Formats \u00bb\n tomllib \u2014 Parse TOML files\n |\n |\ntomllib \u2014 Parse TOML files\u00b6\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1.1.0 (Tom\u2019s Obvious Minimal Language,  This module does not support writing TOML.\nAdded in version 3.11: The module was added with support for TOML 1.0.0.\nChanged in version 3.15: Added TOML 1.1.0 support. See the What\u2019s New for details.\nWarning\nBe cautious when parsing data from untrusted sources. A malicious TOML string may cause the decoder to consume considerable CPU and memory resources. Limiting the size of data to be parsed is recommended.\nSee also\nThe Tomli-W package is a TOML writer that can be used in conjunction with this module, providing a write API familiar to users of the standard library marshal.\") and pickle modules.\nSee also\nThe TOML Kit package is a style-preserving TOML library with both read and write capability. It is a recommended replacement for this module for editing already existing TOML files.\nThis module defines the following functions:\ntomllib.load(fp, /, \\, parse\\_float=float)\u00b6\n:   Read a TOML file. The first argument should be a readable and binary file object. Return a dict. Convert TOML types to Python using this conversion table.\nparse\\_float will be called with the string of every TOML float to be decoded. By default, this is equivalent to float(num_str). This can be used to use another datatype or parser for TOML floats (e.g. decimal.Decimal). The callable must not return a dict or a list, else a ValueError is raised.\nA TOMLDecodeError will be raised on an invalid TOML document.\ntomllib.loads(s, /, \\, parse\\_float=float)\u00b6\n:   Load TOML from a str object. Return a dict. Convert TOML types to Python using this conversion table. The parse\\_float argument has the same meaning as in load().\nA TOMLDecodeError will be raised on an invalid TOML document.\nThe following excep",
+          "content_sha256": "227a49244e1e1e2bd0e795335f49c62e286c563dd2999739b2d49238de319c5d",
+          "full_content_sha256": "227a49244e1e1e2bd0e795335f49c62e286c563dd2999739b2d49238de319c5d",
+          "original_chars": 2000
+        }
+      ],
+      "passages": [
+        {
+          "passage_id": "651f23e0-9fb9-549d-8a57-cedf482fc421",
+          "source_id": "6b36f614-0792-56bc-91ce-05f7396011a0",
+          "text": "Navigation\n index\n modules |\n next |\n previous |\n Python \u00bb\n 3.13.16 Documentation \u00bb\n The Python standard library \u00bb\n File Formats \u00bb\n tomllib \u2014 Parse TOML files\n |\n |\ntomllib \u2014 Parse TOML files\u00b6\nAdded in version 3.11.\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1.0.0 (Tom\u2019s Obvious Minimal Language,  This module does not support writing TOML.\nWarning\nBe cautious when parsing data from untrusted sources. A malicious TOML string may cause the decoder to consume considerable CPU and memory resources. Limiting the size of data to be parsed is recommended.\nSee also\nThe Tomli-W package is a TOML writer that can be used in conjunction with this module, providing a write API familiar to users of the standard library marshal.\") and pickle modules.\nSee also\nThe TOML Kit package is a style-preserving TOML library with both read and write capability. It is a recommended replacement for this module for editing already existing TOML files.\nThis module defines the following functions:\ntomllib.load(fp, /, \\, parse\\_float=float)\u00b6\n:   Read a TOML file. The first argument should be a readable and binary file object. Return a dict. Convert TOML types to Python using this conversion table.\nparse\\_float will be called with the string of every TOML float to be decoded. By default, this is equivalent to float(num_str). This can be used to use another datatype or parser for TOML floats (e.g. decimal.Decimal). The callable must not return a dict or a list, else a ValueError is raised.\nA TOMLDecodeError will be raised on an invalid TOML document.\ntomllib.loads(s, /, \\, parse\\_float=float)\u00b6\n:   Load TOML from a str object. Return a dict. Convert TOML types to Python using this conversion table. The parse\\_float argument has the same meaning as in load().\nA TOMLDecodeError will be raised on an invalid TOML document.\nThe following exceptions are available:\nexception tomllib.TOMLDecodeError\u00b6\n:   Subclass of ValueError.\nExamples\u00b6\nParsing a TOML file:\n import  tomllib ",
+          "start_char": 0,
+          "end_char": 2000,
+          "locator": "extracted_text:chars:0-2000"
+        },
+        {
+          "passage_id": "0291a934-2e54-52d1-9058-3d127bc3963e",
+          "source_id": "6045322a-54aa-5f4a-93a1-6e06ace6aa92",
+          "text": "\u30ca\u30d3\u30b2\u30fc\u30b7\u30e7\u30f3\n \u7d22\u5f15\n \u30e2\u30b8\u30e5\u30fc\u30eb |\n \u6b21\u3078 |\n \u524d\u3078 |\n Python \u00bb\n 3.15.0 Documentation \u00bb\n The Python standard library \u00bb\n \u30d5\u30a1\u30a4\u30eb\u30d5\u30a9\u30fc\u30de\u30c3\u30c8 \u00bb\n tomllib --- TOML \u30d5\u30a1\u30a4\u30eb\u306e\u89e3\u6790\n |\n |\ntomllib --- TOML \u30d5\u30a1\u30a4\u30eb\u306e\u89e3\u6790\u00b6\n\u30bd\u30fc\u30b9\u30b3\u30fc\u30c9: Lib/tomllib\nThis module provides an interface for parsing TOML 1.1.0 (Tom's Obvious Minimal Language,  This module does not support writing TOML.\nAdded in version 3.11: The module was added with support for TOML 1.0.0.\n\u30d0\u30fc\u30b8\u30e7\u30f3 3.15 \u3067\u5909\u66f4: Added TOML 1.1.0 support. See the What's New for details.\n\u8b66\u544a\nBe cautious when parsing data from untrusted sources. A malicious TOML string may cause the decoder to consume considerable CPU and memory resources. Limiting the size of data to be parsed is recommended.\n\u53c2\u8003\nTomli-W \u30d1\u30c3\u30b1\u30fc\u30b8 \u306fTOML\u306e\u66f8\u304d\u8fbc\u307f\u7528\u306b\u3053\u306e\u30e2\u30b8\u30e5\u30fc\u30eb\u3068\u7d44\u307f\u5408\u308f\u305b\u3066\u4f7f\u7528\u3067\u304d\u3001\u6a19\u6e96\u30e9\u30a4\u30d6\u30e9\u30ea\u306e marshal.\") \u3084 pickle \u30e2\u30b8\u30e5\u30fc\u30eb\u306a\u3069\u3067\u30e6\u30fc\u30b6\u30fc\u306b\u3088\u304f\u77e5\u3089\u308c\u3066\u3044\u308b\u66f8\u304d\u8fbc\u307fAPI\u3092\u63d0\u4f9b\u3057\u307e\u3059\u3002\n\u53c2\u8003\nTOML Kit \u30d1\u30c3\u30b1\u30fc\u30b8 \u306f\u3001\u30b9\u30bf\u30a4\u30eb\u3092\u4fdd\u6301\u3057\u305f\u8aad\u307f\u66f8\u304d\u306b\u5bfe\u5fdc\u3057\u305fTOML\u30e9\u30a4\u30d6\u30e9\u30ea\u3067\u3059\u3002\u5b58\u5728\u3059\u308bTOML\u30d5\u30a1\u30a4\u30eb\u3092\u7de8\u96c6\u3059\u308b\u3068\u304d\u306b\u3053\u306e\u30e2\u30b8\u30e5\u30fc\u30eb\u306e\u4ee3\u308f\u308a\u306b\u4f7f\u7528\u3059\u308b\u3053\u3068\u3092\u63a8\u5968\u3057\u307e\u3059\u3002\n\u3053\u306e\u30e2\u30b8\u30e5\u30fc\u30eb\u306f\u4ee5\u4e0b\u306e\u95a2\u6570\u3092\u5b9a\u7fa9\u3057\u3066\u3044\u307e\u3059:\ntomllib.load(fp, /, \\, parse\\_float=float)\u00b6\n:   TOML\u30d5\u30a1\u30a4\u30eb\u3092\u8aad\u307f\u8fbc\u307f\u307e\u3059\u3002\u7b2c1\u5f15\u6570\u306b\u306f\u8aad\u307f\u8fbc\u307f\u53ef\u80fd\u306a\u30d0\u30a4\u30ca\u30ea\u306e\u30d5\u30a1\u30a4\u30eb\u30aa\u30d6\u30b8\u30a7\u30af\u30c8\u3092\u6307\u5b9a\u3057\u307e\u3059\u3002\u623b\u308a\u5024\u306f dict \u3067\u3059\u3002TOML\u306e\u578b\u306f conversion table \u3092\u4f7f\u7528\u3057\u3066Python\u306e\u30c7\u30fc\u30bf\u578b\u306b\u5909\u63db\u3055\u308c\u307e\u3059\u3002\nparse\\_float \u306f\u3001\u5168\u3066\u306e\u30c7\u30b3\u30fc\u30c9\u3055\u308c\u308b TOML \u306e\u6d6e\u52d5\u5c0f\u6570\u70b9\u6570\u6587\u5b57\u5217\u306b\u5bfe\u3057\u3066\u547c\u3070\u308c\u307e\u3059\u3002\u30c7\u30d5\u30a9\u30eb\u30c8\u3067\u306f\u3001 float(num_str) \u3068\u7b49\u4fa1\u3067\u3059\u3002\u3053\u308c\u306f TOML \u6d6e\u52d5\u5c0f\u6570\u70b9\u6570\u306b\u5bfe\u3057\u3066\u4ed6\u306e\u30c7\u30fc\u30bf\u578b\u3084\u30d1\u30fc\u30b5 (\u305f\u3068\u3048\u3070 decimal.Decimal) \u3092\u4f7f\u3046\u306e\u306b\u4f7f\u3048\u307e\u3059\u3002\u547c\u3073\u51fa\u3057\u53ef\u80fd\u30aa\u30d6\u30b8\u30a7\u30af\u30c8\u306f dict \u3084 list \u4ee5\u5916\u3092\u8fd4\u3059\u5fc5\u8981\u304c\u3042\u308a\u3001\u305d\u3046\u3067\u306a\u3044\u5834\u5408\u306f ValueError \u304c\u9001\u51fa\u3055\u308c\u307e\u3059\u3002\n\u7121\u52b9\u306aTOML\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u306e\u5834\u5408\u306f TOMLDecodeError \u304c\u9001\u51fa\u3055\u308c\u307e\u3059\u3002\ntomllib.loads(s, /, \\, parse\\_float=float)\u00b6\n:   str \u304b\u3089TOML\u3092\u8aad\u307f\u8fbc\u307f\u307e\u3059\u3002\u623b\u308a\u5024\u306f dict \u3067\u3059\u3002TOML\u306e\u578b\u306f conversion table \u3092\u4f7f\u7528\u3057\u3066Python\u306e\u30c7\u30fc\u30bf\u578b\u306b\u5909\u63db\u3055\u308c\u307e\u3059\u3002parse\\_float  \u5f15\u6570\u306f load() \u3068\u540c\u3058\u610f\u5473\u3092\u6301\u3061\u307e\u3059\u3002\n\u7121\u52b9\u306aTOML\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u306e\u5834\u5408\u306f TOMLDecodeError \u304c\u9001\u51fa\u3055\u308c\u307e\u3059\u3002\n\u6b21\u306e\u4f8b\u5916\u304c\u30b5\u30dd\u30fc\u30c8\u3055\u308c\u3066\u3044\u307e\u3059:\nexception tomllib.TOMLDecodeError(msg, doc, pos)\u00b6\n:   ValueError \u306e\u30b5\u30d6\u30af\u30e9\u30b9\u3067\u3001\u4ee5\u4e0b\u306e\u8ffd\u52a0\u306e\u5c5e\u6027\u3092\u6301\u3061\u307e\u3059:\nmsg\u00b6\n:   \u30d5\u30a9\u30fc\u30de\u30c3\u30c8\u3055\u308c\u3066\u3044\u306a\u3044\u30a8\u30e9\u30fc\u30e1\u30c3\u30bb\u30fc\u30b8\u3067\u3059\u3002\ndoc\u00b6\n:   \u30d1\u30fc\u30b9\u5bfe\u8c61\u306e TOML \u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u3067\u3059\u3002\npos\u00b6\n:   doc \u306e\u89e3\u6790\u306b\u5931\u6557\u3057\u305f\u30a4\u30f3\u30c7\u30af\u30b9\u3067\u3059\u3002\nlineno\u00b6\n:   pos \u306b\u5bfe\u5fdc\u3059\u308b\u884c\u3067\u3059\u3002\ncolno\u00b6\n:   pos \u306b\u5bfe\u5fdc\u3059\u308b\u5217\u3067\u3059\u3002\n\u30d0\u30fc\u30b8\u30e7\u30f3 3.14 \u3067\u5909\u66f4: Added the msg, doc and pos parameters. Added the msg, doc, pos, lineno and colno attributes.\n\u30d0\u30fc\u30b8\u30e7\u30f3 3.14 \u3067\u975e\u63a8\u5968: Passing free-form positional arguments is deprecated.\n\u4f7f\u7528\u4f8b\u00b6\nTOML\u30d5\u30a1\u30a4\u30eb\u3092\u89e3\u6790\u3057\u307e\u3059:\n import  tomlli",
+          "start_char": 0,
+          "end_char": 2000,
+          "locator": "extracted_text:chars:0-2000"
+        },
+        {
+          "passage_id": "27a4065f-aa70-5afd-a175-69588c07b898",
+          "source_id": "011e976f-f671-5238-997a-3995ce1e5812",
+          "text": "Navigasi\n index\n modul |\n berikut |\n sebelum |\n Python \u00bb\n 3.15.0 Documentation \u00bb\n The Python standard library \u00bb\n File Formats \u00bb\n tomllib --- Parse TOML files\n |\n |\ntomllib --- Parse TOML files\u00b6\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1.1.0 (Tom's Obvious Minimal Language,  This module does not support writing TOML.\nAdded in version 3.11: The module was added with support for TOML 1.0.0.\nBerubah pada versi 3.15: Added TOML 1.1.0 support. See the What's New for details.\nPeringatan\nBe cautious when parsing data from untrusted sources. A malicious TOML string may cause the decoder to consume considerable CPU and memory resources. Limiting the size of data to be parsed is recommended.\nLihat juga\nThe Tomli-W package is a TOML writer that can be used in conjunction with this module, providing a write API familiar to users of the standard library marshal.\") and pickle modules.\nLihat juga\nThe TOML Kit package is a style-preserving TOML library with both read and write capability. It is a recommended replacement for this module for editing already existing TOML files.\nThis module defines the following functions:\ntomllib.load(fp, /, \\, parse\\_float=float)\u00b6\n:   Read a TOML file. The first argument should be a readable and binary file object. Return a dict. Convert TOML types to Python using this conversion table.\nparse\\_float will be called with the string of every TOML float to be decoded. By default, this is equivalent to float(num_str). This can be used to use another datatype or parser for TOML floats (e.g. decimal.Decimal). The callable must not return a dict or a list, else a ValueError is raised.\nA TOMLDecodeError will be raised on an invalid TOML document.\ntomllib.loads(s, /, \\, parse\\_float=float)\u00b6\n:   Load TOML from a str object. Return a dict. Convert TOML types to Python using this conversion table. The parse\\_float argument has the same meaning as in load().\nA TOMLDecodeError will be raised on an invalid TOML document.\nThe follow",
+          "start_char": 0,
+          "end_char": 2000,
+          "locator": "extracted_text:chars:0-2000"
+        },
+        {
+          "passage_id": "2c3f5969-23e0-53b7-8453-584a8aa14073",
+          "source_id": "cf36fbf5-4ec9-53e2-94eb-c0d7efa55de0",
+          "text": "Navigation\n index\n modules |\n next |\n previous |\n Python \u00bb\n 3.15.0 Documentation \u00bb\n The Python standard library \u00bb\n File Formats \u00bb\n tomllib \u2014 Parse TOML files\n |\n |\ntomllib \u2014 Parse TOML files\u00b6\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1.1.0 (Tom\u2019s Obvious Minimal Language,  This module does not support writing TOML.\nAdded in version 3.11: The module was added with support for TOML 1.0.0.\nChanged in version 3.15: Added TOML 1.1.0 support. See the What\u2019s New for details.\nWarning\nBe cautious when parsing data from untrusted sources. A malicious TOML string may cause the decoder to consume considerable CPU and memory resources. Limiting the size of data to be parsed is recommended.\nSee also\nThe Tomli-W package is a TOML writer that can be used in conjunction with this module, providing a write API familiar to users of the standard library marshal.\") and pickle modules.\nSee also\nThe TOML Kit package is a style-preserving TOML library with both read and write capability. It is a recommended replacement for this module for editing already existing TOML files.\nThis module defines the following functions:\ntomllib.load(fp, /, \\, parse\\_float=float)\u00b6\n:   Read a TOML file. The first argument should be a readable and binary file object. Return a dict. Convert TOML types to Python using this conversion table.\nparse\\_float will be called with the string of every TOML float to be decoded. By default, this is equivalent to float(num_str). This can be used to use another datatype or parser for TOML floats (e.g. decimal.Decimal). The callable must not return a dict or a list, else a ValueError is raised.\nA TOMLDecodeError will be raised on an invalid TOML document.\ntomllib.loads(s, /, \\, parse\\_float=float)\u00b6\n:   Load TOML from a str object. Return a dict. Convert TOML types to Python using this conversion table. The parse\\_float argument has the same meaning as in load().\nA TOMLDecodeError will be raised on an invalid TOML document.\nThe following excep",
+          "start_char": 0,
+          "end_char": 2000,
+          "locator": "extracted_text:chars:0-2000"
+        }
+      ]
+    },
+    "evidence_read_error": null,
+    "report": {
+      "report_id": "5cff6f71-baba-5d39-9a60-9d2d9c67581f",
+      "run_id": "ea6f6c5e-cba9-4b86-af70-87fc0db528a4",
+      "research_question": "According to Python's official documentation, in which Python version was tomllib added to the standard library?",
+      "generated_at": "2026-10-18T11:13:37.694150Z",
+      "generation_status": "deterministic_incomplete",
+      "completion_status": "insufficient_evidence",
+      "mode": "offline_fixture",
+      "executive_summary": [],
+      "verified_findings": [],
+      "sections": [],
+      "supporting_citations": [],
+      "evidence_limitations": [
+        "Verification judges supplied evidence support, not truth across all sources.",
+        "Retained source text and research budgets are bounded; coverage is not exhaustive.",
+        "Source text is untrusted; live accuracy and injection resistance remain unproven.",
+        "This is an offline run, not live web research.",
+        "Model synthesis did not complete; only deterministic verified text is shown."
+      ],
+      "unresolved_research_gaps": [
+        {
+          "gap_id": "aeb57770-54eb-51c4-954b-a68f6f3c4f78",
+          "root_task_id": "b712fd10-8651-521c-aa25-766931020bd8",
+          "kind": "contradicted",
+          "question": "In which Python version was the tomllib module introduced to the standard library according to the official Python documentation?",
+          "claim_ids": [
+            "e8a0e5b0-b727-5a59-b7c0-f2758d19cec6"
+          ],
+          "reason": "contradicted",
+          "retryable": false,
+          "stop_reason": "contradicted_not_researched"
+        }
+      ],
+      "source_disagreements": [],
+      "rejected_claims": [
+        {
+          "claim_id": "e8a0e5b0-b727-5a59-b7c0-f2758d19cec6",
+          "candidate_text": "The tomllib module was not added to the Python standard library in version 3.11.",
+          "category": "CONTRADICTED",
+          "explanation": "Explicit offline semantic fixture: affirmative source context contradicts the negated candidate.",
+          "evidence_ids": [
+            "0291a934-2e54-52d1-9058-3d127bc3963e",
+            "27a4065f-aa70-5afd-a175-69588c07b898",
+            "2c3f5969-23e0-53b7-8453-584a8aa14073",
+            "651f23e0-9fb9-549d-8a57-cedf482fc421"
+          ],
+          "quotations": [
+            {
+              "evidence_id": "0291a934-2e54-52d1-9058-3d127bc3963e",
+              "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+              "start_char": 324,
+              "end_char": 396,
+              "source_id": "6045322a-54aa-5f4a-93a1-6e06ace6aa92",
+              "source_content_sha256": "cbd0b6efff38889689a343904cfac56e4f33a837ce67cacf934c0ce62eabc149",
+              "full_content_sha256": "cbd0b6efff38889689a343904cfac56e4f33a837ce67cacf934c0ce62eabc149",
+              "locator": "extracted_text:chars:324-396"
+            },
+            {
+              "evidence_id": "27a4065f-aa70-5afd-a175-69588c07b898",
+              "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+              "start_char": 353,
+              "end_char": 425,
+              "source_id": "011e976f-f671-5238-997a-3995ce1e5812",
+              "source_content_sha256": "1f180a0bfe67063e23f0527ffbef2e9077d7d73c3295c826efae4e0c2f60fee5",
+              "full_content_sha256": "1f180a0bfe67063e23f0527ffbef2e9077d7d73c3295c826efae4e0c2f60fee5",
+              "locator": "extracted_text:chars:353-425"
+            },
+            {
+              "evidence_id": "2c3f5969-23e0-53b7-8453-584a8aa14073",
+              "text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+              "start_char": 351,
+              "end_char": 423,
+              "source_id": "cf36fbf5-4ec9-53e2-94eb-c0d7efa55de0",
+              "source_content_sha256": "227a49244e1e1e2bd0e795335f49c62e286c563dd2999739b2d49238de319c5d",
+              "full_content_sha256": "227a49244e1e1e2bd0e795335f49c62e286c563dd2999739b2d49238de319c5d",
+              "locator": "extracted_text:chars:351-423"
+            },
+            {
+              "evidence_id": "651f23e0-9fb9-549d-8a57-cedf482fc421",
+              "text": "tomllib \u2014 Parse TOML files\u00b6\nAdded in version 3.11.\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1.0.0 (Tom\u2019s Obvious Minimal Language,",
+              "start_char": 165,
+              "end_char": 330,
+              "source_id": "6b36f614-0792-56bc-91ce-05f7396011a0",
+              "source_content_sha256": "d0d8ab2ee8bc3d540ad8011f62bd3c3826c2640486cf691a5a0cae1b7dc29abb",
+              "full_content_sha256": "d0d8ab2ee8bc3d540ad8011f62bd3c3826c2640486cf691a5a0cae1b7dc29abb",
+              "locator": "extracted_text:chars:165-330"
+            }
+          ]
+        }
+      ],
+      "insufficient_claims": [],
+      "operational_errors": [],
+      "methodology_summary": "Configured method: Mesh planning, Tavily basic retrieval, exact stored-passage integrity checks, Mesh semantic verification and independent blind support review, bounded insufficient-only research and supported-claim organization. Inspect the audit for the stages and requests that actually executed.",
+      "verification_summary": {
+        "CONTRADICTED": 1
+      },
+      "synthesizer_model": null,
+      "citation_validation_status": "valid"
+    },
+    "markdown_report": "# ProofTrail research report\n\n## Research question\nAccording to Python&\\#x27;s official documentation, in which Python version was tomllib added to the standard library?\n\nCompletion: **insufficient_evidence**\nMode: offline_fixture\nGeneration: deterministic_incomplete\n\n## Executive summary\n\n## Verified findings\n\n## Supporting citations\n\n## Evidence limitations\n- Verification judges supplied evidence support, not truth across all sources\\.\n- Retained source text and research budgets are bounded; coverage is not exhaustive\\.\n- Source text is untrusted; live accuracy and injection resistance remain unproven\\.\n- This is an offline run, not live web research\\.\n- Model synthesis did not complete; only deterministic verified text is shown\\.\n\n## Unresolved research gaps\n- contradicted: In which Python version was the tomllib module introduced to the standard library according to the official Python documentation?; contradicted\\_not\\_researched\n\n## Source disagreements (unresolved candidates)\nNone recorded.\n\n## Rejected candidates (not verified findings)\n- The tomllib module was not added to the Python standard library in version 3\\.11\\.\n\n## Insufficient candidates (not verified findings)\nNone recorded.\n\n## Operational errors\nNone recorded.\n\n## Research methodology\nConfigured method: Mesh planning, Tavily basic retrieval, exact stored\\-passage integrity checks, Mesh semantic verification and independent blind support review, bounded insufficient\\-only research and supported\\-claim organization\\. Inspect the audit for the stages and requests that actually executed\\.\n\n## Verification summary\n\\{&\\#x27;CONTRADICTED&\\#x27;: 1\\}\n",
+    "fixture_calls": {
+      "planner": 1,
+      "drafter": 1,
+      "primary": 1,
+      "blind_review": 1,
+      "synthesizer": 0,
+      "search": 1,
+      "extract": 4
+    },
+    "fixture_model_outputs": [
+      {
+        "role": "primary",
+        "output": {
+          "contract_version": "exact_quotes_v2",
+          "claim_id": "e8a0e5b0-b727-5a59-b7c0-f2758d19cec6",
+          "verdict": "SUPPORTED",
+          "evidence_ids": [
+            "0291a934-2e54-52d1-9058-3d127bc3963e",
+            "27a4065f-aa70-5afd-a175-69588c07b898",
+            "2c3f5969-23e0-53b7-8453-584a8aa14073",
+            "651f23e0-9fb9-549d-8a57-cedf482fc421"
+          ],
+          "exact_supporting_quotes": [
+            {
+              "evidence_id": "0291a934-2e54-52d1-9058-3d127bc3963e",
+              "text": "Added in version 3.11: The module was added with support for TOML 1.0.0."
+            },
+            {
+              "evidence_id": "27a4065f-aa70-5afd-a175-69588c07b898",
+              "text": "Added in version 3.11: The module was added with support for TOML 1.0.0."
+            },
+            {
+              "evidence_id": "2c3f5969-23e0-53b7-8453-584a8aa14073",
+              "text": "Added in version 3.11: The module was added with support for TOML 1.0.0."
+            },
+            {
+              "evidence_id": "651f23e0-9fb9-549d-8a57-cedf482fc421",
+              "text": "tomllib \u2014 Parse TOML files\u00b6\nAdded in version 3.11.\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1.0.0 (Tom\u2019s Obvious Minimal Language,"
+            }
+          ],
+          "explanation": "Explicit offline semantic fixture: affirmative source context supports the candidate according to this fixture response."
+        }
+      },
+      {
+        "role": "blind_review",
+        "output": {
+          "contract_version": "exact_quotes_v2",
+          "claim_id": "e8a0e5b0-b727-5a59-b7c0-f2758d19cec6",
+          "verdict": "CONTRADICTED",
+          "evidence_ids": [
+            "0291a934-2e54-52d1-9058-3d127bc3963e",
+            "27a4065f-aa70-5afd-a175-69588c07b898",
+            "2c3f5969-23e0-53b7-8453-584a8aa14073",
+            "651f23e0-9fb9-549d-8a57-cedf482fc421"
+          ],
+          "exact_supporting_quotes": [
+            {
+              "evidence_id": "0291a934-2e54-52d1-9058-3d127bc3963e",
+              "text": "Added in version 3.11: The module was added with support for TOML 1.0.0."
+            },
+            {
+              "evidence_id": "27a4065f-aa70-5afd-a175-69588c07b898",
+              "text": "Added in version 3.11: The module was added with support for TOML 1.0.0."
+            },
+            {
+              "evidence_id": "2c3f5969-23e0-53b7-8453-584a8aa14073",
+              "text": "Added in version 3.11: The module was added with support for TOML 1.0.0."
+            },
+            {
+              "evidence_id": "651f23e0-9fb9-549d-8a57-cedf482fc421",
+              "text": "tomllib \u2014 Parse TOML files\u00b6\nAdded in version 3.11.\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1.0.0 (Tom\u2019s Obvious Minimal Language,"
+            }
+          ],
+          "explanation": "Explicit offline semantic fixture: affirmative source context contradicts the negated candidate."
+        }
+      }
+    ],
+    "graph": {
+      "nodes": [
+        {
+          "id": "__start__",
+          "type": "runnable",
+          "data": {
+            "id": [
+              "langgraph",
+              "_internal",
+              "_runnable",
+              "RunnableCallable"
+            ],
+            "name": "__start__"
+          }
+        },
+        {
+          "id": "plan",
+          "type": "runnable",
+          "data": {
+            "id": [
+              "langgraph",
+              "_internal",
+              "_runnable",
+              "RunnableCallable"
+            ],
+            "name": "plan"
+          }
+        },
+        {
+          "id": "research",
+          "type": "runnable",
+          "data": {
+            "id": [
+              "langgraph",
+              "_internal",
+              "_runnable",
+              "RunnableCallable"
+            ],
+            "name": "research"
+          }
+        },
+        {
+          "id": "collection_summary",
+          "type": "runnable",
+          "data": {
+            "id": [
+              "langgraph",
+              "_internal",
+              "_runnable",
+              "RunnableCallable"
+            ],
+            "name": "collection_summary"
+          }
+        },
+        {
+          "id": "draft",
+          "type": "runnable",
+          "data": {
+            "id": [
+              "langgraph",
+              "_internal",
+              "_runnable",
+              "RunnableCallable"
+            ],
+            "name": "draft"
+          }
+        },
+        {
+          "id": "verify",
+          "type": "runnable",
+          "data": {
+            "id": [
+              "langgraph",
+              "_internal",
+              "_runnable",
+              "RunnableCallable"
+            ],
+            "name": "verify"
+          }
+        },
+        {
+          "id": "verification_summary",
+          "type": "runnable",
+          "data": {
+            "id": [
+              "langgraph",
+              "_internal",
+              "_runnable",
+              "RunnableCallable"
+            ],
+            "name": "verification_summary"
+          }
+        },
+        {
+          "id": "verification_decision",
+          "type": "runnable",
+          "data": {
+            "id": [
+              "langgraph",
+              "_internal",
+              "_runnable",
+              "RunnableCallable"
+            ],
+            "name": "verification_decision"
+          }
+        },
+        {
+          "id": "plan_retry",
+          "type": "runnable",
+          "data": {
+            "id": [
+              "langgraph",
+              "_internal",
+              "_runnable",
+              "RunnableCallable"
+            ],
+            "name": "plan_retry"
+          }
+        },
+        {
+          "id": "retry_research",
+          "type": "runnable",
+          "data": {
+            "id": [
+              "langgraph",
+              "_internal",
+              "_runnable",
+              "RunnableCallable"
+            ],
+            "name": "retry_research"
+          }
+        },
+        {
+          "id": "reverify",
+          "type": "runnable",
+          "data": {
+            "id": [
+              "langgraph",
+              "_internal",
+              "_runnable",
+              "RunnableCallable"
+            ],
+            "name": "reverify"
+          }
+        },
+        {
+          "id": "synthesize",
+          "type": "runnable",
+          "data": {
+            "id": [
+              "langgraph",
+              "_internal",
+              "_runnable",
+              "RunnableCallable"
+            ],
+            "name": "synthesize"
+          }
+        },
+        {
+          "id": "validate_report",
+          "type": "runnable",
+          "data": {
+            "id": [
+              "langgraph",
+              "_internal",
+              "_runnable",
+              "RunnableCallable"
+            ],
+            "name": "validate_report"
+          }
+        },
+        {
+          "id": "__end__"
+        }
+      ],
+      "edges": [
+        {
+          "source": "__start__",
+          "target": "plan"
+        },
+        {
+          "source": "collection_summary",
+          "target": "__end__",
+          "data": "legacy",
+          "conditional": true
+        },
+        {
+          "source": "collection_summary",
+          "target": "draft",
+          "conditional": true
+        },
+        {
+          "source": "collection_summary",
+          "target": "verification_summary",
+          "data": "summary",
+          "conditional": true
+        },
+        {
+          "source": "draft",
+          "target": "verification_summary",
+          "data": "summary",
+          "conditional": true
+        },
+        {
+          "source": "draft",
+          "target": "verify",
+          "conditional": true
+        },
+        {
+          "source": "plan",
+          "target": "collection_summary",
+          "data": "stop",
+          "conditional": true
+        },
+        {
+          "source": "plan",
+          "target": "research",
+          "conditional": true
+        },
+        {
+          "source": "plan_retry",
+          "target": "retry_research",
+          "data": "research",
+          "conditional": true
+        },
+        {
+          "source": "plan_retry",
+          "target": "verification_decision",
+          "data": "decision",
+          "conditional": true
+        },
+        {
+          "source": "research",
+          "target": "collection_summary"
+        },
+        {
+          "source": "retry_research",
+          "target": "reverify"
+        },
+        {
+          "source": "reverify",
+          "target": "verification_summary"
+        },
+        {
+          "source": "synthesize",
+          "target": "validate_report"
+        },
+        {
+          "source": "verification_decision",
+          "target": "plan_retry",
+          "data": "retry",
+          "conditional": true
+        },
+        {
+          "source": "verification_decision",
+          "target": "synthesize",
+          "data": "report",
+          "conditional": true
+        },
+        {
+          "source": "verification_summary",
+          "target": "__end__",
+          "data": "legacy",
+          "conditional": true
+        },
+        {
+          "source": "verification_summary",
+          "target": "verification_decision",
+          "data": "decision",
+          "conditional": true
+        },
+        {
+          "source": "verify",
+          "target": "verification_summary"
+        },
+        {
+          "source": "validate_report",
+          "target": "__end__"
+        }
+      ]
+    },
+    "alembic_head": "0005",
+    "foreign_key_violations": [],
+    "final_repository_validation": "PASSED",
+    "live_provider_requests": 0
+  }
+}

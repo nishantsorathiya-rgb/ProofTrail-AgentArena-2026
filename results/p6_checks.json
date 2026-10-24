@@ -1,0 +1,128 @@
+{
+  "phase": "P6",
+  "started_at_utc": "2026-10-15T17:41:39.267406+00:00",
+  "python": "3.12.13",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "mode": "offline synthetic fixtures",
+  "passed": true,
+  "tests_passed": 274,
+  "previous_phase_test_count": 238,
+  "checks": [
+    {
+      "command": [
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 254.556,
+      "stdout": "........................................................................ [ 26%]\n........................................................................ [ 52%]\n........................................................................ [ 78%]\n..........................................................               [100%]\n274 passed in 248.14s (0:04:08)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\.venv\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "app"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.475,
+      "stdout": "Listing 'app'...\nListing 'app\\\\agents'...\nListing 'app\\\\api'...\nListing 'app\\\\application'...\nListing 'app\\\\domain'...\nListing 'app\\\\evaluation'...\nListing 'app\\\\infrastructure'...\nListing 'app\\\\infrastructure\\\\migrations'...\nListing 'app\\\\infrastructure\\\\migrations\\\\versions'...\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.392,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.201,
+      "stdout": "No broken requirements found.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\.venv\\Scripts\\python.exe",
+        "-m",
+        "alembic",
+        "upgrade",
+        "head"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.155,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\.venv\\Scripts\\python.exe",
+        "-m",
+        "alembic",
+        "heads"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.982,
+      "stdout": "0005 (head)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\.venv\\Scripts\\python.exe",
+        "-m",
+        "alembic",
+        "current"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.853,
+      "stdout": "0005 (head)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\.venv\\Scripts\\python.exe",
+        "-m",
+        "alembic",
+        "check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.135,
+      "stdout": "No new upgrade operations detected.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\.venv\\Scripts\\python.exe",
+        "-m",
+        "scripts.evaluate_p6",
+        "--split",
+        "all",
+        "--allow-held-out"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 38.827,
+      "stdout": "P6 offline evaluation: 60 core cases, 18 adversarial scenarios, 3 workflows; reviewed accuracy N/A until owner review.\nSaved <USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\results\\p6_evaluation_offline.json and <USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\results\\p6_metrics.md; live calls 0; cost $0.\n",
+      "stderr": "{\"timestamp\": \"2026-10-15T17:46:18.764929+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:19.026083+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:19.279508+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:19.511492+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:19.747224+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:19.971663+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:20.199684+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:20.457682+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:20.711004+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:20.945139+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:21.183414+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:21.426013+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:21.669484+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:21.921088+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:22.187717+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:22.432410+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:22.679699+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:22.918467+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:23.155885+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:23.412743+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:23.662331+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:23.903477+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:24.146355+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:24.379586+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:24.616384+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:24.880996+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:25.129057+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:25.372667+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:25.625999+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:25.875587+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:26.116425+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:26.371000+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:26.631283+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:26.872580+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:27.119637+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:27.356282+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:27.591452+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:27.848739+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:28.104057+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:28.341975+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:28.586407+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:28.825905+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:29.056360+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:29.311233+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:29.578885+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:29.820469+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:30.056743+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:30.304052+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:30.537103+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:30.786522+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:31.030825+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:31.259162+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:31.488363+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:31.721783+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:31.953141+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:32.199854+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:32.442472+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:32.675878+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:32.908290+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:33.147389+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:33.378233+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:33.613168+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:33.844451+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:34.073514+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:34.324240+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:34.579210+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:34.796236+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:35.020693+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:35.240626+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:35.489538+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:35.743773+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:35.964557+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:36.192484+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:36.427263+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:37.518896+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:37.629211+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 1.441}\n{\"timestamp\": \"2026-10-15T17:46:37.664050+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"extract\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 0.2, \"status_code\": 200, \"duration_ms\": 1.003}\n{\"timestamp\": \"2026-10-15T17:46:37.839031+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:38.029531+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:38.134208+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:38.303612+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:38.615882+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:38.763188+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 0.968}\n{\"timestamp\": \"2026-10-15T17:46:38.795289+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"extract\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 0.2, \"status_code\": 200, \"duration_ms\": 0.993}\n{\"timestamp\": \"2026-10-15T17:46:39.080038+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:39.165432+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:39.700721+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:40.607597+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:40.713758+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 1.077}\n{\"timestamp\": \"2026-10-15T17:46:40.745737+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"extract\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 0.2, \"status_code\": 200, \"duration_ms\": 0.879}\n{\"timestamp\": \"2026-10-15T17:46:40.897141+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:41.069122+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:41.280441+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:41.293700+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:41.618364+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:41.764227+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 0.8}\n{\"timestamp\": \"2026-10-15T17:46:41.797166+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"extract\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 0.2, \"status_code\": 200, \"duration_ms\": 0.889}\n{\"timestamp\": \"2026-10-15T17:46:42.074292+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:42.157817+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:42.594234+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:42.756870+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 0.887}\n{\"timestamp\": \"2026-10-15T17:46:42.785176+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"extract\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 0.2, \"status_code\": 200, \"duration_ms\": 1.076}\n{\"timestamp\": \"2026-10-15T17:46:43.123852+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:43.216108+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:43.736927+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:44.760565+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:44.870653+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 0.558}\n{\"timestamp\": \"2026-10-15T17:46:45.055004+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:45.198161+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 0.607}\n{\"timestamp\": \"2026-10-15T17:46:45.420790+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-15T17:46:45.587374+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 0.607}\n"
+    }
+  ],
+  "live_mesh_calls": 0,
+  "live_tavily_calls": 0,
+  "actual_api_cost_usd": 0,
+  "_public_copy_notice": "Privacy-redacted derivative. Raw owner original preserved locally. Private home paths/account details replaced; observed outcomes unchanged."
+}

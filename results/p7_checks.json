@@ -1,0 +1,195 @@
+{
+  "phase": "P7",
+  "python": "3.12.13",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "mode": "OFFLINE_OWNER_REQUEST",
+  "owner_live_decision": "Keep P7 offline; no provider requests",
+  "raw_run_directory": "results\\p7_runs\\20261016T023618-3f38350d",
+  "checks": [
+    {
+      "command": [
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 295.669,
+      "stdout": "........................................................................ [ 23%]\n........................................................................ [ 46%]\n........................................................................ [ 69%]\n........................................................................ [ 92%]\n......................                                                   [100%]\n310 passed in 289.01s (0:04:49)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\.venv\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "app"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.431,
+      "stdout": "Listing 'app'...\nListing 'app\\\\agents'...\nListing 'app\\\\api'...\nListing 'app\\\\application'...\nListing 'app\\\\domain'...\nListing 'app\\\\evaluation'...\nListing 'app\\\\infrastructure'...\nListing 'app\\\\infrastructure\\\\migrations'...\nListing 'app\\\\infrastructure\\\\migrations\\\\versions'...\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\.venv\\Scripts\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.378,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.06,
+      "stdout": "No broken requirements found.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\.venv\\Scripts\\python.exe",
+        "-m",
+        "alembic",
+        "upgrade",
+        "head"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.787,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\.venv\\Scripts\\python.exe",
+        "-m",
+        "alembic",
+        "heads"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.888,
+      "stdout": "0005 (head)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\.venv\\Scripts\\python.exe",
+        "-m",
+        "alembic",
+        "current"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.761,
+      "stdout": "0005 (head)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\.venv\\Scripts\\python.exe",
+        "-m",
+        "alembic",
+        "check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.172,
+      "stdout": "No new upgrade operations detected.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\.venv\\Scripts\\python.exe",
+        "-m",
+        "scripts.p7_semantic",
+        "--require-safe",
+        "--output",
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\results\\p7_runs\\20261016T023618-3f38350d\\semantic.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 21.757,
+      "stdout": "Semantic release gate: PASS for these fixtures\n",
+      "stderr": "{\"timestamp\": \"2026-10-16T02:41:39.161361+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:41:39.561724+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:41:39.916556+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:41:40.275267+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:41:40.335091+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:41:40.719735+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:41:40.786070+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:41:41.184808+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:41:41.526719+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:41:41.904095+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:41:42.266188+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:41:42.642538+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:41:42.990145+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:41:43.328078+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:41:43.671079+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:41:44.036518+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:41:45.732481+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:41:45.811450+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:41:46.053490+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:41:46.567070+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:41:46.692130+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 1.329}\n{\"timestamp\": \"2026-10-16T02:41:46.730907+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"extract\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 0.2, \"status_code\": 200, \"duration_ms\": 1.466}\n{\"timestamp\": \"2026-10-16T02:41:46.925733+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:41:47.101692+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:41:47.176661+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:41:47.916663+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:41:48.027740+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 0.975}\n{\"timestamp\": \"2026-10-16T02:41:48.063089+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"extract\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 0.2, \"status_code\": 200, \"duration_ms\": 1.058}\n{\"timestamp\": \"2026-10-16T02:41:48.235095+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:41:48.388945+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:41:48.452111+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n"
+    },
+    {
+      "command": [
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\.venv\\Scripts\\python.exe",
+        "-m",
+        "scripts.p7_benchmark",
+        "--run-directory",
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\results\\p7_runs\\20261016T023618-3f38350d\\paired"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 27.382,
+      "stdout": "Paired benchmark: 5 immutable offline pairs; live calls 0; cost $0.\n",
+      "stderr": "{\"timestamp\": \"2026-10-16T02:41:59.545783+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:41:59.694696+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 1.535}\n{\"timestamp\": \"2026-10-16T02:41:59.730258+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"extract\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 0.2, \"status_code\": 200, \"duration_ms\": 1.563}\n{\"timestamp\": \"2026-10-16T02:41:59.918174+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:00.380827+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:00.490505+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 0.903}\n{\"timestamp\": \"2026-10-16T02:42:00.532139+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"extract\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 0.2, \"status_code\": 200, \"duration_ms\": 1.038}\n{\"timestamp\": \"2026-10-16T02:42:00.698909+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:00.960322+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:01.133402+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:01.324080+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:01.383643+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:01.688612+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:01.825344+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 0.893}\n{\"timestamp\": \"2026-10-16T02:42:01.855610+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"extract\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 0.2, \"status_code\": 200, \"duration_ms\": 0.955}\n{\"timestamp\": \"2026-10-16T02:42:02.182959+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:02.228389+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:02.315601+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:02.393163+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:02.940930+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:03.785898+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:03.899413+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 1.222}\n{\"timestamp\": \"2026-10-16T02:42:03.940967+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"extract\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 0.2, \"status_code\": 200, \"duration_ms\": 0.902}\n{\"timestamp\": \"2026-10-16T02:42:04.109248+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:04.306195+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:04.419333+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:04.449007+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:04.760814+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:05.063608+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:05.208593+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 0.824}\n{\"timestamp\": \"2026-10-16T02:42:05.242771+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"extract\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 0.2, \"status_code\": 200, \"duration_ms\": 1.156}\n{\"timestamp\": \"2026-10-16T02:42:05.569873+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:05.584737+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:05.673941+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:06.142758+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:06.874822+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:07.193229+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 0.94}\n{\"timestamp\": \"2026-10-16T02:42:07.228094+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"extract\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 0.2, \"status_code\": 200, \"duration_ms\": 1.085}\n{\"timestamp\": \"2026-10-16T02:42:07.415774+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:07.888452+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:07.992714+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 0.898}\n{\"timestamp\": \"2026-10-16T02:42:08.485846+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:08.600760+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 0.899}\n{\"timestamp\": \"2026-10-16T02:42:08.806236+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:08.947790+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 0.687}\n{\"timestamp\": \"2026-10-16T02:42:09.183656+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:09.350160+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 0.688}\n{\"timestamp\": \"2026-10-16T02:42:10.127941+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:10.238944+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 1.004}\n{\"timestamp\": \"2026-10-16T02:42:10.276219+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"extract\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 0.2, \"status_code\": 200, \"duration_ms\": 0.968}\n{\"timestamp\": \"2026-10-16T02:42:10.453415+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:10.649893+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:10.764167+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:10.781552+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:10.879899+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:11.017858+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:11.270267+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:11.696829+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:12.361463+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:12.462817+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 0.806}\n{\"timestamp\": \"2026-10-16T02:42:12.495056+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"extract\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 0.2, \"status_code\": 200, \"duration_ms\": 1.324}\n{\"timestamp\": \"2026-10-16T02:42:12.677294+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:13.153950+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:13.256171+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 0.864}\n{\"timestamp\": \"2026-10-16T02:42:13.288217+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"extract\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 0.2, \"status_code\": 200, \"duration_ms\": 0.971}\n{\"timestamp\": \"2026-10-16T02:42:13.464485+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:13.910898+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:14.023623+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 0.956}\n{\"timestamp\": \"2026-10-16T02:42:14.058904+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"extract\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 0.2, \"status_code\": 200, \"duration_ms\": 1.57}\n{\"timestamp\": \"2026-10-16T02:42:14.225481+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:14.402457+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:14.516939+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:14.603425+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:14.842675+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:15.065598+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:15.208019+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 0.721}\n{\"timestamp\": \"2026-10-16T02:42:15.468237+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:15.645544+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 0.611}\n"
+    },
+    {
+      "command": [
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\.venv\\Scripts\\python.exe",
+        "-m",
+        "scripts.p7_profile_reads",
+        "--label",
+        "post-semantic-fix",
+        "--output",
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\results\\p7_runs\\20261016T023618-3f38350d\\reads_after.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 8.754,
+      "stdout": "{\"label\": \"post-semantic-fix\", \"passages\": 6, \"median_queries\": 8.0, \"median_seconds_excluding_warmup\": 0.01876089999996111}\n",
+      "stderr": "{\"timestamp\": \"2026-10-16T02:42:24.746444+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:24.809505+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n"
+    },
+    {
+      "command": [
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\.venv\\Scripts\\python.exe",
+        "-m",
+        "scripts.p7_performance",
+        "--output",
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\results\\p7_runs\\20261016T023618-3f38350d\\performance.json",
+        "--before",
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\results\\p7_reads_before.json",
+        "--after",
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\results\\p7_runs\\20261016T023618-3f38350d\\reads_after.json",
+        "--comparison",
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\results\\p7_runs\\20261016T023618-3f38350d\\paired\\comparison.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 15.248,
+      "stdout": "Performance recorded: queries 23.0 -> 8.0; live calls 0.\n",
+      "stderr": "{\"timestamp\": \"2026-10-16T02:42:35.577499+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:35.730910+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 1.581}\n{\"timestamp\": \"2026-10-16T02:42:35.764563+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"extract\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 0.2, \"status_code\": 200, \"duration_ms\": 1.549}\n{\"timestamp\": \"2026-10-16T02:42:35.939760+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:36.123066+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:36.267317+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:36.441679+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:36.503756+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:36.810968+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:36.958662+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 0.848}\n{\"timestamp\": \"2026-10-16T02:42:37.294080+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:37.461406+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": 1.0, \"status_code\": 200, \"duration_ms\": 1.029}\n{\"timestamp\": \"2026-10-16T02:42:37.846630+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:38.585826+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:38.746792+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": null, \"status_code\": 200, \"duration_ms\": 38.842}\n{\"timestamp\": \"2026-10-16T02:42:38.822848+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"extract\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": null, \"status_code\": 200, \"duration_ms\": 43.844}\n{\"timestamp\": \"2026-10-16T02:42:38.945569+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": null, \"status_code\": 200, \"duration_ms\": 33.845}\n{\"timestamp\": \"2026-10-16T02:42:39.007213+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"extract\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": null, \"status_code\": 200, \"duration_ms\": 31.837}\n{\"timestamp\": \"2026-10-16T02:42:39.131408+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": null, \"status_code\": 200, \"duration_ms\": 40.062}\n{\"timestamp\": \"2026-10-16T02:42:39.195539+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"extract\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": null, \"status_code\": 200, \"duration_ms\": 33.919}\n{\"timestamp\": \"2026-10-16T02:42:39.630876+00:00\", \"level\": \"INFO\", \"event\": \"mesh_completion\", \"prompt_tokens\": 20, \"completion_tokens\": 10}\n{\"timestamp\": \"2026-10-16T02:42:39.863155+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": null, \"status_code\": 200, \"duration_ms\": 15.315}\n{\"timestamp\": \"2026-10-16T02:42:39.875815+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": null, \"status_code\": 200, \"duration_ms\": 9.667}\n{\"timestamp\": \"2026-10-16T02:42:39.905968+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"search\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": null, \"status_code\": 200, \"duration_ms\": 7.568}\n{\"timestamp\": \"2026-10-16T02:42:39.924707+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"extract\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": null, \"status_code\": 200, \"duration_ms\": 10.55}\n{\"timestamp\": \"2026-10-16T02:42:40.019267+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"extract\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": null, \"status_code\": 200, \"duration_ms\": 10.735}\n{\"timestamp\": \"2026-10-16T02:42:40.030930+00:00\", \"level\": \"INFO\", \"event\": \"tavily_request\", \"operation\": \"extract\", \"attempt_number\": 1, \"error_code\": null, \"reported_credits\": null, \"status_code\": 200, \"duration_ms\": 7.556}\n"
+    },
+    {
+      "command": [
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\.venv\\Scripts\\python.exe",
+        "-m",
+        "scripts.p7_readiness",
+        "--output",
+        "<USER_HOME>\\Documents\\ChatGPT\\Agent Arena 2026\\results\\p7_runs\\20261016T023618-3f38350d\\readiness.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.229,
+      "stdout": "Readiness recorded without network calls; live compatibility NOT verified.\n",
+      "stderr": ""
+    }
+  ],
+  "passed": true,
+  "tests_passed": 310,
+  "known_semantic_release_probes_passed": true,
+  "production_release_ready": false,
+  "remaining_release_requirements": [
+    "Independent human-reviewed semantic evaluation",
+    "Approved live Mesh/Tavily compatibility and semantic validation",
+    "Owner review; correlated semantic errors remain possible with the same model"
+  ],
+  "live_mesh_requests": 0,
+  "live_tavily_requests": 0,
+  "actual_api_cost_usd": 0,
+  "_public_copy_notice": "Privacy-redacted derivative. Raw owner original preserved locally. Private home paths/account details replaced; observed outcomes unchanged."
+}

@@ -1,0 +1,71 @@
+{
+  "mode": "DIAGNOSIS_OF_ACTUAL_LIVE_RESPONSE_NOT_A_NEW_MODEL_EVALUATION",
+  "primary_proposed_verdict": "SUPPORTED",
+  "persisted_outcome": "validation_rejected",
+  "persisted_verdict": "INSUFFICIENT_EVIDENCE",
+  "rejection_reason": "verification_quote_mismatch",
+  "root_cause": "All four model quotes use absolute source offsets 0:200. Their actual exact text is present elsewhere in each source, with lengths 165/72/72/72 rather than 200. The strict offset/text gate correctly rejected them. No invented quotation text was found in these four references.",
+  "quotes": [
+    {
+      "evidence_id": "084519d2-d532-5047-84eb-c0384f21c21f",
+      "original_url": "https://docs.python.org/3.13/library/tomllib.html",
+      "model_quote_text": "tomllib \u2014 Parse TOML files\u00b6\nAdded in version 3.11.\nSource code: Lib/tomllib\nThis module provides an interface for parsing TOML 1.0.0 (Tom\u2019s Obvious Minimal Language,",
+      "model_start_char": 0,
+      "model_end_char": 200,
+      "model_quote_length": 165,
+      "expected_declared_span_length": 200,
+      "quote_found_exactly_in_source": true,
+      "first_actual_start_char_for_diagnosis_only": 165,
+      "first_actual_end_char_for_diagnosis_only": 330,
+      "declared_slice_equals_quote": false,
+      "offsets_or_verdict_modified": false
+    },
+    {
+      "evidence_id": "28e3be83-2bc4-50a0-be80-0ac1de8b6d89",
+      "original_url": "https://docs.python.org/ja/3/library/tomllib.html",
+      "model_quote_text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+      "model_start_char": 0,
+      "model_end_char": 200,
+      "model_quote_length": 72,
+      "expected_declared_span_length": 200,
+      "quote_found_exactly_in_source": true,
+      "first_actual_start_char_for_diagnosis_only": 324,
+      "first_actual_end_char_for_diagnosis_only": 396,
+      "declared_slice_equals_quote": false,
+      "offsets_or_verdict_modified": false
+    },
+    {
+      "evidence_id": "436b4ea4-9aad-55e2-96e9-359977a52ee0",
+      "original_url": "https://docs.python.org/id/3.15/library/tomllib.html",
+      "model_quote_text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+      "model_start_char": 0,
+      "model_end_char": 200,
+      "model_quote_length": 72,
+      "expected_declared_span_length": 200,
+      "quote_found_exactly_in_source": true,
+      "first_actual_start_char_for_diagnosis_only": 353,
+      "first_actual_end_char_for_diagnosis_only": 425,
+      "declared_slice_equals_quote": false,
+      "offsets_or_verdict_modified": false
+    },
+    {
+      "evidence_id": "4d232bac-cc8a-5444-bb5b-f04de019988b",
+      "original_url": "https://docs.python.org/3/library/tomllib.html",
+      "model_quote_text": "Added in version 3.11: The module was added with support for TOML 1.0.0.",
+      "model_start_char": 0,
+      "model_end_char": 200,
+      "model_quote_length": 72,
+      "expected_declared_span_length": 200,
+      "quote_found_exactly_in_source": true,
+      "first_actual_start_char_for_diagnosis_only": 351,
+      "first_actual_end_char_for_diagnosis_only": 423,
+      "declared_slice_equals_quote": false,
+      "offsets_or_verdict_modified": false
+    }
+  ],
+  "blind_semantic_review": "NOT_REACHED_PRIMARY_VALIDATION_FAILED",
+  "research_retry": "NOT_EXERCISED_NONRETRYABLE_OPERATIONAL_GAP",
+  "model_synthesis": "NOT_INVOKED_NO_SUPPORTED_FINDINGS",
+  "final_report": "PERSISTED_DETERMINISTIC_INCOMPLETE_WITH_ZERO_VERIFIED_FINDINGS",
+  "automatic_repair_or_live_replay_performed": false
+}

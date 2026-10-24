@@ -1,0 +1,7 @@
+{
+  "artifact_kind": "PUBLIC_ARCHIVE_RETENTION_MARKER_V1_NOT_EXECUTION_JOURNAL",
+  "upstream_public_blob_sha256": "66d7256a6797f35a65ce8edc449a825a19ec4fe9c7876ae4ccc6e6bd75cab902",
+  "scope": "Raw B001 provider journal and operational telemetry excluded from public selection. Private original retained unchanged.",
+  "new_live_execution": false,
+  "regression_role": "Read-only archive preservation guard; not evidence of provider calls, usage or performance."
+}

@@ -1,0 +1,3 @@
+# Preserve reviewed bytes, including frozen source hashes and the organizer workflow.
+# Any deliberate line-ending normalization requires a new reviewed manifest.
+* -text

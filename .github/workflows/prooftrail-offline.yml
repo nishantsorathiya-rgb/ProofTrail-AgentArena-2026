@@ -1,0 +1,27 @@
+name: ProofTrail offline validation
+
+# Explicit invocation only. The separate organizer workflow reports on push.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline:
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.12']
+    env:
+      ENABLE_LIVE_REQUESTS: 'false'
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install exact tested dependencies
+        run: python -m pip install -c requirements.lock -e '.[dev]'
+      - name: Validate offline (no provider secrets)
+        run: python -m scripts.check_p8a

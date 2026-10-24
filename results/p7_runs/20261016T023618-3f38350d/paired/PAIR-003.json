@@ -1,0 +1,1149 @@
+{
+  "case_id": "PAIR-003",
+  "execution_order": [
+    "baseline",
+    "prooftrail"
+  ],
+  "identical_initial_evidence": true,
+  "baseline": {
+    "arm": "baseline",
+    "question": "Research AlphaCo's 2024 employees and revenue when source searches return nothing.",
+    "model_configuration": {
+      "requested_model": "offline-mesh-p5-fixture",
+      "temperature": 0,
+      "fallback": false,
+      "sdk_retries": 0
+    },
+    "initial_evidence": [],
+    "quality": {
+      "provisional_synthetic_metrics": {
+        "assertions": 0,
+        "supported": 0,
+        "unsupported": 0,
+        "unknown": 0,
+        "supported_final_claim_rate": null,
+        "unsupported_final_claim_rate": null,
+        "false_supported_rate": null,
+        "false_supported_denominator": "All factual assertions emitted by this arm; baseline assertions are unverified, not verifier approvals.",
+        "structural_citation_correctness": null,
+        "semantic_citation_correctness": null,
+        "research_completeness": 0.0,
+        "covered_subtopics": [],
+        "expected_subtopics": [
+          "AlphaCo employed 42 people in 2024.",
+          "AlphaCo reported revenue of 5 million dollars in 2024."
+        ]
+      },
+      "human_reviewed_metrics": null,
+      "live_model_metrics": null,
+      "evaluated_assertions": [],
+      "failure_examples": []
+    },
+    "end_to_end_seconds": 0.3165545000001657,
+    "provider_calls": {
+      "planner": 1,
+      "drafter": 0,
+      "verifier": 0,
+      "followup": 0,
+      "synthesizer": 0,
+      "search": 1,
+      "extract": 0
+    },
+    "state": {
+      "run_id": "6f470639-27fc-425e-ab7b-7707d202ddfa",
+      "original_question": "Research AlphaCo's 2024 employees and revenue when source searches return nothing.",
+      "phase": "P3",
+      "verification_status": "not_implemented",
+      "mode": "offline_fixture",
+      "status": "completed",
+      "execution_status": "no_evidence",
+      "research_plan": {
+        "goal": "Research the synthetic AlphaCo 2024 fixture",
+        "subquestions": [
+          {
+            "question": "What were AlphaCo's 2024 employees and revenue?",
+            "search_query": "AlphaCo 2024 official disclosures",
+            "evidence_requirement": "Exact original employee and revenue passages"
+          }
+        ]
+      },
+      "subquestions": [
+        {
+          "task_id": "981f17a7-e604-5b7f-97cb-d501c83b9a80",
+          "assignment": {
+            "question": "What were AlphaCo's 2024 employees and revenue?",
+            "search_query": "AlphaCo 2024 official disclosures",
+            "evidence_requirement": "Exact original employee and revenue passages"
+          },
+          "parent_task_id": null,
+          "retry_number": 0,
+          "status": "empty",
+          "source_ids": [],
+          "passage_ids": [],
+          "warnings": [
+            "no_evidence_found"
+          ],
+          "error_code": null,
+          "started_at": "2026-10-16T02:42:07.947484Z",
+          "finished_at": "2026-10-16T02:42:07.999560Z",
+          "duration_seconds": 0.052146
+        }
+      ],
+      "research_task_status": {
+        "981f17a7-e604-5b7f-97cb-d501c83b9a80": "empty"
+      },
+      "retrieved_evidence_ids": [],
+      "source_references": [],
+      "warnings": [
+        "no_evidence_found"
+      ],
+      "errors": [],
+      "budgets": {
+        "max_llm_calls": 12,
+        "max_searches": 6,
+        "max_fetches": 10,
+        "model_attempts": 1,
+        "llm_calls": 1,
+        "search_requests": 1,
+        "extract_requests": 0,
+        "fetch_units": 0,
+        "max_research_tasks": 9,
+        "max_retries_per_subquestion": 2,
+        "max_claims": 18
+      },
+      "created_at": "2026-10-16T02:42:07.826437Z",
+      "updated_at": "2026-10-16T02:42:08.129730Z",
+      "started_at": "2026-10-16T02:42:07.854337Z",
+      "finished_at": "2026-10-16T02:42:08.076226Z",
+      "planning_duration_seconds": 0.043283,
+      "research_duration_seconds": 0.090585,
+      "total_duration_seconds": 0.224066,
+      "cache_hits": 0,
+      "prompt_tokens": 20,
+      "completion_tokens": 10,
+      "collection_status": "no_evidence",
+      "candidate_claim_ids": [],
+      "supported_claim_ids": [],
+      "verification_counts": {},
+      "drafting_duration_seconds": 0.0,
+      "verification_duration_seconds": 0.0,
+      "verification_persistence_duration_ms": 0.0,
+      "verification_llm_requests": 0,
+      "verification_failures": 0,
+      "verification_prompt_tokens": null,
+      "verification_completion_tokens": null,
+      "research_gaps": [],
+      "retry_history": [],
+      "retry_counts": {
+        "981f17a7-e604-5b7f-97cb-d501c83b9a80": 0
+      },
+      "active_retry_ids": [],
+      "eligible_gap_ids": [],
+      "correction_stopped": false,
+      "correction_stop_reason": null,
+      "retry_duration_seconds": 0.0,
+      "synthesis_duration_seconds": 0.0,
+      "report_validation_duration_seconds": 0.0,
+      "report_id": null,
+      "report_generation_status": "not_implemented",
+      "audit_events": [
+        {
+          "event_id": "274cd8a4-c4e9-4c35-9157-b96b0e0e8ca5",
+          "sequence": 1,
+          "timestamp": "2026-10-16T02:42:07.834194Z",
+          "agent": "coordinator",
+          "event": "run_queued",
+          "task_id": null,
+          "details": {}
+        },
+        {
+          "event_id": "89d15ba3-2fac-473e-a2fa-15c114c841d7",
+          "sequence": 2,
+          "timestamp": "2026-10-16T02:42:07.858170Z",
+          "agent": "planner",
+          "event": "planner_started",
+          "task_id": null,
+          "details": {}
+        },
+        {
+          "event_id": "2b8121e7-5d69-4b7f-a91a-e27361932800",
+          "sequence": 3,
+          "timestamp": "2026-10-16T02:42:07.912918Z",
+          "agent": "planner",
+          "event": "planner_completed",
+          "task_id": null,
+          "details": {
+            "task_count": 1,
+            "duplicates_removed": 0
+          }
+        },
+        {
+          "event_id": "6b14fa42-9036-467b-9132-29c08d0613c5",
+          "sequence": 4,
+          "timestamp": "2026-10-16T02:42:07.933486Z",
+          "agent": "researcher",
+          "event": "research_started",
+          "task_id": null,
+          "details": {
+            "task_count": 1
+          }
+        },
+        {
+          "event_id": "b196f42b-872c-4e6c-964c-146f5a12ffcd",
+          "sequence": 5,
+          "timestamp": "2026-10-16T02:42:07.951352Z",
+          "agent": "researcher",
+          "event": "task_started",
+          "task_id": "981f17a7-e604-5b7f-97cb-d501c83b9a80",
+          "details": {
+            "status": "running",
+            "source_ids": [],
+            "passage_ids": [],
+            "duration_seconds": 0,
+            "error_code": ""
+          }
+        },
+        {
+          "event_id": "76728d6c-ded6-41a3-bedf-3e865ef15033",
+          "sequence": 6,
+          "timestamp": "2026-10-16T02:42:08.003217Z",
+          "agent": "researcher",
+          "event": "task_finished",
+          "task_id": "981f17a7-e604-5b7f-97cb-d501c83b9a80",
+          "details": {
+            "status": "empty",
+            "source_ids": [],
+            "passage_ids": [],
+            "duration_seconds": 0.052146,
+            "error_code": ""
+          }
+        },
+        {
+          "event_id": "b6383fee-2abf-4e8e-9729-032efcd7ad42",
+          "sequence": 7,
+          "timestamp": "2026-10-16T02:42:08.031551Z",
+          "agent": "researcher",
+          "event": "research_completed",
+          "task_id": null,
+          "details": {}
+        },
+        {
+          "event_id": "2fab0edb-744f-4b3a-b141-bce3f84d4ecb",
+          "sequence": 8,
+          "timestamp": "2026-10-16T02:42:08.059539Z",
+          "agent": "graph",
+          "event": "collection_summarized",
+          "task_id": null,
+          "details": {
+            "source_count": 0,
+            "passage_count": 0,
+            "verification_status": "not_implemented"
+          }
+        },
+        {
+          "event_id": "a09a3c9f-d358-4556-9080-1037cf4b7ba0",
+          "sequence": 9,
+          "timestamp": "2026-10-16T02:42:08.079210Z",
+          "agent": "graph",
+          "event": "workflow_finished",
+          "task_id": null,
+          "details": {
+            "execution_status": "no_evidence",
+            "total_duration_seconds": 0.224066
+          }
+        },
+        {
+          "event_id": "b7c05a69-7ce3-4e11-a38a-d87a5f2b9849",
+          "sequence": 10,
+          "timestamp": "2026-10-16T02:42:08.100464Z",
+          "agent": "drafter",
+          "event": "baseline_drafting_started",
+          "task_id": null,
+          "details": {}
+        },
+        {
+          "event_id": "89767ed1-9d05-4064-af1a-4b1babbdf855",
+          "sequence": 11,
+          "timestamp": "2026-10-16T02:42:08.129730Z",
+          "agent": "drafter",
+          "event": "baseline_drafting_completed",
+          "task_id": null,
+          "details": {
+            "assertions": 0
+          }
+        }
+      ]
+    },
+    "claims": {
+      "run_id": "6f470639-27fc-425e-ab7b-7707d202ddfa",
+      "claims": [],
+      "supported_claim_ids": [],
+      "note": "Evidence-support decisions and immutable verification history."
+    },
+    "report": null,
+    "retry_effectiveness": [],
+    "model_request_timings": [
+      {
+        "usage_id": "2a0c55db-da67-4cc1-b19d-0fee73f01574",
+        "status": "success",
+        "elapsed_seconds": 0.004214,
+        "error_code": null,
+        "model": "offline-mesh-p5-fixture"
+      }
+    ],
+    "retrieval_request_timings": [
+      {
+        "operation": "search",
+        "status": "success",
+        "elapsed_seconds": 0.000898,
+        "error_code": null,
+        "fixture_credits": 1.0
+      }
+    ],
+    "api_usage": {
+      "model_requests": 1,
+      "search_requests": 1,
+      "extract_requests": 0,
+      "cache_hits": 0,
+      "fixture_prompt_tokens": 20,
+      "fixture_completion_tokens": 10,
+      "actual_cost_usd": 0,
+      "estimated_live_cost_usd": null
+    }
+  },
+  "prooftrail": {
+    "arm": "prooftrail",
+    "question": "Research AlphaCo's 2024 employees and revenue when source searches return nothing.",
+    "model_configuration": {
+      "requested_model": "offline-mesh-p5-fixture",
+      "temperature": 0,
+      "fallback": false,
+      "sdk_retries": 0
+    },
+    "initial_evidence": [],
+    "quality": {
+      "provisional_synthetic_metrics": {
+        "assertions": 0,
+        "supported": 0,
+        "unsupported": 0,
+        "unknown": 0,
+        "supported_final_claim_rate": null,
+        "unsupported_final_claim_rate": null,
+        "false_supported_rate": null,
+        "false_supported_denominator": "All factual assertions emitted by this arm; baseline assertions are unverified, not verifier approvals.",
+        "structural_citation_correctness": null,
+        "semantic_citation_correctness": null,
+        "research_completeness": 0.0,
+        "covered_subtopics": [],
+        "expected_subtopics": [
+          "AlphaCo employed 42 people in 2024.",
+          "AlphaCo reported revenue of 5 million dollars in 2024."
+        ]
+      },
+      "human_reviewed_metrics": null,
+      "live_model_metrics": null,
+      "evaluated_assertions": [],
+      "failure_examples": []
+    },
+    "end_to_end_seconds": 1.3413664999998218,
+    "provider_calls": {
+      "planner": 1,
+      "drafter": 0,
+      "verifier": 0,
+      "followup": 2,
+      "synthesizer": 0,
+      "search": 3,
+      "extract": 0
+    },
+    "state": {
+      "run_id": "ce7803df-18cd-4a3f-a998-2b53a31d4bd4",
+      "original_question": "Research AlphaCo's 2024 employees and revenue when source searches return nothing.",
+      "phase": "P5",
+      "verification_status": "not_run",
+      "mode": "offline_fixture",
+      "status": "completed",
+      "execution_status": "report_ready",
+      "research_plan": {
+        "goal": "Research the synthetic AlphaCo 2024 fixture",
+        "subquestions": [
+          {
+            "question": "What were AlphaCo's 2024 employees and revenue?",
+            "search_query": "AlphaCo 2024 official disclosures",
+            "evidence_requirement": "Exact original employee and revenue passages"
+          }
+        ]
+      },
+      "subquestions": [
+        {
+          "task_id": "4853ba52-8716-5fc4-9ca2-e347de9f156c",
+          "assignment": {
+            "question": "What were AlphaCo's 2024 employees and revenue?",
+            "search_query": "AlphaCo 2024 official disclosures",
+            "evidence_requirement": "Exact original employee and revenue passages"
+          },
+          "parent_task_id": null,
+          "retry_number": 0,
+          "status": "empty",
+          "source_ids": [],
+          "passage_ids": [],
+          "warnings": [
+            "no_evidence_found"
+          ],
+          "error_code": null,
+          "started_at": "2026-10-16T02:42:08.552846Z",
+          "finished_at": "2026-10-16T02:42:08.609454Z",
+          "duration_seconds": 0.056636
+        },
+        {
+          "task_id": "0c78c38e-b733-5fdc-8a35-0a7b19630d72",
+          "assignment": {
+            "question": "What exact 2024 revenue did AlphaCo disclose?",
+            "search_query": "AlphaCo revenue 2024 audited filing",
+            "evidence_requirement": "Original 2024 revenue disclosure"
+          },
+          "parent_task_id": "4853ba52-8716-5fc4-9ca2-e347de9f156c",
+          "retry_number": 1,
+          "status": "empty",
+          "source_ids": [],
+          "passage_ids": [],
+          "warnings": [
+            "no_evidence_found"
+          ],
+          "error_code": null,
+          "started_at": "2026-10-16T02:42:08.900568Z",
+          "finished_at": "2026-10-16T02:42:08.954454Z",
+          "duration_seconds": 0.053804
+        },
+        {
+          "task_id": "216b36c5-7c03-5fa1-ac7b-20387c14f0f0",
+          "assignment": {
+            "question": "What exact 2024 revenue did AlphaCo disclose?",
+            "search_query": "AlphaCo revenue 2024 regulator annual accounts",
+            "evidence_requirement": "Original 2024 revenue disclosure"
+          },
+          "parent_task_id": "4853ba52-8716-5fc4-9ca2-e347de9f156c",
+          "retry_number": 2,
+          "status": "empty",
+          "source_ids": [],
+          "passage_ids": [],
+          "warnings": [
+            "no_evidence_found"
+          ],
+          "error_code": null,
+          "started_at": "2026-10-16T02:42:09.297247Z",
+          "finished_at": "2026-10-16T02:42:09.356795Z",
+          "duration_seconds": 0.059581
+        }
+      ],
+      "research_task_status": {
+        "4853ba52-8716-5fc4-9ca2-e347de9f156c": "empty",
+        "0c78c38e-b733-5fdc-8a35-0a7b19630d72": "empty",
+        "216b36c5-7c03-5fa1-ac7b-20387c14f0f0": "empty"
+      },
+      "retrieved_evidence_ids": [],
+      "source_references": [],
+      "warnings": [
+        "no_evidence_found"
+      ],
+      "errors": [],
+      "budgets": {
+        "max_llm_calls": 12,
+        "max_searches": 6,
+        "max_fetches": 10,
+        "model_attempts": 3,
+        "llm_calls": 3,
+        "search_requests": 3,
+        "extract_requests": 0,
+        "fetch_units": 0,
+        "max_research_tasks": 9,
+        "max_retries_per_subquestion": 2,
+        "max_claims": 18
+      },
+      "created_at": "2026-10-16T02:42:08.423793Z",
+      "updated_at": "2026-10-16T02:42:09.717189Z",
+      "started_at": "2026-10-16T02:42:08.451175Z",
+      "finished_at": "2026-10-16T02:42:09.713308Z",
+      "planning_duration_seconds": 0.04455,
+      "research_duration_seconds": 0.346169,
+      "total_duration_seconds": 1.26331,
+      "cache_hits": 0,
+      "prompt_tokens": 60,
+      "completion_tokens": 30,
+      "collection_status": "no_evidence",
+      "candidate_claim_ids": [],
+      "supported_claim_ids": [],
+      "verification_counts": {},
+      "drafting_duration_seconds": 0.0,
+      "verification_duration_seconds": 0.0,
+      "verification_persistence_duration_ms": 0.0,
+      "verification_llm_requests": 0,
+      "verification_failures": 0,
+      "verification_prompt_tokens": null,
+      "verification_completion_tokens": null,
+      "research_gaps": [
+        {
+          "gap_id": "71d76c56-64b9-576b-b8d0-f0b6fded83be",
+          "root_task_id": "4853ba52-8716-5fc4-9ca2-e347de9f156c",
+          "kind": "missing_evidence",
+          "question": "What were AlphaCo's 2024 employees and revenue?",
+          "claim_ids": [],
+          "reason": "missing_evidence",
+          "retryable": false,
+          "stop_reason": "retry_limit_reached"
+        }
+      ],
+      "retry_history": [
+        {
+          "retry_id": "ea136199-07c9-592f-9b6f-b72fad178b97",
+          "root_task_id": "4853ba52-8716-5fc4-9ca2-e347de9f156c",
+          "task_id": "0c78c38e-b733-5fdc-8a35-0a7b19630d72",
+          "number": 1,
+          "trigger": "missing_evidence",
+          "question": "What exact 2024 revenue did AlphaCo disclose?",
+          "search_query": "AlphaCo revenue 2024 audited filing",
+          "claim_ids": [],
+          "drafted_claim_ids": [],
+          "previous_verdicts": {},
+          "updated_verdicts": {},
+          "previous_evidence_ids": [],
+          "new_evidence_ids": [],
+          "status": "no_new_evidence",
+          "created_at": "2026-10-16T02:42:08.815268Z",
+          "finished_at": "2026-10-16T02:42:08.993038Z",
+          "duration_seconds": 0.17777,
+          "error_code": "no_evidence_found"
+        },
+        {
+          "retry_id": "a3cce97b-2d85-54ea-8ab0-fef2c09cce34",
+          "root_task_id": "4853ba52-8716-5fc4-9ca2-e347de9f156c",
+          "task_id": "216b36c5-7c03-5fa1-ac7b-20387c14f0f0",
+          "number": 2,
+          "trigger": "missing_evidence",
+          "question": "What exact 2024 revenue did AlphaCo disclose?",
+          "search_query": "AlphaCo revenue 2024 regulator annual accounts",
+          "claim_ids": [],
+          "drafted_claim_ids": [],
+          "previous_verdicts": {},
+          "updated_verdicts": {},
+          "previous_evidence_ids": [],
+          "new_evidence_ids": [],
+          "status": "no_new_evidence",
+          "created_at": "2026-10-16T02:42:09.196717Z",
+          "finished_at": "2026-10-16T02:42:09.396455Z",
+          "duration_seconds": 0.199738,
+          "error_code": "no_evidence_found"
+        }
+      ],
+      "retry_counts": {
+        "4853ba52-8716-5fc4-9ca2-e347de9f156c": 2
+      },
+      "active_retry_ids": [],
+      "eligible_gap_ids": [],
+      "correction_stopped": false,
+      "correction_stop_reason": null,
+      "retry_duration_seconds": 0.405598,
+      "synthesis_duration_seconds": 0.033396,
+      "report_validation_duration_seconds": 0.042649,
+      "report_id": "f7195940-cc05-5c16-a2d6-fc2ef19cee14",
+      "report_generation_status": "incomplete",
+      "audit_events": [
+        {
+          "event_id": "2a270803-030a-4eb9-8127-7958951532ad",
+          "sequence": 1,
+          "timestamp": "2026-10-16T02:42:08.431408Z",
+          "agent": "coordinator",
+          "event": "run_queued",
+          "task_id": null,
+          "details": {}
+        },
+        {
+          "event_id": "296d4423-916e-4ed6-80fb-c999849007bf",
+          "sequence": 2,
+          "timestamp": "2026-10-16T02:42:08.454150Z",
+          "agent": "planner",
+          "event": "planner_started",
+          "task_id": null,
+          "details": {}
+        },
+        {
+          "event_id": "c0975bb0-4fed-4fbe-ac67-57b93b36c822",
+          "sequence": 3,
+          "timestamp": "2026-10-16T02:42:08.511298Z",
+          "agent": "planner",
+          "event": "planner_completed",
+          "task_id": null,
+          "details": {
+            "task_count": 1,
+            "duplicates_removed": 0
+          }
+        },
+        {
+          "event_id": "fd754812-fa1b-47ea-b1e4-e2a1266f4e69",
+          "sequence": 4,
+          "timestamp": "2026-10-16T02:42:08.538074Z",
+          "agent": "researcher",
+          "event": "research_started",
+          "task_id": null,
+          "details": {
+            "task_count": 1
+          }
+        },
+        {
+          "event_id": "d6cd8203-9749-47a9-b739-bc1d713c59ca",
+          "sequence": 5,
+          "timestamp": "2026-10-16T02:42:08.556633Z",
+          "agent": "researcher",
+          "event": "task_started",
+          "task_id": "4853ba52-8716-5fc4-9ca2-e347de9f156c",
+          "details": {
+            "status": "running",
+            "source_ids": [],
+            "passage_ids": [],
+            "duration_seconds": 0,
+            "error_code": ""
+          }
+        },
+        {
+          "event_id": "a34348e5-9ff0-4125-b4c9-d3e38cb69a18",
+          "sequence": 6,
+          "timestamp": "2026-10-16T02:42:08.613579Z",
+          "agent": "researcher",
+          "event": "task_finished",
+          "task_id": "4853ba52-8716-5fc4-9ca2-e347de9f156c",
+          "details": {
+            "status": "empty",
+            "source_ids": [],
+            "passage_ids": [],
+            "duration_seconds": 0.056636,
+            "error_code": ""
+          }
+        },
+        {
+          "event_id": "22fb5f97-daa5-4deb-8388-c4fcda705548",
+          "sequence": 7,
+          "timestamp": "2026-10-16T02:42:08.645124Z",
+          "agent": "researcher",
+          "event": "research_completed",
+          "task_id": null,
+          "details": {}
+        },
+        {
+          "event_id": "11d9987d-fa2d-42f1-b157-85b21d222969",
+          "sequence": 8,
+          "timestamp": "2026-10-16T02:42:08.676817Z",
+          "agent": "graph",
+          "event": "collection_summarized",
+          "task_id": null,
+          "details": {
+            "source_count": 0,
+            "passage_count": 0,
+            "verification_status": "pending"
+          }
+        },
+        {
+          "event_id": "8a4893ac-f968-47e4-b4d3-9c2378683f88",
+          "sequence": 9,
+          "timestamp": "2026-10-16T02:42:08.710151Z",
+          "agent": "graph",
+          "event": "verification_summarized",
+          "task_id": null,
+          "details": {
+            "claims_processed": 0,
+            "supported_claim_count": 0,
+            "verification_status": "not_run"
+          }
+        },
+        {
+          "event_id": "91d79f32-4f15-4c33-83da-2c885719a3a4",
+          "sequence": 10,
+          "timestamp": "2026-10-16T02:42:08.745531Z",
+          "agent": "graph",
+          "event": "verification_decision",
+          "task_id": null,
+          "details": {
+            "retryable_gap_ids": [
+              "71d76c56-64b9-576b-b8d0-f0b6fded83be"
+            ],
+            "stop_reasons": [],
+            "unresolved_gap_count": 1
+          }
+        },
+        {
+          "event_id": "6f65bad2-78c3-487a-9d63-ddae4070d5b2",
+          "sequence": 11,
+          "timestamp": "2026-10-16T02:42:08.769182Z",
+          "agent": "planner",
+          "event": "followup_planner_started",
+          "task_id": null,
+          "details": {}
+        },
+        {
+          "event_id": "5ab599ea-ebba-457c-b802-99618d100133",
+          "sequence": 12,
+          "timestamp": "2026-10-16T02:42:08.819634Z",
+          "agent": "planner",
+          "event": "research_retry_planned",
+          "task_id": null,
+          "details": {
+            "retry_ids": [
+              "ea136199-07c9-592f-9b6f-b72fad178b97"
+            ],
+            "task_ids": [
+              "0c78c38e-b733-5fdc-8a35-0a7b19630d72"
+            ],
+            "queries": [
+              "AlphaCo revenue 2024 audited filing"
+            ]
+          }
+        },
+        {
+          "event_id": "6f693331-4680-4a9e-93b7-ecc48536cfdc",
+          "sequence": 13,
+          "timestamp": "2026-10-16T02:42:08.851927Z",
+          "agent": "graph",
+          "event": "retry_plan_recorded",
+          "task_id": null,
+          "details": {}
+        },
+        {
+          "event_id": "5288eb57-1aa8-406f-82b5-3cc8e4e2c577",
+          "sequence": 14,
+          "timestamp": "2026-10-16T02:42:08.880568Z",
+          "agent": "researcher",
+          "event": "retry_research_started",
+          "task_id": null,
+          "details": {
+            "retry_ids": [
+              "ea136199-07c9-592f-9b6f-b72fad178b97"
+            ]
+          }
+        },
+        {
+          "event_id": "13fcd9f1-853f-4fc4-bb24-cd8ef02a8eee",
+          "sequence": 15,
+          "timestamp": "2026-10-16T02:42:08.905711Z",
+          "agent": "researcher",
+          "event": "task_started",
+          "task_id": "0c78c38e-b733-5fdc-8a35-0a7b19630d72",
+          "details": {
+            "status": "running",
+            "source_ids": [],
+            "passage_ids": [],
+            "duration_seconds": 0,
+            "error_code": ""
+          }
+        },
+        {
+          "event_id": "d2b3a4d6-69ca-4c14-9cb8-715931e2537c",
+          "sequence": 16,
+          "timestamp": "2026-10-16T02:42:08.959717Z",
+          "agent": "researcher",
+          "event": "task_finished",
+          "task_id": "0c78c38e-b733-5fdc-8a35-0a7b19630d72",
+          "details": {
+            "status": "empty",
+            "source_ids": [],
+            "passage_ids": [],
+            "duration_seconds": 0.053804,
+            "error_code": ""
+          }
+        },
+        {
+          "event_id": "c7cd94aa-0778-4af5-9d3d-2d8c9bee20d9",
+          "sequence": 17,
+          "timestamp": "2026-10-16T02:42:09.003199Z",
+          "agent": "researcher",
+          "event": "retry_research_completed",
+          "task_id": null,
+          "details": {
+            "new_evidence_ids": [],
+            "statuses": [
+              "no_new_evidence"
+            ]
+          }
+        },
+        {
+          "event_id": "61a15c9f-d297-4681-924f-7da91401e697",
+          "sequence": 18,
+          "timestamp": "2026-10-16T02:42:09.030001Z",
+          "agent": "verifier",
+          "event": "reverification_started",
+          "task_id": null,
+          "details": {}
+        },
+        {
+          "event_id": "fa84a1ce-6d7e-4bd6-8b7a-d8720f8f005a",
+          "sequence": 19,
+          "timestamp": "2026-10-16T02:42:09.079149Z",
+          "agent": "graph",
+          "event": "verification_summarized",
+          "task_id": null,
+          "details": {
+            "claims_processed": 0,
+            "supported_claim_count": 0,
+            "verification_status": "not_run"
+          }
+        },
+        {
+          "event_id": "2a4fb6e2-765d-4122-a3ee-adf951f6c0e3",
+          "sequence": 20,
+          "timestamp": "2026-10-16T02:42:09.118558Z",
+          "agent": "graph",
+          "event": "verification_decision",
+          "task_id": null,
+          "details": {
+            "retryable_gap_ids": [
+              "71d76c56-64b9-576b-b8d0-f0b6fded83be"
+            ],
+            "stop_reasons": [],
+            "unresolved_gap_count": 1
+          }
+        },
+        {
+          "event_id": "24233074-ed1d-464d-84b0-c433f5d12801",
+          "sequence": 21,
+          "timestamp": "2026-10-16T02:42:09.145243Z",
+          "agent": "planner",
+          "event": "followup_planner_started",
+          "task_id": null,
+          "details": {}
+        },
+        {
+          "event_id": "f2af8287-62e7-473b-be62-ba1bd15ae741",
+          "sequence": 22,
+          "timestamp": "2026-10-16T02:42:09.200768Z",
+          "agent": "planner",
+          "event": "research_retry_planned",
+          "task_id": null,
+          "details": {
+            "retry_ids": [
+              "a3cce97b-2d85-54ea-8ab0-fef2c09cce34"
+            ],
+            "task_ids": [
+              "216b36c5-7c03-5fa1-ac7b-20387c14f0f0"
+            ],
+            "queries": [
+              "AlphaCo revenue 2024 regulator annual accounts"
+            ]
+          }
+        },
+        {
+          "event_id": "bd4ee484-c7bf-4b99-bebb-3e9eb155ba03",
+          "sequence": 23,
+          "timestamp": "2026-10-16T02:42:09.235949Z",
+          "agent": "graph",
+          "event": "retry_plan_recorded",
+          "task_id": null,
+          "details": {}
+        },
+        {
+          "event_id": "17430c71-42af-43ce-8c42-df0a85eeecee",
+          "sequence": 24,
+          "timestamp": "2026-10-16T02:42:09.271342Z",
+          "agent": "researcher",
+          "event": "retry_research_started",
+          "task_id": null,
+          "details": {
+            "retry_ids": [
+              "a3cce97b-2d85-54ea-8ab0-fef2c09cce34"
+            ]
+          }
+        },
+        {
+          "event_id": "ea0beaa5-ec82-441c-b46e-4ce667ad1104",
+          "sequence": 25,
+          "timestamp": "2026-10-16T02:42:09.300621Z",
+          "agent": "researcher",
+          "event": "task_started",
+          "task_id": "216b36c5-7c03-5fa1-ac7b-20387c14f0f0",
+          "details": {
+            "status": "running",
+            "source_ids": [],
+            "passage_ids": [],
+            "duration_seconds": 0,
+            "error_code": ""
+          }
+        },
+        {
+          "event_id": "63a766ab-b51c-4169-a80f-33eca5a75025",
+          "sequence": 26,
+          "timestamp": "2026-10-16T02:42:09.360780Z",
+          "agent": "researcher",
+          "event": "task_finished",
+          "task_id": "216b36c5-7c03-5fa1-ac7b-20387c14f0f0",
+          "details": {
+            "status": "empty",
+            "source_ids": [],
+            "passage_ids": [],
+            "duration_seconds": 0.059581,
+            "error_code": ""
+          }
+        },
+        {
+          "event_id": "0bfa7120-14f2-4dad-92cb-d24a4896a007",
+          "sequence": 27,
+          "timestamp": "2026-10-16T02:42:09.406853Z",
+          "agent": "researcher",
+          "event": "retry_research_completed",
+          "task_id": null,
+          "details": {
+            "new_evidence_ids": [],
+            "statuses": [
+              "no_new_evidence"
+            ]
+          }
+        },
+        {
+          "event_id": "91557484-80d8-4a23-9c46-a3997f7163bd",
+          "sequence": 28,
+          "timestamp": "2026-10-16T02:42:09.437909Z",
+          "agent": "verifier",
+          "event": "reverification_started",
+          "task_id": null,
+          "details": {}
+        },
+        {
+          "event_id": "329f0d11-3b06-4061-be57-3c6c21f31778",
+          "sequence": 29,
+          "timestamp": "2026-10-16T02:42:09.486719Z",
+          "agent": "graph",
+          "event": "verification_summarized",
+          "task_id": null,
+          "details": {
+            "claims_processed": 0,
+            "supported_claim_count": 0,
+            "verification_status": "not_run"
+          }
+        },
+        {
+          "event_id": "d98cd031-b0a8-4b25-b934-2c1a38ba7e20",
+          "sequence": 30,
+          "timestamp": "2026-10-16T02:42:09.531637Z",
+          "agent": "graph",
+          "event": "verification_decision",
+          "task_id": null,
+          "details": {
+            "retryable_gap_ids": [],
+            "stop_reasons": [
+              "retry_limit_reached"
+            ],
+            "unresolved_gap_count": 1
+          }
+        },
+        {
+          "event_id": "705d74c3-2513-4c65-9664-5b3b0de5a70a",
+          "sequence": 31,
+          "timestamp": "2026-10-16T02:42:09.567884Z",
+          "agent": "synthesizer",
+          "event": "synthesis_started",
+          "task_id": null,
+          "details": {}
+        },
+        {
+          "event_id": "9f927e2d-7abf-4ad8-adda-14edf3669a5d",
+          "sequence": 32,
+          "timestamp": "2026-10-16T02:42:09.608689Z",
+          "agent": "synthesizer",
+          "event": "synthesis_incomplete",
+          "task_id": null,
+          "details": {
+            "generation_status": "deterministic_incomplete",
+            "error_code": "",
+            "finding_count": 0
+          }
+        },
+        {
+          "event_id": "72a8f639-c58b-47af-8bcc-162d7118d7d6",
+          "sequence": 33,
+          "timestamp": "2026-10-16T02:42:09.642553Z",
+          "agent": "graph",
+          "event": "report_validation_started",
+          "task_id": null,
+          "details": {}
+        },
+        {
+          "event_id": "8afcf2e0-38cb-4cfb-b634-12b6b36a96eb",
+          "sequence": 34,
+          "timestamp": "2026-10-16T02:42:09.685016Z",
+          "agent": "graph",
+          "event": "report_validated",
+          "task_id": null,
+          "details": {
+            "report_id": "f7195940-cc05-5c16-a2d6-fc2ef19cee14",
+            "finding_count": 0,
+            "citation_count": 0,
+            "completion_status": "insufficient_evidence"
+          }
+        },
+        {
+          "event_id": "292acbb4-6ce9-4d8e-bf2b-3163cd88f928",
+          "sequence": 35,
+          "timestamp": "2026-10-16T02:42:09.717189Z",
+          "agent": "graph",
+          "event": "workflow_finished",
+          "task_id": null,
+          "details": {
+            "execution_status": "report_ready",
+            "total_duration_seconds": 1.26331
+          }
+        }
+      ]
+    },
+    "claims": {
+      "run_id": "ce7803df-18cd-4a3f-a998-2b53a31d4bd4",
+      "claims": [],
+      "supported_claim_ids": [],
+      "note": "Evidence-support decisions and immutable verification history."
+    },
+    "report": {
+      "report_id": "f7195940-cc05-5c16-a2d6-fc2ef19cee14",
+      "run_id": "ce7803df-18cd-4a3f-a998-2b53a31d4bd4",
+      "research_question": "Research AlphaCo's 2024 employees and revenue when source searches return nothing.",
+      "generated_at": "2026-10-16T02:42:09.597121Z",
+      "generation_status": "deterministic_incomplete",
+      "completion_status": "insufficient_evidence",
+      "mode": "offline_fixture",
+      "executive_summary": [],
+      "verified_findings": [],
+      "sections": [],
+      "supporting_citations": [],
+      "evidence_limitations": [
+        "Verification judges supplied evidence support, not truth across all sources.",
+        "Retained source text and research budgets are bounded; coverage is not exhaustive.",
+        "Source text is untrusted; live accuracy and injection resistance remain unproven.",
+        "This is an offline run, not live web research.",
+        "Model synthesis did not complete; only deterministic verified text is shown."
+      ],
+      "unresolved_research_gaps": [
+        {
+          "gap_id": "71d76c56-64b9-576b-b8d0-f0b6fded83be",
+          "root_task_id": "4853ba52-8716-5fc4-9ca2-e347de9f156c",
+          "kind": "missing_evidence",
+          "question": "What were AlphaCo's 2024 employees and revenue?",
+          "claim_ids": [],
+          "reason": "missing_evidence",
+          "retryable": false,
+          "stop_reason": "retry_limit_reached"
+        }
+      ],
+      "source_disagreements": [],
+      "rejected_claims": [],
+      "insufficient_claims": [],
+      "operational_errors": [],
+      "methodology_summary": "Configured method: Mesh planning, Tavily basic retrieval, exact stored-passage integrity checks, Mesh semantic verification and independent blind support review, bounded insufficient-only research and supported-claim organization. Inspect the audit for the stages and requests that actually executed.",
+      "verification_summary": {},
+      "synthesizer_model": null,
+      "citation_validation_status": "valid"
+    },
+    "retry_effectiveness": [
+      {
+        "record": {
+          "retry_id": "ea136199-07c9-592f-9b6f-b72fad178b97",
+          "root_task_id": "4853ba52-8716-5fc4-9ca2-e347de9f156c",
+          "task_id": "0c78c38e-b733-5fdc-8a35-0a7b19630d72",
+          "number": 1,
+          "trigger": "missing_evidence",
+          "question": "What exact 2024 revenue did AlphaCo disclose?",
+          "search_query": "AlphaCo revenue 2024 audited filing",
+          "claim_ids": [],
+          "drafted_claim_ids": [],
+          "previous_verdicts": {},
+          "updated_verdicts": {},
+          "previous_evidence_ids": [],
+          "new_evidence_ids": [],
+          "status": "no_new_evidence",
+          "created_at": "2026-10-16T02:42:08.815268Z",
+          "finished_at": "2026-10-16T02:42:08.993038Z",
+          "duration_seconds": 0.17777,
+          "error_code": "no_evidence_found"
+        },
+        "changes": []
+      },
+      {
+        "record": {
+          "retry_id": "a3cce97b-2d85-54ea-8ab0-fef2c09cce34",
+          "root_task_id": "4853ba52-8716-5fc4-9ca2-e347de9f156c",
+          "task_id": "216b36c5-7c03-5fa1-ac7b-20387c14f0f0",
+          "number": 2,
+          "trigger": "missing_evidence",
+          "question": "What exact 2024 revenue did AlphaCo disclose?",
+          "search_query": "AlphaCo revenue 2024 regulator annual accounts",
+          "claim_ids": [],
+          "drafted_claim_ids": [],
+          "previous_verdicts": {},
+          "updated_verdicts": {},
+          "previous_evidence_ids": [],
+          "new_evidence_ids": [],
+          "status": "no_new_evidence",
+          "created_at": "2026-10-16T02:42:09.196717Z",
+          "finished_at": "2026-10-16T02:42:09.396455Z",
+          "duration_seconds": 0.199738,
+          "error_code": "no_evidence_found"
+        },
+        "changes": []
+      }
+    ],
+    "model_request_timings": [
+      {
+        "usage_id": "deec3a63-8427-42ca-a577-295b6e8f903f",
+        "status": "success",
+        "elapsed_seconds": 0.003574,
+        "error_code": null,
+        "model": "offline-mesh-p5-fixture"
+      },
+      {
+        "usage_id": "c539239f-dd6e-40bd-882a-548018af5e09",
+        "status": "success",
+        "elapsed_seconds": 0.003696,
+        "error_code": null,
+        "model": "offline-mesh-p5-fixture"
+      },
+      {
+        "usage_id": "f7209bb3-ef9f-4c29-999c-0da3f7129b75",
+        "status": "success",
+        "elapsed_seconds": 0.003229,
+        "error_code": null,
+        "model": "offline-mesh-p5-fixture"
+      }
+    ],
+    "retrieval_request_timings": [
+      {
+        "operation": "search",
+        "status": "success",
+        "elapsed_seconds": 0.000899,
+        "error_code": null,
+        "fixture_credits": 1.0
+      },
+      {
+        "operation": "search",
+        "status": "success",
+        "elapsed_seconds": 0.000687,
+        "error_code": null,
+        "fixture_credits": 1.0
+      },
+      {
+        "operation": "search",
+        "status": "success",
+        "elapsed_seconds": 0.000688,
+        "error_code": null,
+        "fixture_credits": 1.0
+      }
+    ],
+    "api_usage": {
+      "model_requests": 3,
+      "search_requests": 3,
+      "extract_requests": 0,
+      "cache_hits": 0,
+      "fixture_prompt_tokens": 60,
+      "fixture_completion_tokens": 30,
+      "actual_cost_usd": 0,
+      "estimated_live_cost_usd": null
+    }
+  },
+  "incremental_usage": {
+    "model_requests": 2,
+    "search_requests": 2,
+    "extract_requests": 0
+  },
+  "latency_delta_seconds": 1.024811999999656
+}

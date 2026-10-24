@@ -1,0 +1,717 @@
+{
+  "scope": "PUBLIC_PROJECTION_001_OFFLINE_VALIDATION",
+  "date_ist": "2026-10-22",
+  "status": "PASSED_OFFLINE_ENGINEERING_NOT_A_LEGAL_CLEARANCE_OR_CI_RESULT",
+  "full_suite_results": [
+    {
+      "python": "311",
+      "passed": 423,
+      "pytest_seconds": 383.91
+    },
+    {
+      "python": "312",
+      "passed": 423,
+      "pytest_seconds": 379.77
+    }
+  ],
+  "commands": [
+    {
+      "python": "311",
+      "candidate": "public_release_checkpoint_005",
+      "commands": [
+        {
+          "arguments": [
+            "--version"
+          ],
+          "exit_code": 0,
+          "stdout": "Python 3.11.17\n",
+          "stderr": "",
+          "seconds": 0.128181
+        },
+        {
+          "arguments": [
+            "-c",
+            "import app; from pathlib import Path; from app.application.config import Settings; print(\"isolated imports:\",Path(app.__file__).resolve().is_relative_to(Path.cwd())); print(\"live enabled:\",Settings().enable_live_requests)"
+          ],
+          "exit_code": 0,
+          "stdout": "isolated imports: True\nlive enabled: False\n",
+          "stderr": "",
+          "seconds": 2.612485
+        },
+        {
+          "arguments": [
+            "-m",
+            "pytest",
+            "-q"
+          ],
+          "exit_code": 0,
+          "stdout": "........................................................................ [ 17%]\n........................................................................ [ 34%]\n........................................................................ [ 51%]\n........................................................................ [ 68%]\n........................................................................ [ 85%]\n...............................................................          [100%]\n423 passed in 383.91s (0:06:23)\n",
+          "stderr": "",
+          "seconds": 393.55222
+        },
+        {
+          "arguments": [
+            "-m",
+            "compileall",
+            "app"
+          ],
+          "exit_code": 0,
+          "stdout": "Listing 'app'...\nListing 'app\\\\agents'...\nListing 'app\\\\api'...\nListing 'app\\\\application'...\nListing 'app\\\\domain'...\nListing 'app\\\\evaluation'...\nListing 'app\\\\infrastructure'...\nListing 'app\\\\infrastructure\\\\migrations'...\nCompiling 'app\\\\infrastructure\\\\migrations\\\\__init__.py'...\nListing 'app\\\\infrastructure\\\\migrations\\\\versions'...\nCompiling 'app\\\\infrastructure\\\\migrations\\\\versions\\\\__init__.py'...\n",
+          "stderr": "",
+          "seconds": 1.000306
+        },
+        {
+          "arguments": [
+            "-m",
+            "compileall",
+            "-q",
+            "scripts",
+            "tests"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "seconds": 1.286359
+        },
+        {
+          "arguments": [
+            "-m",
+            "ruff",
+            "check",
+            "."
+          ],
+          "exit_code": 0,
+          "stdout": "All checks passed!\n",
+          "stderr": "",
+          "seconds": 2.215741
+        },
+        {
+          "arguments": [
+            "-m",
+            "pip",
+            "check"
+          ],
+          "exit_code": 0,
+          "stdout": "No broken requirements found.\n",
+          "stderr": "",
+          "seconds": 6.840374
+        },
+        {
+          "arguments": [
+            "-m",
+            "alembic",
+            "upgrade",
+            "head"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "seconds": 4.480248
+        },
+        {
+          "arguments": [
+            "-m",
+            "alembic",
+            "heads"
+          ],
+          "exit_code": 0,
+          "stdout": "0005 (head)\n",
+          "stderr": "",
+          "seconds": 3.352191
+        },
+        {
+          "arguments": [
+            "-m",
+            "alembic",
+            "current"
+          ],
+          "exit_code": 0,
+          "stdout": "0005 (head)\n",
+          "stderr": "",
+          "seconds": 4.46113
+        },
+        {
+          "arguments": [
+            "-m",
+            "alembic",
+            "check"
+          ],
+          "exit_code": 0,
+          "stdout": "No new upgrade operations detected.\n",
+          "stderr": "",
+          "seconds": 4.344891
+        },
+        {
+          "arguments": [
+            "-c",
+            "import sqlite3; from app.application.config import Settings; c=sqlite3.connect(Settings().database_url.removeprefix(\"sqlite:///\")); print(\"integrity:\",c.execute(\"pragma integrity_check\").fetchone()[0]); print(\"foreign key violations:\",len(c.execute(\"pragma foreign_key_check\").fetchall())); c.close()"
+          ],
+          "exit_code": 0,
+          "stdout": "integrity: ok\nforeign key violations: 0\n",
+          "stderr": "",
+          "seconds": 2.225978
+        },
+        {
+          "arguments": [
+            "-c",
+            "import ast; from pathlib import Path; paths=[p for d in (\"app\",\"scripts\",\"tests\") for p in Path(d).rglob(\"*.py\")]; [ast.parse(p.read_text(encoding=\"utf-8-sig\"),feature_version=(3,11)) for p in paths]; print(\"Python 3.11 grammar:\",len(paths),\"files parsed\")"
+          ],
+          "exit_code": 0,
+          "stdout": "Python 3.11 grammar: 143 files parsed\n",
+          "stderr": "",
+          "seconds": 0.93743
+        }
+      ],
+      "provider_requests": 0,
+      "api_cost_usd": 0,
+      "complete": true,
+      "all_commands_passed": true
+    },
+    {
+      "python": "312",
+      "candidate": "public_release_checkpoint_005",
+      "commands": [
+        {
+          "arguments": [
+            "--version"
+          ],
+          "exit_code": 0,
+          "stdout": "Python 3.12.13\n",
+          "stderr": "",
+          "seconds": 0.115961
+        },
+        {
+          "arguments": [
+            "-c",
+            "import app; from pathlib import Path; from app.application.config import Settings; print(\"isolated imports:\",Path(app.__file__).resolve().is_relative_to(Path.cwd())); print(\"live enabled:\",Settings().enable_live_requests)"
+          ],
+          "exit_code": 0,
+          "stdout": "isolated imports: True\nlive enabled: False\n",
+          "stderr": "",
+          "seconds": 1.343361
+        },
+        {
+          "arguments": [
+            "-m",
+            "pytest",
+            "-q"
+          ],
+          "exit_code": 0,
+          "stdout": "........................................................................ [ 17%]\n........................................................................ [ 34%]\n........................................................................ [ 51%]\n........................................................................ [ 68%]\n........................................................................ [ 85%]\n...............................................................          [100%]\n423 passed in 379.77s (0:06:19)\n",
+          "stderr": "",
+          "seconds": 387.708769
+        },
+        {
+          "arguments": [
+            "-m",
+            "compileall",
+            "app"
+          ],
+          "exit_code": 0,
+          "stdout": "Listing 'app'...\nListing 'app\\\\agents'...\nListing 'app\\\\api'...\nListing 'app\\\\application'...\nListing 'app\\\\domain'...\nListing 'app\\\\evaluation'...\nListing 'app\\\\infrastructure'...\nListing 'app\\\\infrastructure\\\\migrations'...\nCompiling 'app\\\\infrastructure\\\\migrations\\\\__init__.py'...\nListing 'app\\\\infrastructure\\\\migrations\\\\versions'...\nCompiling 'app\\\\infrastructure\\\\migrations\\\\versions\\\\__init__.py'...\n",
+          "stderr": "",
+          "seconds": 0.517431
+        },
+        {
+          "arguments": [
+            "-m",
+            "compileall",
+            "-q",
+            "scripts",
+            "tests"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "seconds": 0.887675
+        },
+        {
+          "arguments": [
+            "-m",
+            "ruff",
+            "check",
+            "."
+          ],
+          "exit_code": 0,
+          "stdout": "All checks passed!\n",
+          "stderr": "",
+          "seconds": 2.403393
+        },
+        {
+          "arguments": [
+            "-m",
+            "pip",
+            "check"
+          ],
+          "exit_code": 0,
+          "stdout": "No broken requirements found.\n",
+          "stderr": "",
+          "seconds": 2.50409
+        },
+        {
+          "arguments": [
+            "-m",
+            "alembic",
+            "upgrade",
+            "head"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "seconds": 3.126794
+        },
+        {
+          "arguments": [
+            "-m",
+            "alembic",
+            "heads"
+          ],
+          "exit_code": 0,
+          "stdout": "0005 (head)\n",
+          "stderr": "",
+          "seconds": 2.169416
+        },
+        {
+          "arguments": [
+            "-m",
+            "alembic",
+            "current"
+          ],
+          "exit_code": 0,
+          "stdout": "0005 (head)\n",
+          "stderr": "",
+          "seconds": 3.018369
+        },
+        {
+          "arguments": [
+            "-m",
+            "alembic",
+            "check"
+          ],
+          "exit_code": 0,
+          "stdout": "No new upgrade operations detected.\n",
+          "stderr": "",
+          "seconds": 3.234785
+        },
+        {
+          "arguments": [
+            "-c",
+            "import sqlite3; from app.application.config import Settings; c=sqlite3.connect(Settings().database_url.removeprefix(\"sqlite:///\")); print(\"integrity:\",c.execute(\"pragma integrity_check\").fetchone()[0]); print(\"foreign key violations:\",len(c.execute(\"pragma foreign_key_check\").fetchall())); c.close()"
+          ],
+          "exit_code": 0,
+          "stdout": "integrity: ok\nforeign key violations: 0\n",
+          "stderr": "",
+          "seconds": 1.316149
+        },
+        {
+          "arguments": [
+            "-c",
+            "import ast; from pathlib import Path; paths=[p for d in (\"app\",\"scripts\",\"tests\") for p in Path(d).rglob(\"*.py\")]; [ast.parse(p.read_text(encoding=\"utf-8-sig\"),feature_version=(3,11)) for p in paths]; print(\"Python 3.11 grammar:\",len(paths),\"files parsed\")"
+          ],
+          "exit_code": 0,
+          "stdout": "Python 3.11 grammar: 143 files parsed\n",
+          "stderr": "",
+          "seconds": 0.717162
+        }
+      ],
+      "provider_requests": 0,
+      "api_cost_usd": 0,
+      "complete": true,
+      "all_commands_passed": true
+    }
+  ],
+  "initial_failed_attempts_preserved": [
+    {
+      "python": "311",
+      "candidate": "public_release_checkpoint_005",
+      "commands": [
+        {
+          "arguments": [
+            "--version"
+          ],
+          "exit_code": 0,
+          "stdout": "Python 3.11.17\n",
+          "stderr": "",
+          "seconds": 0.088764
+        },
+        {
+          "arguments": [
+            "-c",
+            "import app; from pathlib import Path; from app.application.config import Settings; print(\"isolated imports:\",Path(app.__file__).resolve().is_relative_to(Path.cwd())); print(\"live enabled:\",Settings().enable_live_requests)"
+          ],
+          "exit_code": 0,
+          "stdout": "isolated imports: True\nlive enabled: False\n",
+          "stderr": "",
+          "seconds": 2.895542
+        },
+        {
+          "arguments": [
+            "-m",
+            "pytest",
+            "-q"
+          ],
+          "exit_code": 1,
+          "stdout": "........................................................................ [ 17%]\n........................................................................ [ 34%]\n.................FFFFF.................................................. [ 51%]\n........................................................................ [ 68%]\n........................................................................ [ 85%]\n.................F.............................................          [100%]\n================================== FAILURES ===================================\n_ test_complete_graph_locates_historical_quotes_then_reviews_and_synthesizes __\n\ntmp_path = WindowsPath('[USER_HOME]/AppData/Local/Temp/pytest-of-[OWNER_NAME]/pytest-117/test_complete_graph_locates_hi0')\n\n    async def test_complete_graph_locates_historical_quotes_then_reviews_and_synthesizes(tmp_path):\n>       result = await run_case(tmp_path / \"positive.db\")\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests\\integration\\test_quote_locator_workflow.py:9: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\npath = WindowsPath('[USER_HOME]/AppData/Local/Temp/pytest-of-[OWNER_NAME]/pytest-117/test_complete_graph_locates_hi0/positive.db')\nnegative = False, tamper = None\n\n    async def run_case(path, *, negative=False, tamper=None):\n        settings = fixture_settings(\n            enable_live_requests=False, database_url=\"sqlite:///\" + path.as_posix(),\n            mesh_api_key=\"offline-key\", mesh_model_id=\"offline-p8c-semantic-fixture\",\n            tavily_api_key=\"offline-key\", max_llm_calls_per_run=8, max_searches_per_run=2,\n            max_fetches_per_run=10, max_claims_per_run=1, max_research_subquestions=1,\n            max_research_tasks_per_run=2, max_retries_per_subquestion=1,\n            max_parallel_fetches=1, max_parallel_research_tasks=1, max_parallel_verifications=1,\n            tavily_max_attempts=1,\n        )\n        database = Database(settings.database_url)\n        await database.initialize()\n        providers = HistoricalProviders(negative=negative, tamper=tamper, database=database)\n        runtime = WorkflowRuntime(settings, database,\n                                  mesh_transport=httpx.MockTransport(providers.mesh),\n                                  tavily_transport=httpx.MockTransport(providers.tavily),\n                                  resolver=fixture_resolver)\n        try:\n            await runtime.coordinator.start()\n            submitted = await runtime.coordinator.submit(\n>               providers.history[\"state\"][\"original_question\"])\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE               KeyError: 'original_question'\n\nscripts\\offline_quote_locator.py:182: KeyError\n_ test_valid_quotes_cannot_override_blind_semantic_rejection_of_negated_claim _\n\ntmp_path = WindowsPath('[USER_HOME]/AppData/Local/Temp/pytest-of-[OWNER_NAME]/pytest-117/test_valid_quotes_cannot_overr0')\n\n    async def test_valid_quotes_cannot_override_blind_semantic_rejection_of_negated_claim(tmp_path):\n>       result = await run_case(tmp_path / \"negative.db\", negative=True)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests\\integration\\test_quote_locator_workflow.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\npath = WindowsPath('[USER_HOME]/AppData/Local/Temp/pytest-of-[OWNER_NAME]/pytest-117/test_valid_quotes_cannot_overr0/negative.db')\nnegative = True, tamper = None\n\n    async def run_case(path, *, negative=False, tamper=None):\n        settings = fixture_settings(\n            enable_live_requests=False, database_url=\"sqlite:///\" + path.as_posix(),\n            mesh_api_key=\"offline-key\", mesh_model_id=\"offline-p8c-semantic-fixture\",\n            tavily_api_key=\"offline-key\", max_llm_calls_per_run=8, max_searches_per_run=2,\n            max_fetches_per_run=10, max_claims_per_run=1, max_research_subquestions=1,\n            max_research_tasks_per_run=2, max_retries_per_subquestion=1,\n            max_parallel_fetches=1, max_parallel_research_tasks=1, max_parallel_verifications=1,\n            tavily_max_attempts=1,\n        )\n        database = Database(settings.database_url)\n        await database.initialize()\n        providers = HistoricalProviders(negative=negative, tamper=tamper, database=database)\n        runtime = WorkflowRuntime(settings, database,\n                                  mesh_transport=httpx.MockTransport(providers.mesh),\n                                  tavily_transport=httpx.MockTransport(providers.tavily),\n                                  resolver=fixture_resolver)\n        try:\n            await runtime.coordinator.start()\n            submitted = await runtime.coordinator.submit(\n>               providers.history[\"state\"][\"original_question\"])\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE               KeyError: 'original_question'\n\nscripts\\offline_quote_locator.py:182: KeyError\n_ test_repository_approval_and_version_checks_precede_v2_locator_and_review[wrong_source-evidence_task_mismatch] _\n\ntmp_path = WindowsPath('[USER_HOME]/AppData/Local/Temp/pytest-of-[OWNER_NAME]/pytest-117/test_repository_approval_and_v0')\nmutation = 'wrong_source', code = 'evidence_task_mismatch'\n\n    @pytest.mark.parametrize(\"mutation,code\", [\n        (\"wrong_source\", \"evidence_task_mismatch\"),\n        (\"stale_hash\", \"evidence_content_hash_mismatch\"),\n        (\"cross_run\", \"evidence_run_mismatch\"),\n    ])\n    async def test_repository_approval_and_version_checks_precede_v2_locator_and_review(\n        tmp_path, mutation, code\n    ):\n>       result = await run_case(tmp_path / \"tamper.db\", tamper=mutation)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests\\integration\\test_quote_locator_workflow.py:63: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\npath = WindowsPath('[USER_HOME]/AppData/Local/Temp/pytest-of-[OWNER_NAME]/pytest-117/test_repository_approval_and_v0/tamper.db')\nnegative = False, tamper = 'wrong_source'\n\n    async def run_case(path, *, negative=False, tamper=None):\n        settings = fixture_settings(\n            enable_live_requests=False, database_url=\"sqlite:///\" + path.as_posix(),\n            mesh_api_key=\"offline-key\", mesh_model_id=\"offline-p8c-semantic-fixture\",\n            tavily_api_key=\"offline-key\", max_llm_calls_per_run=8, max_searches_per_run=2,\n            max_fetches_per_run=10, max_claims_per_run=1, max_research_subquestions=1,\n            max_research_tasks_per_run=2, max_retries_per_subquestion=1,\n            max_parallel_fetches=1, max_parallel_research_tasks=1, max_parallel_verifications=1,\n            tavily_max_attempts=1,\n        )\n        database = Database(settings.database_url)\n        await database.initialize()\n        providers = HistoricalProviders(negative=negative, tamper=tamper, database=database)\n        runtime = WorkflowRuntime(settings, database,\n                                  mesh_transport=httpx.MockTransport(providers.mesh),\n                                  tavily_transport=httpx.MockTransport(providers.tavily),\n                                  resolver=fixture_resolver)\n        try:\n            await runtime.coordinator.start()\n            submitted = await runtime.coordinator.submit(\n>               providers.history[\"state\"][\"original_question\"])\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE               KeyError: 'original_question'\n\nscripts\\offline_quote_locator.py:182: KeyError\n_ test_repository_approval_and_version_checks_precede_v2_locator_and_review[stale_hash-evidence_content_hash_mismatch] _\n\ntmp_path = WindowsPath('[USER_HOME]/AppData/Local/Temp/pytest-of-[OWNER_NAME]/pytest-117/test_repository_approval_and_v1')\nmutation = 'stale_hash', code = 'evidence_content_hash_mismatch'\n\n    @pytest.mark.parametrize(\"mutation,code\", [\n        (\"wrong_source\", \"evidence_task_mismatch\"),\n        (\"stale_hash\", \"evidence_content_hash_mismatch\"),\n        (\"cross_run\", \"evidence_run_mismatch\"),\n    ])\n    async def test_repository_approval_and_version_checks_precede_v2_locator_and_review(\n        tmp_path, mutation, code\n    ):\n>       result = await run_case(tmp_path / \"tamper.db\", tamper=mutation)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests\\integration\\test_quote_locator_workflow.py:63: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\npath = WindowsPath('[USER_HOME]/AppData/Local/Temp/pytest-of-[OWNER_NAME]/pytest-117/test_repository_approval_and_v1/tamper.db')\nnegative = False, tamper = 'stale_hash'\n\n    async def run_case(path, *, negative=False, tamper=None):\n        settings = fixture_settings(\n            enable_live_requests=False, database_url=\"sqlite:///\" + path.as_posix(),\n            mesh_api_key=\"offline-key\", mesh_model_id=\"offline-p8c-semantic-fixture\",\n            tavily_api_key=\"offline-key\", max_llm_calls_per_run=8, max_searches_per_run=2,\n            max_fetches_per_run=10, max_claims_per_run=1, max_research_subquestions=1,\n            max_research_tasks_per_run=2, max_retries_per_subquestion=1,\n            max_parallel_fetches=1, max_parallel_research_tasks=1, max_parallel_verifications=1,\n            tavily_max_attempts=1,\n        )\n        database = Database(settings.database_url)\n        await database.initialize()\n        providers = HistoricalProviders(negative=negative, tamper=tamper, database=database)\n        runtime = WorkflowRuntime(settings, database,\n                                  mesh_transport=httpx.MockTransport(providers.mesh),\n                                  tavily_transport=httpx.MockTransport(providers.tavily),\n                                  resolver=fixture_resolver)\n        try:\n            await runtime.coordinator.start()\n            submitted = await runtime.coordinator.submit(\n>               providers.history[\"state\"][\"original_question\"])\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE               KeyError: 'original_question'\n\nscripts\\offline_quote_locator.py:182: KeyError\n_ test_repository_approval_and_version_checks_precede_v2_locator_and_review[cross_run-evidence_run_mismatch] _\n\ntmp_path = WindowsPath('[USER_HOME]/AppData/Local/Temp/pytest-of-[OWNER_NAME]/pytest-117/test_repository_approval_and_v2')\nmutation = 'cross_run', code = 'evidence_run_mismatch'\n\n    @pytest.mark.parametrize(\"mutation,code\", [\n        (\"wrong_source\", \"evidence_task_mismatch\"),\n        (\"stale_hash\", \"evidence_content_hash_mismatch\"),\n        (\"cross_run\", \"evidence_run_mismatch\"),\n    ])\n    async def test_repository_approval_and_version_checks_precede_v2_locator_and_review(\n        tmp_path, mutation, code\n    ):\n>       result = await run_case(tmp_path / \"tamper.db\", tamper=mutation)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests\\integration\\test_quote_locator_workflow.py:63: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\npath = WindowsPath('[USER_HOME]/AppData/Local/Temp/pytest-of-[OWNER_NAME]/pytest-117/test_repository_approval_and_v2/tamper.db')\nnegative = False, tamper = 'cross_run'\n\n    async def run_case(path, *, negative=False, tamper=None):\n        settings = fixture_settings(\n            enable_live_requests=False, database_url=\"sqlite:///\" + path.as_posix(),\n            mesh_api_key=\"offline-key\", mesh_model_id=\"offline-p8c-semantic-fixture\",\n            tavily_api_key=\"offline-key\", max_llm_calls_per_run=8, max_searches_per_run=2,\n            max_fetches_per_run=10, max_claims_per_run=1, max_research_subquestions=1,\n            max_research_tasks_per_run=2, max_retries_per_subquestion=1,\n            max_parallel_fetches=1, max_parallel_research_tasks=1, max_parallel_verifications=1,\n            tavily_max_attempts=1,\n        )\n        database = Database(settings.database_url)\n        await database.initialize()\n        providers = HistoricalProviders(negative=negative, tamper=tamper, database=database)\n        runtime = WorkflowRuntime(settings, database,\n                                  mesh_transport=httpx.MockTransport(providers.mesh),\n                                  tavily_transport=httpx.MockTransport(providers.tavily),\n                                  resolver=fixture_resolver)\n        try:\n            await runtime.coordinator.start()\n            submitted = await runtime.coordinator.submit(\n>               providers.history[\"state\"][\"original_question\"])\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE               KeyError: 'original_question'\n\nscripts\\offline_quote_locator.py:182: KeyError\n____________ test_reopen_validates_the_actual_final_reports_table _____________\n\ntmp_path = WindowsPath('[USER_HOME]/AppData/Local/Temp/pytest-of-[OWNER_NAME]/pytest-117/test_reopen_validates_the_actu0')\n\n    async def test_reopen_validates_the_actual_final_reports_table(tmp_path):\n        path = tmp_path / \"offline.db\"\n>       fixture = await run_case(path)\n                  ^^^^^^^^^^^^^^^^^^^^\n\ntests\\unit\\test_session_b_002.py:195: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\npath = WindowsPath('[USER_HOME]/AppData/Local/Temp/pytest-of-[OWNER_NAME]/pytest-117/test_reopen_validates_the_actu0/offline.db')\nnegative = False, tamper = None\n\n    async def run_case(path, *, negative=False, tamper=None):\n        settings = fixture_settings(\n            enable_live_requests=False, database_url=\"sqlite:///\" + path.as_posix(),\n            mesh_api_key=\"offline-key\", mesh_model_id=\"offline-p8c-semantic-fixture\",\n            tavily_api_key=\"offline-key\", max_llm_calls_per_run=8, max_searches_per_run=2,\n            max_fetches_per_run=10, max_claims_per_run=1, max_research_subquestions=1,\n            max_research_tasks_per_run=2, max_retries_per_subquestion=1,\n            max_parallel_fetches=1, max_parallel_research_tasks=1, max_parallel_verifications=1,\n            tavily_max_attempts=1,\n        )\n        database = Database(settings.database_url)\n        await database.initialize()\n        providers = HistoricalProviders(negative=negative, tamper=tamper, database=database)\n        runtime = WorkflowRuntime(settings, database,\n                                  mesh_transport=httpx.MockTransport(providers.mesh),\n                                  tavily_transport=httpx.MockTransport(providers.tavily),\n                                  resolver=fixture_resolver)\n        try:\n            await runtime.coordinator.start()\n            submitted = await runtime.coordinator.submit(\n>               providers.history[\"state\"][\"original_question\"])\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE               KeyError: 'original_question'\n\nscripts\\offline_quote_locator.py:182: KeyError\n=========================== short test summary info ===========================\nFAILED tests/integration/test_quote_locator_workflow.py::test_complete_graph_locates_historical_quotes_then_reviews_and_synthesizes\nFAILED tests/integration/test_quote_locator_workflow.py::test_valid_quotes_cannot_override_blind_semantic_rejection_of_negated_claim\nFAILED tests/integration/test_quote_locator_workflow.py::test_repository_approval_and_version_checks_precede_v2_locator_and_review[wrong_source-evidence_task_mismatch]\nFAILED tests/integration/test_quote_locator_workflow.py::test_repository_approval_and_version_checks_precede_v2_locator_and_review[stale_hash-evidence_content_hash_mismatch]\nFAILED tests/integration/test_quote_locator_workflow.py::test_repository_approval_and_version_checks_precede_v2_locator_and_review[cross_run-evidence_run_mismatch]\nFAILED tests/unit/test_session_b_002.py::test_reopen_validates_the_actual_final_reports_table\n6 failed, 417 passed in 396.74s (0:06:36)\n",
+          "stderr": "",
+          "seconds": 406.613224
+        }
+      ],
+      "provider_requests": 0,
+      "api_cost_usd": 0,
+      "complete": false,
+      "all_commands_passed": false
+    },
+    {
+      "python": "312",
+      "candidate": "public_release_checkpoint_005",
+      "commands": [
+        {
+          "arguments": [
+            "--version"
+          ],
+          "exit_code": 0,
+          "stdout": "Python 3.12.13\n",
+          "stderr": "",
+          "seconds": 0.223928
+        },
+        {
+          "arguments": [
+            "-c",
+            "import app; from pathlib import Path; from app.application.config import Settings; print(\"isolated imports:\",Path(app.__file__).resolve().is_relative_to(Path.cwd())); print(\"live enabled:\",Settings().enable_live_requests)"
+          ],
+          "exit_code": 0,
+          "stdout": "isolated imports: True\nlive enabled: False\n",
+          "stderr": "",
+          "seconds": 1.887573
+        },
+        {
+          "arguments": [
+            "-m",
+            "pytest",
+            "-q"
+          ],
+          "exit_code": 1,
+          "stdout": "........................................................................ [ 17%]\n........................................................................ [ 34%]\n.................FFFFF.................................................. [ 51%]\n........................................................................ [ 68%]\n........................................................................ [ 85%]\n.................F.............................................          [100%]\n================================== FAILURES ===================================\n_ test_complete_graph_locates_historical_quotes_then_reviews_and_synthesizes __\n\ntmp_path = WindowsPath('[USER_HOME]/AppData/Local/Temp/pytest-of-[OWNER_NAME]/pytest-116/test_complete_graph_locates_hi0')\n\n    async def test_complete_graph_locates_historical_quotes_then_reviews_and_synthesizes(tmp_path):\n>       result = await run_case(tmp_path / \"positive.db\")\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests\\integration\\test_quote_locator_workflow.py:9: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\npath = WindowsPath('[USER_HOME]/AppData/Local/Temp/pytest-of-[OWNER_NAME]/pytest-116/test_complete_graph_locates_hi0/positive.db')\nnegative = False, tamper = None\n\n    async def run_case(path, *, negative=False, tamper=None):\n        settings = fixture_settings(\n            enable_live_requests=False, database_url=\"sqlite:///\" + path.as_posix(),\n            mesh_api_key=\"offline-key\", mesh_model_id=\"offline-p8c-semantic-fixture\",\n            tavily_api_key=\"offline-key\", max_llm_calls_per_run=8, max_searches_per_run=2,\n            max_fetches_per_run=10, max_claims_per_run=1, max_research_subquestions=1,\n            max_research_tasks_per_run=2, max_retries_per_subquestion=1,\n            max_parallel_fetches=1, max_parallel_research_tasks=1, max_parallel_verifications=1,\n            tavily_max_attempts=1,\n        )\n        database = Database(settings.database_url)\n        await database.initialize()\n        providers = HistoricalProviders(negative=negative, tamper=tamper, database=database)\n        runtime = WorkflowRuntime(settings, database,\n                                  mesh_transport=httpx.MockTransport(providers.mesh),\n                                  tavily_transport=httpx.MockTransport(providers.tavily),\n                                  resolver=fixture_resolver)\n        try:\n            await runtime.coordinator.start()\n            submitted = await runtime.coordinator.submit(\n>               providers.history[\"state\"][\"original_question\"])\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE               KeyError: 'original_question'\n\nscripts\\offline_quote_locator.py:182: KeyError\n_ test_valid_quotes_cannot_override_blind_semantic_rejection_of_negated_claim _\n\ntmp_path = WindowsPath('[USER_HOME]/AppData/Local/Temp/pytest-of-[OWNER_NAME]/pytest-116/test_valid_quotes_cannot_overr0')\n\n    async def test_valid_quotes_cannot_override_blind_semantic_rejection_of_negated_claim(tmp_path):\n>       result = await run_case(tmp_path / \"negative.db\", negative=True)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests\\integration\\test_quote_locator_workflow.py:38: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\npath = WindowsPath('[USER_HOME]/AppData/Local/Temp/pytest-of-[OWNER_NAME]/pytest-116/test_valid_quotes_cannot_overr0/negative.db')\nnegative = True, tamper = None\n\n    async def run_case(path, *, negative=False, tamper=None):\n        settings = fixture_settings(\n            enable_live_requests=False, database_url=\"sqlite:///\" + path.as_posix(),\n            mesh_api_key=\"offline-key\", mesh_model_id=\"offline-p8c-semantic-fixture\",\n            tavily_api_key=\"offline-key\", max_llm_calls_per_run=8, max_searches_per_run=2,\n            max_fetches_per_run=10, max_claims_per_run=1, max_research_subquestions=1,\n            max_research_tasks_per_run=2, max_retries_per_subquestion=1,\n            max_parallel_fetches=1, max_parallel_research_tasks=1, max_parallel_verifications=1,\n            tavily_max_attempts=1,\n        )\n        database = Database(settings.database_url)\n        await database.initialize()\n        providers = HistoricalProviders(negative=negative, tamper=tamper, database=database)\n        runtime = WorkflowRuntime(settings, database,\n                                  mesh_transport=httpx.MockTransport(providers.mesh),\n                                  tavily_transport=httpx.MockTransport(providers.tavily),\n                                  resolver=fixture_resolver)\n        try:\n            await runtime.coordinator.start()\n            submitted = await runtime.coordinator.submit(\n>               providers.history[\"state\"][\"original_question\"])\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE               KeyError: 'original_question'\n\nscripts\\offline_quote_locator.py:182: KeyError\n_ test_repository_approval_and_version_checks_precede_v2_locator_and_review[wrong_source-evidence_task_mismatch] _\n\ntmp_path = WindowsPath('[USER_HOME]/AppData/Local/Temp/pytest-of-[OWNER_NAME]/pytest-116/test_repository_approval_and_v0')\nmutation = 'wrong_source', code = 'evidence_task_mismatch'\n\n    @pytest.mark.parametrize(\"mutation,code\", [\n        (\"wrong_source\", \"evidence_task_mismatch\"),\n        (\"stale_hash\", \"evidence_content_hash_mismatch\"),\n        (\"cross_run\", \"evidence_run_mismatch\"),\n    ])\n    async def test_repository_approval_and_version_checks_precede_v2_locator_and_review(\n        tmp_path, mutation, code\n    ):\n>       result = await run_case(tmp_path / \"tamper.db\", tamper=mutation)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests\\integration\\test_quote_locator_workflow.py:63: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\npath = WindowsPath('[USER_HOME]/AppData/Local/Temp/pytest-of-[OWNER_NAME]/pytest-116/test_repository_approval_and_v0/tamper.db')\nnegative = False, tamper = 'wrong_source'\n\n    async def run_case(path, *, negative=False, tamper=None):\n        settings = fixture_settings(\n            enable_live_requests=False, database_url=\"sqlite:///\" + path.as_posix(),\n            mesh_api_key=\"offline-key\", mesh_model_id=\"offline-p8c-semantic-fixture\",\n            tavily_api_key=\"offline-key\", max_llm_calls_per_run=8, max_searches_per_run=2,\n            max_fetches_per_run=10, max_claims_per_run=1, max_research_subquestions=1,\n            max_research_tasks_per_run=2, max_retries_per_subquestion=1,\n            max_parallel_fetches=1, max_parallel_research_tasks=1, max_parallel_verifications=1,\n            tavily_max_attempts=1,\n        )\n        database = Database(settings.database_url)\n        await database.initialize()\n        providers = HistoricalProviders(negative=negative, tamper=tamper, database=database)\n        runtime = WorkflowRuntime(settings, database,\n                                  mesh_transport=httpx.MockTransport(providers.mesh),\n                                  tavily_transport=httpx.MockTransport(providers.tavily),\n                                  resolver=fixture_resolver)\n        try:\n            await runtime.coordinator.start()\n            submitted = await runtime.coordinator.submit(\n>               providers.history[\"state\"][\"original_question\"])\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE               KeyError: 'original_question'\n\nscripts\\offline_quote_locator.py:182: KeyError\n_ test_repository_approval_and_version_checks_precede_v2_locator_and_review[stale_hash-evidence_content_hash_mismatch] _\n\ntmp_path = WindowsPath('[USER_HOME]/AppData/Local/Temp/pytest-of-[OWNER_NAME]/pytest-116/test_repository_approval_and_v1')\nmutation = 'stale_hash', code = 'evidence_content_hash_mismatch'\n\n    @pytest.mark.parametrize(\"mutation,code\", [\n        (\"wrong_source\", \"evidence_task_mismatch\"),\n        (\"stale_hash\", \"evidence_content_hash_mismatch\"),\n        (\"cross_run\", \"evidence_run_mismatch\"),\n    ])\n    async def test_repository_approval_and_version_checks_precede_v2_locator_and_review(\n        tmp_path, mutation, code\n    ):\n>       result = await run_case(tmp_path / \"tamper.db\", tamper=mutation)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests\\integration\\test_quote_locator_workflow.py:63: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\npath = WindowsPath('[USER_HOME]/AppData/Local/Temp/pytest-of-[OWNER_NAME]/pytest-116/test_repository_approval_and_v1/tamper.db')\nnegative = False, tamper = 'stale_hash'\n\n    async def run_case(path, *, negative=False, tamper=None):\n        settings = fixture_settings(\n            enable_live_requests=False, database_url=\"sqlite:///\" + path.as_posix(),\n            mesh_api_key=\"offline-key\", mesh_model_id=\"offline-p8c-semantic-fixture\",\n            tavily_api_key=\"offline-key\", max_llm_calls_per_run=8, max_searches_per_run=2,\n            max_fetches_per_run=10, max_claims_per_run=1, max_research_subquestions=1,\n            max_research_tasks_per_run=2, max_retries_per_subquestion=1,\n            max_parallel_fetches=1, max_parallel_research_tasks=1, max_parallel_verifications=1,\n            tavily_max_attempts=1,\n        )\n        database = Database(settings.database_url)\n        await database.initialize()\n        providers = HistoricalProviders(negative=negative, tamper=tamper, database=database)\n        runtime = WorkflowRuntime(settings, database,\n                                  mesh_transport=httpx.MockTransport(providers.mesh),\n                                  tavily_transport=httpx.MockTransport(providers.tavily),\n                                  resolver=fixture_resolver)\n        try:\n            await runtime.coordinator.start()\n            submitted = await runtime.coordinator.submit(\n>               providers.history[\"state\"][\"original_question\"])\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE               KeyError: 'original_question'\n\nscripts\\offline_quote_locator.py:182: KeyError\n_ test_repository_approval_and_version_checks_precede_v2_locator_and_review[cross_run-evidence_run_mismatch] _\n\ntmp_path = WindowsPath('[USER_HOME]/AppData/Local/Temp/pytest-of-[OWNER_NAME]/pytest-116/test_repository_approval_and_v2')\nmutation = 'cross_run', code = 'evidence_run_mismatch'\n\n    @pytest.mark.parametrize(\"mutation,code\", [\n        (\"wrong_source\", \"evidence_task_mismatch\"),\n        (\"stale_hash\", \"evidence_content_hash_mismatch\"),\n        (\"cross_run\", \"evidence_run_mismatch\"),\n    ])\n    async def test_repository_approval_and_version_checks_precede_v2_locator_and_review(\n        tmp_path, mutation, code\n    ):\n>       result = await run_case(tmp_path / \"tamper.db\", tamper=mutation)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests\\integration\\test_quote_locator_workflow.py:63: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\npath = WindowsPath('[USER_HOME]/AppData/Local/Temp/pytest-of-[OWNER_NAME]/pytest-116/test_repository_approval_and_v2/tamper.db')\nnegative = False, tamper = 'cross_run'\n\n    async def run_case(path, *, negative=False, tamper=None):\n        settings = fixture_settings(\n            enable_live_requests=False, database_url=\"sqlite:///\" + path.as_posix(),\n            mesh_api_key=\"offline-key\", mesh_model_id=\"offline-p8c-semantic-fixture\",\n            tavily_api_key=\"offline-key\", max_llm_calls_per_run=8, max_searches_per_run=2,\n            max_fetches_per_run=10, max_claims_per_run=1, max_research_subquestions=1,\n            max_research_tasks_per_run=2, max_retries_per_subquestion=1,\n            max_parallel_fetches=1, max_parallel_research_tasks=1, max_parallel_verifications=1,\n            tavily_max_attempts=1,\n        )\n        database = Database(settings.database_url)\n        await database.initialize()\n        providers = HistoricalProviders(negative=negative, tamper=tamper, database=database)\n        runtime = WorkflowRuntime(settings, database,\n                                  mesh_transport=httpx.MockTransport(providers.mesh),\n                                  tavily_transport=httpx.MockTransport(providers.tavily),\n                                  resolver=fixture_resolver)\n        try:\n            await runtime.coordinator.start()\n            submitted = await runtime.coordinator.submit(\n>               providers.history[\"state\"][\"original_question\"])\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE               KeyError: 'original_question'\n\nscripts\\offline_quote_locator.py:182: KeyError\n____________ test_reopen_validates_the_actual_final_reports_table _____________\n\ntmp_path = WindowsPath('[USER_HOME]/AppData/Local/Temp/pytest-of-[OWNER_NAME]/pytest-116/test_reopen_validates_the_actu0')\n\n    async def test_reopen_validates_the_actual_final_reports_table(tmp_path):\n        path = tmp_path / \"offline.db\"\n>       fixture = await run_case(path)\n                  ^^^^^^^^^^^^^^^^^^^^\n\ntests\\unit\\test_session_b_002.py:195: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\npath = WindowsPath('[USER_HOME]/AppData/Local/Temp/pytest-of-[OWNER_NAME]/pytest-116/test_reopen_validates_the_actu0/offline.db')\nnegative = False, tamper = None\n\n    async def run_case(path, *, negative=False, tamper=None):\n        settings = fixture_settings(\n            enable_live_requests=False, database_url=\"sqlite:///\" + path.as_posix(),\n            mesh_api_key=\"offline-key\", mesh_model_id=\"offline-p8c-semantic-fixture\",\n            tavily_api_key=\"offline-key\", max_llm_calls_per_run=8, max_searches_per_run=2,\n            max_fetches_per_run=10, max_claims_per_run=1, max_research_subquestions=1,\n            max_research_tasks_per_run=2, max_retries_per_subquestion=1,\n            max_parallel_fetches=1, max_parallel_research_tasks=1, max_parallel_verifications=1,\n            tavily_max_attempts=1,\n        )\n        database = Database(settings.database_url)\n        await database.initialize()\n        providers = HistoricalProviders(negative=negative, tamper=tamper, database=database)\n        runtime = WorkflowRuntime(settings, database,\n                                  mesh_transport=httpx.MockTransport(providers.mesh),\n                                  tavily_transport=httpx.MockTransport(providers.tavily),\n                                  resolver=fixture_resolver)\n        try:\n            await runtime.coordinator.start()\n            submitted = await runtime.coordinator.submit(\n>               providers.history[\"state\"][\"original_question\"])\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE               KeyError: 'original_question'\n\nscripts\\offline_quote_locator.py:182: KeyError\n=========================== short test summary info ===========================\nFAILED tests/integration/test_quote_locator_workflow.py::test_complete_graph_locates_historical_quotes_then_reviews_and_synthesizes\nFAILED tests/integration/test_quote_locator_workflow.py::test_valid_quotes_cannot_override_blind_semantic_rejection_of_negated_claim\nFAILED tests/integration/test_quote_locator_workflow.py::test_repository_approval_and_version_checks_precede_v2_locator_and_review[wrong_source-evidence_task_mismatch]\nFAILED tests/integration/test_quote_locator_workflow.py::test_repository_approval_and_version_checks_precede_v2_locator_and_review[stale_hash-evidence_content_hash_mismatch]\nFAILED tests/integration/test_quote_locator_workflow.py::test_repository_approval_and_version_checks_precede_v2_locator_and_review[cross_run-evidence_run_mismatch]\nFAILED tests/unit/test_session_b_002.py::test_reopen_validates_the_actual_final_reports_table\n6 failed, 417 passed in 393.08s (0:06:33)\n",
+          "stderr": "",
+          "seconds": 401.332008
+        }
+      ],
+      "provider_requests": 0,
+      "api_cost_usd": 0,
+      "complete": false,
+      "all_commands_passed": false
+    }
+  ],
+  "preparation_diagnostics": {
+    "first_full_suite_attempt": {
+      "python311": "6 failed, 417 passed in 396.74s (0:06:36)",
+      "python312": "6 failed, 417 passed in 393.08s (0:06:33)",
+      "cause": "The public excerpt omitted state.original_question, required by the existing offline replay.",
+      "repair": "Copied the exact original field into the explicit public derivative. No application, script, test or assertion changed.",
+      "raw_logs": [
+        "checks_python311_attempt001_failed.json",
+        "checks_python312_attempt001_failed.json"
+      ]
+    },
+    "targeted_validation": {
+      "pre_repair_attempt": "6 failed in 12.03s; a preparation command used the wrong working directory so the repair had not yet executed.",
+      "corrected_repair_command": "Executed successfully from the owner workspace.",
+      "post_repair_python311": "6 passed in 22.10s"
+    },
+    "readonly_remote_check": {
+      "command": "git ls-remote --heads origin",
+      "exit_code": 0,
+      "branch_refs": [],
+      "push_authentication_verified": false,
+      "diagnostic_note": "Unexpected curl diagnostics were emitted with zero-valued verbose flags. No raw HTTP headers or network addresses are included in the public artifacts. Future commands remove those environment variables rather than setting them to zero.",
+      "push_or_workflow_triggered": false
+    },
+    "mesh_api_requests": 0,
+    "tavily_api_requests": 0,
+    "api_spending_usd": 0
+  },
+  "initial_failure_repair": "Restored exact original state.original_question omitted from the first public excerpt. No Python, test, assertion or semantic decision changed.",
+  "publisher_notice_checks": {
+    "public_documentation_legal_pages_only": true,
+    "mesh_api_requests": 0,
+    "tavily_api_requests": 0,
+    "agreements": [
+      {
+        "url": "https://docs.python.org/3.13/license.html",
+        "http_status": 200,
+        "page_sha256": "aa8c59e4e823b4c55e3123717b4fb500e79d909dc76bb5f1d2e41811f7beef62",
+        "local_agreement": "LICENSES/PSF-2.0-Python-3.13.txt",
+        "same_text_allowing_whitespace": true
+      },
+      {
+        "url": "https://docs.python.org/3.15/license.html",
+        "http_status": 200,
+        "page_sha256": "c668f4f5c4d80556a01e5d4a8c4588b14609bb452fa0769150d6e1938e991170",
+        "local_agreement": "LICENSES/PSF-2.0-Python-3.15.txt",
+        "same_text_allowing_whitespace": true
+      },
+      {
+        "url": "https://docs.python.org/ja/3/license.html",
+        "http_status": 200,
+        "page_sha256": "ec738e88445e67c7ce18ac5c8b2388d8a5e561adc97b5dae46d49eb432e567a2",
+        "local_agreement": "LICENSES/PSF-2.0-Python-3.15.txt",
+        "same_text_allowing_whitespace": true
+      },
+      {
+        "url": "https://docs.python.org/id/3.15/license.html",
+        "http_status": 200,
+        "page_sha256": "4e422df2731f6f9861d338ebc3abbc2237e935c77c9abcb03cc109d18456b301",
+        "local_agreement": "LICENSES/PSF-2.0-Python-3.15.txt",
+        "same_text_allowing_whitespace": true
+      }
+    ],
+    "source_notices_retained": true,
+    "legal_clearance_certified": false,
+    "scope": "Publisher agreement/notice comparison, not an interpretation of unknown account or contest contracts."
+  },
+  "validated_input_sha256": {
+    ".env.example": "99e22ef3b2a04b21bc4935b6790803ed7cb9c8989aaaf5f73c57d41c6f45c56b",
+    ".gitattributes": "4f4bcad548b28185a1a12aae8f6ebdd4c855619a2993f1951aef1d1c6289b7d9",
+    ".github/workflows/agent-arena-2026-checks.yml": "f34c4aba59caa82bd992a3fb77b51c0c94d3d2c3551acb55f72ddaf4e6e91436",
+    ".github/workflows/prooftrail-offline.yml": "a18bfad5da6c2d7aff02c187d11193849dd10f5c13cb83fbc4eafe3ea2e6a646",
+    ".gitignore": "7d3c7c3b226a613c8eefb17c2540938fe32be4bbc81e648f7da61a2abe46c240",
+    "AGENTS.md": "6136ee94b4a4bdfc8f0f000910b2c142ad865a4b8f16501f35bb50691c199116",
+    "CODEX_START_HERE.md": "031beae50a6a475c554a9569542421bc543b9858e8b6354620e6d5a81f8a8560",
+    "Evaluation_Case_Template.csv": "fd3ffee42ffa1fc2c1b6d23239cec953e44e7863e7f1f6dc4ba19539144f5597",
+    "LICENSE": "b79fba40b51013645b2280d9b81892c24c574477c604d44784802d2d4724dc23",
+    "LICENSES/PSF-2.0-Python-3.13.txt": "80e1c970947d349e18b1ff279e5537e62bfb1b3b8002a98628956c30da8da560",
+    "LICENSES/PSF-2.0-Python-3.15.txt": "f76ad4c98bb899355b1f2023574d68acc6a56b6dfb831a26530e759d1a9be7ce",
+    "LICENSES/Python-documentation-NOTICE.md": "d415494abeabd446255df0201e65ab1208f55cf72d0b4f4fecf0f00c007103a3",
+    "README.md": "c2d22dc499da888ad059ace42503e863ccc03077fb0b2239a6961b2d65874ef6",
+    "THIRD_PARTY_NOTICES.md": "678b5e86f1fd04ed0b52e67db38d4d5b2cc65f1d3c20ad9e532e821993a9c55a",
+    "alembic.ini": "78e8f17908869ccd6cdecd29712196f0e26ac9c950cc6c022f0bbd4a8dbc56a0",
+    "app/__init__.py": "fd62283e158654758f4d0eeb9a3d9e5b90f972be0c2d6a52eb4196964e2ffffc",
+    "app/agents/__init__.py": "391ab8953a40fb8e9117e261a4a60dae8f53c4b253d130b9ad4123e68e2028cd",
+    "app/agents/correction.py": "858e1bbbc7bc796753882e6fb3cdf541bce9e6215927d11b61ffd8f518f978bb",
+    "app/agents/drafter.py": "b2d7ab3bc5a01f6c8783186c2834f014eb9276e3b7103b769242cd47209ea253",
+    "app/agents/followup_planner.py": "01954638c4ae0858452e3488000cb8b6ab212afefe7eb9fe9cdf387525d19ad7",
+    "app/agents/graph.py": "88872b1c7b9f81c6212857c78a2efd77dcca127240ccf091a5fa7b7f36b0273b",
+    "app/agents/planner.py": "1ae1d0bb5ed0600679e485d4ad4a0dd4a6ebda2678b9f8ea5f59beadab945ead",
+    "app/agents/researcher.py": "6e04f517eca219454b8912050f7c2babba0556a9003d98d9ab7d96d783060618",
+    "app/agents/synthesizer.py": "8328760f12de633e0acac97ee2e44f40711fafd05e41b3305bd7c74043a23cfc",
+    "app/agents/verifier.py": "3fa447d5ab8a336b00709680241db848e12c33d4539c8969a47e595e15cabcb7",
+    "app/api/__init__.py": "fee30616b145bf15d4b51803cc3be76b30d70d8ae2fcf0f109ccd3b75a2ddbb9",
+    "app/api/errors.py": "04c769e54af1020025fd15c606917cd66232a24f9fe04049dc7e6bb8bdd06733",
+    "app/api/middleware.py": "3f6f134a4013522a5e262726dc116618256f3e021ac781dfb9f44501c55bf306",
+    "app/api/research.py": "d7d822ef02b9a648b958b8765199bd365b000ac2390b33a9f17aee382cebf155",
+    "app/api/routes.py": "afd20baa130245483d32253ad540f606be80036a5c7e82621cdc5543805dfdef",
+    "app/application/__init__.py": "9ddb60fc7014782a744d7e4338bfbc77ec4e853b43476b34f41baab34d41f9e1",
+    "app/application/budgeted_model.py": "7387fac52b53f9582a888941c9b9b78b2435f9b4d519a91e70150a285ace6c93",
+    "app/application/collection.py": "a9dd39fbecdb4ccb1a96451b5647543c1b06ab6aa85cb4ebf611afebd3ed9f94",
+    "app/application/config.py": "85c9fff8b8d10021c7a4c327b456e3b73d1dcaf9006d0bc6706909957e55d585",
+    "app/application/coordinator.py": "52793ed595669c5d188121f0b71c53aee64bb771d9bed119005f8acf9bc0e187",
+    "app/application/correction.py": "5a9545e4b2f72b3d69efee4abbb856b473c97110a57eefa25e3db12372099766",
+    "app/application/health.py": "bf985378a40b87ffbb593766354754bfeb8cec3ee0059a969ebb611532d0fa6e",
+    "app/application/reports.py": "f875fc61079593fc4444103f1ff84e8339b9583537f9f4bafd18577123c7372b",
+    "app/application/runs.py": "5bbd0bdcc6e5c8b56182ec76264a69264c74622861e6ee94f9706492da4668f0",
+    "app/application/verification.py": "2895d601a1a27d5c87bb6175ee228021f96738fe99c5f8c3e53af004d3650fdf",
+    "app/domain/__init__.py": "32925766e8364d4ed211c9a710520a35190f61aaf87c301644109ed8d4138c83",
+    "app/domain/claim_ports.py": "9dd292e992b7394d3ef4b3f77dff46640487ea4633b8933a487330064ca27eef",
+    "app/domain/claims.py": "db1c29ea4f2e25edf4b779e53b10b9b61c547478ad54f7b0f754d9dbb920f386",
+    "app/domain/llm.py": "cf863a5006bfe6fd8ed53168f41a0d16ea635ef83cff0dc3ccbdd3c693af272f",
+    "app/domain/ports.py": "7407da8fe202ea340928cbcb24a173b3ca611e6162a3591d520b3ee215008a83",
+    "app/domain/reports.py": "3e251ab89f687848663e300c2a5c5ce0b0d61021976d4a0a90ec869f476cc8d5",
+    "app/domain/retrieval.py": "4c4a0940c5c99835e53fbb3afab34066b4faa8c00bf5464cb09205fb0062622e",
+    "app/domain/runs.py": "a1bf4cf1285d64073c0bd73b02b8faaeb1a0dea2e5323ba75e21ef8f014d898f",
+    "app/domain/urls.py": "0d34cd51980b60fe2d9dcf46014664d01572e5f63b63f3d8aea7d4d10c18439e",
+    "app/domain/workflow.py": "3272b5e6cce19fb72d92dafc1216efc86b4e088ae919a94c0b74ff2a3293d510",
+    "app/domain/workflow_ports.py": "4d0e00bdf2e7a6edb04b9bab0f8936c80dc360011a4c3a200bcfcb9a8d76431f",
+    "app/evaluation/__init__.py": "5d9a25c79b616268df1db785aba05f212aaafd28606b55756f550b6875752bc9",
+    "app/evaluation/benchmark.py": "15c6f3b45a0f269435be999ef9a7bd8ec0b93c066a70035be23f0603afd6decd",
+    "app/evaluation/citation_review.py": "97b314363933e126e0a6693883ea231c0ff2de138975295665e18147e7e78a4d",
+    "app/evaluation/dataset.py": "18c86b8f795e2fdf9b0ac61a4bf6b69ae0f978c8301265c049be66d5e4768ab4",
+    "app/evaluation/harness.py": "0525a33c99dfa32b3bed9ce4a912e9153126e4bb7e530eedbdbcb847f449de38",
+    "app/evaluation/review.py": "0358f95356390ab21a6b295c7fc23c5fc736de7a31cd79e871aef3cfb60db962",
+    "app/evaluation/scoring.py": "4bd9d14a0efabc5b489333a4fc5f1385251637a2f03bc33d2fb9758a22aedadf",
+    "app/evaluation/verification.py": "87e69342cecd0c3ffb75a6f12050f8895cfc80ea7196b791ba990af7cca949e1",
+    "app/infrastructure/__init__.py": "655cb5d9ffe14e6c32aecac636f5a2312942ff1da25a3c30fc6c9f6684d61a6b",
+    "app/infrastructure/claim_models.py": "72d899230447551cc60efd84c99d784b594f5d9ad42b13e3c4ac8af310737d5b",
+    "app/infrastructure/claim_repository.py": "f13adacdd2e7492e78cff638835c4419d7de26f1994049b1c7e5cd4ef7249907",
+    "app/infrastructure/database.py": "e5afb5293672d60053651844cdee1410323462e8e3cccb896b173e552a6953bd",
+    "app/infrastructure/evidence_models.py": "ce79107c28dcb415963cc84f7259dd4ce3345debebb17b080c8c4c9e7cffa82a",
+    "app/infrastructure/evidence_repository.py": "399a3a63be40e56df3f7727cee45c6f6ff7071cf1a009f2e4da24503a5fb2db0",
+    "app/infrastructure/mesh.py": "4ab44e6da7c2271323cafe926e100cc898b9c48747590e7351f7dbed11816778",
+    "app/infrastructure/migrations/__init__.py": "f5f2a7776c0b5a250cfa1fe0391e872aa1ec3046ab38f6b540394dbfd9e350dd",
+    "app/infrastructure/migrations/env.py": "3f3a36f215fab642c3a1f02130778ab07d616638d0376bbb8812a0f56060ff97",
+    "app/infrastructure/migrations/script.py.mako": "442ae3005c66ef1f99cb151cb88f0e0944386c3253b9eb9fe1fc33d879889b6d",
+    "app/infrastructure/migrations/versions/0001_research_runs.py": "d246247a31fa8896e7b20ec8bcd6acf1bc335d1f6141958797800afa2b1b9148",
+    "app/infrastructure/migrations/versions/0002_evidence.py": "b4f379c3da3e6445ec0977d4dc2fc13bd689796b6c8752ccf9607c8956829666",
+    "app/infrastructure/migrations/versions/0003_workflow.py": "5e74765f0392fdf4fc6eda610b87fa987bc72055d268a3dbc60b1369c7d22cdf",
+    "app/infrastructure/migrations/versions/0004_claim_verification.py": "6e1ad1c753fed4402d63f8bdba7550978b48c1ccf68f43ae14e3391a2cd0c5de",
+    "app/infrastructure/migrations/versions/0005_correction_reports.py": "1a39616efee38ee77fc6426e559f94f6367cfe83036436e0abe45d1bc726f7d6",
+    "app/infrastructure/migrations/versions/__init__.py": "e2969fdf75412bf97b7ee76b1559906cbebcb5034319534550681d8f1052ab9b",
+    "app/infrastructure/observability.py": "0ef172a62cd9ed21fa60033873da89f1cfab43a5b1b8a95c08a23ddf22600ddf",
+    "app/infrastructure/report_models.py": "aa877436176e0e9ed5a9ae91615f5100b6dda76fd033abe43a92b8e1cedfd9cd",
+    "app/infrastructure/report_repository.py": "f5f58af115afc494a7f859d12c201ef13b4c49902295314d2c36b082f5055601",
+    "app/infrastructure/tavily_extract.py": "dea13f183660c5551e3dd7021bb07c7ba2506d9f11901fa9dfcfaaa23f08983b",
+    "app/infrastructure/tavily_http.py": "1c1982a90dfe925b8b32a0ade9618627a31b36cf104318cf3a5d0eb145386cd1",
+    "app/infrastructure/tavily_search.py": "dbbec1716acaf89dd58540279158c092cba8ad154dbd7a3af8e33fa17e49952f",
+    "app/infrastructure/url_policy.py": "2e0915e655fbc73ae06710aa5975147d85cc1c10e561f0e90914d60f6ee628b1",
+    "app/infrastructure/workflow_models.py": "1f9107ba9582b9d7a0f8466dfe7df28af4ad284b4a9963ffa4c7a31ff9e92722",
+    "app/infrastructure/workflow_repository.py": "7c2e6fe03acf00db7fd83e4dd80af043000728616ecd7f9fbe9c6e633b1e3aa4",
+    "app/main.py": "28ea5d7cb6c17fc22e9bf0bb280130a73ffe7aca3b492d38552c65158d58e1de",
+    "app/retrieval.py": "beabf0c4d623f8ccae211947cf09855cb6f2f6213fc799e310f09c30e949de6d",
+    "app/workflow.py": "e0ff04bc5de68b7d66d1c4e6ca6c1cdc443f1fbe3af39466d85d0757f7a3fbec",
+    "docs/adr/0001-foundation.md": "86745890946c5c6524a7383bbc481ada10aadfffbef621252cf87e1d175f569b",
+    "docs/adr/0002-retrieval.md": "bc150cfcacbeb9ec4fb39a45062639993f8788b86fe8229a4b0f9d8169717530",
+    "docs/adr/0003-orchestration.md": "baaee0ac7a9e1801bdac8849463d7759f853744e4fdde50c96b667920ea90ea0",
+    "docs/adr/0004-claim-verification.md": "d2979ebf9d8342afc4c6d4ba5ebacbc8c0a135096e51cf1f285443d8f7d31aad",
+    "docs/adr/0005-correction-reports.md": "d0f716ef2727395f1ca4d6d1728448abbc54f61a0482a0d60576412273122bbf",
+    "docs/adr/0006-evaluation.md": "43124035f254ada0be17525c4ece4d26ec1b47996877b8e9e49caad8050c0bd8",
+    "docs/adr/0007-semantic-support-review.md": "3f613b6d7fa6f7921735258bfb2785fda2d14c367523f49600288d0305a73668",
+    "docs/adr/0008-python-compatibility.md": "163b3e067f7de8845e08b2557bdfb46bbbebbd73fae40c8066bbac22c76c51bf",
+    "docs/evaluation_methodology.md": "45f23aca30a9b4a949e67feb430a647ec6006e9cc0e901d4349db303b2f69575",
+    "docs/evaluation_owner_review.md": "836fb7ee01cb97440fba1beb33cb9f2ffbb62f40e866d1078cbf7cb92ed7d4cf",
+    "docs/organizer_ci_readiness_001.md": "fc259fbedea58619dfa247aed336812a996268c60b0300cf2a6966a2b8fe1f11",
+    "docs/p7_benchmark_methodology.md": "852aa43f21f67ad391129d1879576f585a313921e7a8042b6037d3e21a3e864a",
+    "docs/p7_semantic_integrity.md": "8268ca53efc3ca760e54838a22f605d86ebd9a5f5e73805434e0d59e5e474325",
+    "docs/public_release_projection_001.md": "eb609e81a322a371b9448272e5cd5397743cd6a5586b62810ca76face5dc44ea",
+    "pyproject.toml": "034283bef34c2ee7aea80be795660822d08ae253380b9fb178679b337ecdb925",
+    "release/public_allowlist_005.txt": "7a77be70fbdae1fda36070790e79d8d7ea2164f896ddb9924ec3dc701fbc820c",
+    "requirements.lock": "ca03a8ed13343b182f36d48575673af54c94686d557060c0499af3ab0a8ddb0f",
+    "results/p6_checks.json": "f6911a123a6ecefcd3cee3811b4e7384767e877a3a85291048ce0bae52162ec1",
+    "results/p6_citation_owner_review.csv": "7e4b5298b408d4514d829a77503c1c1b9dd1be378c82ed0cd81df7abd8521832",
+    "results/p6_evaluation_offline.json": "77cb09417fccc29dead03183c22edfbbe56d94506dc73a22e9703b4580a19230",
+    "results/p6_metrics.md": "1a39b47d6d1718b4c7db89d963d504ed923508229784f733fc539611588f793f",
+    "results/p7_baseline_comparison.json": "f989437bc58871aefe8b9503639dca434b55d48a98c8ce1588c857156685863b",
+    "results/p7_changes.json": "6e9f2cc70bdc7c2c1818a112e33e7aabdccd97937bf28a02f8dbb617b81b4cd2",
+    "results/p7_checks.json": "34fd343a6c00b737ba0af1aa51af87af9dfba8afc508e603cf4bb557d6636f47",
+    "results/p7_performance.json": "a1860f83541550aca5de750ccb8f50f915ab296f31f1dcf5a3af35344efc00c7",
+    "results/p7_reads_after.json": "7bfc253f72763ee779d160a7df3a78b539bcd8fc5796710cb173b05b94c2de61",
+    "results/p7_reads_before.json": "05008bf05aeef599ad71082e87d51db58f4d7de5e0e922591ce02a8c8d987c4d",
+    "results/p7_runs/20261016T023618-3f38350d/paired/PAIR-001.json": "afe0397ff1fb843a92f990c542ced3e565481cff2513c523b7db4ea019e991c0",
+    "results/p7_runs/20261016T023618-3f38350d/paired/PAIR-002.json": "11c17bb155d7bad3099bfd0c6f92444114edb588a3698373ea758e25c3981ef7",
+    "results/p7_runs/20261016T023618-3f38350d/paired/PAIR-003.json": "8256ffbae06315a8135ec40d7c3d286ba929a6f28cd13d16b722b44e35f60c8e",
+    "results/p7_runs/20261016T023618-3f38350d/paired/PAIR-004.json": "afe4881c359e2a5f7829cb50c2dca10920ddf0fb5db4be98465dbf018f832dec",
+    "results/p7_runs/20261016T023618-3f38350d/paired/PAIR-005.json": "f3a99507db670adc39e205e8b9bdc47855b43a3c17c0828a4d8c575b37256f80",
+    "results/p7_runs/20261016T023618-3f38350d/paired/comparison.json": "a968d29a0d5ab4df90133f2c1c203178346d04bf7cc835c0ce25f80330600627",
+    "results/p7_runs/20261016T023618-3f38350d/performance.json": "952558c42ffde51e5612ba27c3954b35c20df0f2b50e32b7780083726e8e6025",
+    "results/p7_runs/20261016T023618-3f38350d/reads_after.json": "72dd9428dcc7e9de1f73dbe62061986d3b25819879f8e6ef9c2a2c24caca1c37",
+    "results/p7_runs/20261016T023618-3f38350d/semantic.json": "a8e9580796b2f02b7b1606cc0751e63e223acb1c551099c39243d976feb2e1b1",
+    "results/p7_semantic_fixed.json": "58b97d8dc1f0d4dacb55d43f809d17d13e092ef5a1c6096c40c4675785332266",
+    "results/p7_semantic_initial.json": "d60a584cfba68d0404c113057054adc0827065afa4000f740aea04a6a0bcd287",
+    "results/p8_quote_locator_checks.json": "710593bfcbce3bbfadd3fac9fc761a62e505cd3eb64908a575560525665c857f",
+    "results/p8_quote_locator_historical_regressions.json": "58f95e0b6c98887f79ba035ebeeb0889a9d7713eca9ac673a1d85b78ec973f2b",
+    "results/p8_quote_locator_legacy_compatibility.json": "2bfd420d1780599b49138bd3093e51d0eae2bedeb776d59adf01ba71d3039319",
+    "results/p8_quote_locator_offline_trace.json": "f2f04bf6d62092e6569469546095ee17329983d62fdfc83b198e43af08042802",
+    "results/p8_session_b_001_execution.json": "dc900552753c84087c917947d132f1d463f7770feeb2e1fff123831da51bd536",
+    "results/p8_session_b_001_failure_analysis.json": "fe5d7dbb90797989e728ee1cf4481d037500b16538cf33dc20b058d64a2e3464",
+    "results/p8_session_b_001_trace.json": "8dcb866733f50ada4a2aa9d781923264fa4ad53fb9f26113729e0279418e1bc7",
+    "results/p8d_source_manifest.json": "228eb7e01bdf14f2c4f645198005cc4d6dad44fdc4e25d2ee8829243ccdc138d",
+    "scripts/check_p1.py": "a4bb967a608ae969cfd29d58c0ad04adb7930be59862819e87fbbe7d20193873",
+    "scripts/check_p2.py": "61aaa61fa012fa9806026e0fee3275293d86045f451658ab844c4ec844898937",
+    "scripts/check_p3.py": "b4eeac13b77ca78ef2a4a4f46d6b383f10b5ed533f4d5b318fe18365ebec0229",
+    "scripts/check_p4.py": "3dac20c20436c306d1974e600a5f2f68cce4bdc12bcd660a1761bbbbcb17aa9c",
+    "scripts/check_p5.py": "cb0cba5dca6650e3d1efed1c7a0edb0d0b40d0212584c7b125879158aea589a7",
+    "scripts/check_p6.py": "7cc78f3b81c73b4446f77010efe610e07961e6392053dce1ed3eff30feb3432e",
+    "scripts/check_p7.py": "c8403a80c393f10569965381c48cb0ced051b208b3c4f638500a6a465f0e71bd",
+    "scripts/check_p8a.py": "c3825faee3cf4994c41541fad02e49dae6edd89ed74ffa9d6afb62604acbf0c5",
+    "scripts/check_python_compatibility.py": "3ee049d5d2c9606095a674aff07442d8d13df7997bf686fde01675c3e9e6838d",
+    "scripts/configure_mesh.py": "cad82089d0dc73852da44f47d826d72ed484f5e2c35a1bd1cee2b9964dca78ab",
+    "scripts/configure_tavily.py": "dc214151e69545260316c3c385fb7e0e762da420202d0a7f1842e07a6d20ea6b",
+    "scripts/evaluate_p6.py": "4e3516f3a68ad28816b73ab20e5feee1131a5b25925e931bcfd57a31179518d9",
+    "scripts/evaluate_p6_live.py": "e21c469bfdaa965fddf760b791e96cff97278f4ffe1fc100604060e9ea1b0914",
+    "scripts/mesh_smoke.py": "37c2676fd8ff030cdda36af6dae3b9ab4317ac39a4f7250fba087055c92c23d8",
+    "scripts/offline_p2.py": "a7fd4f208651edcf6f9854e87ad74ac259de0eef723c45b84bfdfb74f0444de5",
+    "scripts/offline_p3.py": "eed5386dc5b28a0de39526ce4b75ef9d892a7fba0773287c6303e6ded1a55eae",
+    "scripts/offline_p4.py": "f34bf0c520749a7c568cb1d8313b69dfa01c500c684e5389c5dafc9d9eb18668",
+    "scripts/offline_p5.py": "14f9cb4260ad5cc1203f869572c168f81f8539ecff70bf13739b0e3bb649c0d3",
+    "scripts/offline_quote_locator.py": "1db8ccb69d15c73c4f1ff486db12afd5b7adcfc96b7e5f6877180ebe119b30bb",
+    "scripts/p6_adversarial.py": "32282970648088ca99ab2f2b5b039b195a5e2a5f236ccdef2a4a3af1377c120c",
+    "scripts/p6_fixtures.py": "dbf1e3b3c6d15bfb4a35aabf5921fc82cfd2228f8f51b95d04ee7cdb7846404c",
+    "scripts/p6_workflows.py": "7d7b26206ccd436262f79c0188343c7f1accab70f33d5fad523dedbcd48180e3",
+    "scripts/p7_benchmark.py": "4f3095d4fd3dea50519f3a00819bd738827bf6048e21cb4c861d4de06cd73f51",
+    "scripts/p7_performance.py": "788225f886012831df6899a1a299544f5fb218f4da5435a2f825f70be0b82fd6",
+    "scripts/p7_profile_reads.py": "6961e58cc06aeb68fbbc47bfd9b201f261c29cbc78c36f375e65f82623245d54",
+    "scripts/p7_readiness.py": "94fd5d79f0cdb451c84090e5146b8d5ad452fe4b766df932fe3a2d4e6152cd62",
+    "scripts/p7_review_cases.py": "cc105a4cdc79adc8fa49be3ae4e2e57f6be9819cb360dfb4702a775a46b5cdab",
+    "scripts/p7_semantic.py": "fbd60ce7171dd1374da4f93e29702a7190e53fdc19fd08cf576ec28649c7e547",
+    "scripts/p8a_live_preflight.py": "a6f36e49c6eecb307a98fc8a4de5060e7a706ab1f2c6207a432700c71ac5a172",
+    "scripts/p8a_security.py": "caafa3fb7893769acb79ffa3ba7f287d884cc49a42ad6d6ec87d1f06c2924331",
+    "scripts/prepare_p6_fixtures.py": "da6eacfe243b46262675945fb874f600a680676f5133e07f7bf1fc80d05ea7fa",
+    "scripts/review_p6_citations.py": "dea2f262060529e501483680bad67198b8d9ac273985e353a6fe2452b0719fcc",
+    "scripts/session_b_002.py": "de0c064362bea0257dce87f3a49502b85fffbaaa398bfb972653d3650a62dfef",
+    "scripts/session_b_live.py": "f96e801c8ebd9c61e6937ebb7e20f6c9e15084e9726a72b2692b9e9b2fea788f",
+    "scripts/setup.ps1": "f0f3d2fd06ee9566f84c2c147ce6d48fa05905a37e6f43773bdaa603cedd6d0c",
+    "scripts/smoke_p1.py": "aed5a7792c9b22d281bf72ff478bc1a06779aee1a4234f6f26faaa576903b874",
+    "scripts/tavily_smoke.py": "36c5c67793c0738b94f9df6de2d6c2587899f820d2c3f257026e089a899f21c7",
+    "tests/conftest.py": "890bd8cbeb709daeb023fdc1876a7cb752d0ec3bad3b01529386f69f946ffe02",
+    "tests/evaluation/README.md": "37e4a5bf7587bf2589f6ab9c6a078bee39b4b7a933e0040bef0ca2cb04361260",
+    "tests/evaluation/datasets/adversarial.v1.json": "b9f5d7bea16f2bfe79f020594192f9c55327a468930258e45fc0fc8236dfb351",
+    "tests/evaluation/datasets/benchmark.v1.json": "5c04015737573734f290adbb6a5ad43d85e49a7772eff54bf86adebec28dd1cf",
+    "tests/evaluation/datasets/claims.v1.json": "5900015def4941389d3144c26ee160a9557fb060cca8dbf841e032d5579147d8",
+    "tests/evaluation/datasets/owner_review.v1.csv": "28eaccbcfeeedfadb14fe7ae424210ba844f66ddfa96522decad56385484d5f1",
+    "tests/evaluation/datasets/workflows.v1.json": "f92faba7cfcb7bccc96058636834f4f1f60fd57b1cb34e36c06ff4b7653adf36",
+    "tests/evaluation/test_p6_citation_review.py": "d0851bf1e6a9ea56c4b292132da11a701cba0df3ee53bd8668c245f98efd643c",
+    "tests/evaluation/test_p6_dataset.py": "b1b0ebdda872d5a4d45e135ba54219df7109a10cc96361db1658746f654ccfdc",
+    "tests/evaluation/test_p6_live_guards.py": "c9f4e4a41488ec82f02b1b1368341ac55e83f49b7b51f9490a8398a2b2ce683d",
+    "tests/evaluation/test_p6_metrics.py": "611803f1e93792d15e206b982c054ffa92a6ea60f7d4f68e8df244fc4a4bf8db",
+    "tests/evaluation/test_p6_verifier.py": "d6f98eb222714f01a870f0dd3dfe7cb2a651f0398ba5a8594f835f37966ffe4f",
+    "tests/evaluation/test_p6_workflows.py": "3addc6773b1199e8c0bc089762209ff1993b978d7c535c9c762b97d259b6cb1d",
+    "tests/evaluation/test_p7_benchmark.py": "cbb63ceddc8880a27623336f37d2624385815706f163f39055af12c6c069f16d",
+    "tests/evaluation/test_p7_read_batching.py": "0ab92698eef4e666cee4949c7bb684afb550b1cbdc78eee4df270368a835d261",
+    "tests/evaluation/test_p7_review.py": "bb8a34a191cc04792778dd6c3b722aed835272e7d931eb2a29507ee07ad6aacc",
+    "tests/evaluation/test_p7_semantic.py": "9fabee784aa4d021ad2f122986590d15ba9c78aa0c0b723b27aa8deb850ef277",
+    "tests/evaluation/test_p7_support_review.py": "5912cc47992facc2b57db8151430f403605272d1d69f32b0e6b52d6ab581e8a6",
+    "tests/evaluation/test_p8a_release.py": "c8e722d21a0d22c7786082c2df6d84fe0ba29c0fee4f28acb604e557a582b7fd",
+    "tests/evaluation/test_quote_locator_metrics.py": "bfad80ccb08040a98d6eec2501d64f10f5e2079b9b7670ccedd4a012b49d3b30",
+    "tests/fixtures/mesh_completion.json": "b1e80269f03690ef994bfa952466d61d74844afa8a8016486095fac373b064bd",
+    "tests/fixtures/planner_plan.json": "02af8fca8f5a7b12a592237ce4afa9755f5bc1d330343b7cd7c6aba0d43dddf1",
+    "tests/fixtures/tavily_extract.json": "60c81eee993ebb16aafad022349b634adacea064af56b311bf190335ef592bff",
+    "tests/fixtures/tavily_search.json": "8aa010dec1a57a64adbd06a243b1186a12446013e5e4b9be2c5c88e2311d5c33",
+    "tests/integration/test_database.py": "2dd89c6a959ec3784297a5680eeeef5512128bc0e5b433c11dd49c48d2760e36",
+    "tests/integration/test_evidence.py": "1b9604d22ff133de5326560847544abea7512b94f0989f8a59f0fb00b969e600",
+    "tests/integration/test_health.py": "4c61daa5981379e673f3400aba40d0b6aba61e8b69c16e4fffa87059fb3d1cb4",
+    "tests/integration/test_p4_workflow.py": "808133bcc5f8049cf7b5d0b2844c3cd33dd827ea0f88f6b5a62bca185ff60245",
+    "tests/integration/test_p5_workflow.py": "768f9fcddb94c942d2fd685e2b1be821aa6dd124b455d213309683f1b5e64967",
+    "tests/integration/test_p8_live_readiness.py": "842a920cb0a35643bf9dc77e37d9d08369c2657efe5e0ef09e81fd6e8ba65ae6",
+    "tests/integration/test_quote_locator_workflow.py": "acba4c7cf738b54639f16fd73b3a119723f358b614115e3062fb04b942a27dc9",
+    "tests/integration/test_research_api.py": "3ac34096cdb83439f9a87a1b124fcc66c04773a9421cadefd2d90a8ae2ee93b0",
+    "tests/integration/test_tavily.py": "96421d2bce4420d12c82e937f07ab90c1724aa62c2303445cd97923a7d11d83b",
+    "tests/integration/test_verification.py": "3e23ade44f2093dd6aceb96218b5f5386111094c5820100815e23f864d562c39",
+    "tests/integration/test_workflow.py": "6cb0a6fc43f986653ee9348f00dacbdfbb89a0618922e29a79947cff51a6663d",
+    "tests/unit/test_architecture.py": "9198d205231acb69d63c0cdc8a2e2489c207819b280efa8b61285fa1ffdc41e8",
+    "tests/unit/test_config.py": "df139be0f43822964bdf9fd2e8662bbc26a41f57af2c677100c268cde45cbfa9",
+    "tests/unit/test_configure_tavily.py": "a3ea194cdafbc09723c7fba8ae4032f18c8ff41c502a30bac559a695bea34119",
+    "tests/unit/test_mesh.py": "cd56587d8023e936af0f96b5d4fd6fb8da9a2c4a0fa743de152e3a9f75f95b15",
+    "tests/unit/test_mesh_smoke.py": "33b4b5f30c035c5876d548c33fbf1036c46e3449027fb806a6401a8cffdfde49",
+    "tests/unit/test_quote_locator.py": "7dac7222320edf5215cf85a303aeb85c4f0eaab280531476f862e029c9c2f954",
+    "tests/unit/test_session_b_002.py": "c5098eb20c4d0f9d994a2f2479976034a83996f807d22fc74bf7aa7f24517a03",
+    "tests/unit/test_session_b_driver.py": "a1211095d02bd6e185165f340340f0257d7ad453a0e8283f0a496188fdec91e5",
+    "tests/unit/test_smoke_safety.py": "f58e6085e8e5cafdd82d5e7d8174aa0068ad7fcaeef106201293f273576793b2",
+    "tests/unit/test_urls.py": "d8706ad4602b6af250be65b1696383acab87044a627ad7cfc4a952592ee4543d",
+    "tests/unit/test_verification_evaluation.py": "60eeda6904f1d9f6cf06aa37d954292c2469158ed40fdd33510c3006c36fd4b9"
+  },
+  "after_testing_changes": [
+    "This generated validation record only; no validated source, fixture or documentation change."
+  ],
+  "public_log_privacy_redactions": [
+    "Workspace/home paths and pytest username components redacted; complete original failed logs retained privately."
+  ],
+  "original_python_file_count": 143,
+  "all_original_test_and_dataset_bytes_preserved": true,
+  "historical_manifest_unchanged": true,
+  "explicit_public_snapshot_differences": [
+    "README.md",
+    "results/p8_session_b_001_trace.json"
+  ],
+  "b001_public_journal_path_is_explicit_archive_marker": true,
+  "b001_b002_private_originals_unchanged": true,
+  "owner_approval_fields_populated": 0,
+  "human_reviewed_accuracy": null,
+  "live_model_accuracy": null,
+  "mesh_api_requests": 0,
+  "tavily_api_requests": 0,
+  "api_spending_usd": 0,
+  "new_live_runs": 0,
+  "commits": 0,
+  "pushes": 0,
+  "organizer_ci_runs": 0,
+  "submissions": 0,
+  "fresh_dependency_install_or_linux_ci_performed": false
+}

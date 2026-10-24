@@ -1,0 +1,9 @@
+{
+  "results": [
+    {"url": "https://example.com/article", "title": "Offline source A", "content": "DISCOVERY ONLY: never persist this snippet as evidence."},
+    {"url": "https://EXAMPLE.com:443/article#section", "title": "Duplicate source", "content": "Duplicate discovery snippet"},
+    {"url": "https://example.org/unavailable", "title": "Offline failed source", "content": "This snippet cannot replace a failed extraction."}
+  ],
+  "usage": {"credits": 1},
+  "answer": "UNEXPECTED GENERATED ANSWER MUST BE IGNORED"
+}

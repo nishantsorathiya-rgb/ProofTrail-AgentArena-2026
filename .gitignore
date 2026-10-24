@@ -1,0 +1,23 @@
+.venv/
+.venv-*/
+.env
+.env.*
+!.env.example
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.sqlite-*
+*.sqlite3-*
+*.pem
+*.key
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+data/
+# Local source snapshots / clean-install logs are review artifacts, not public submission inputs.
+results/p8a_sources/

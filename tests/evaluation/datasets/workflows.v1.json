@@ -1,0 +1,14 @@
+{
+  "dataset_version": "p6-workflow-synthetic-v1",
+  "review_status": "UNREVIEWED",
+  "reviewer": "",
+  "expected_subtopics": [
+    {"id": "workforce", "description": "Exact AlphaCo 2024 employee count", "claim_text": "AlphaCo employed 42 people in 2024.", "planning_term": "employees"},
+    {"id": "revenue", "description": "Exact AlphaCo 2024 revenue amount", "claim_text": "AlphaCo reported revenue of 5 million dollars in 2024.", "planning_term": "revenue"}
+  ],
+  "cases": [
+    {"case_id": "E2E-001", "question": "Research AlphaCo's 2024 workforce and revenue with original disclosures.", "retry_result": "new", "initial_empty": false},
+    {"case_id": "E2E-002", "question": "Which AlphaCo 2024 workforce and revenue claims are evidenced and which remain unresolved?", "retry_result": "unresolved", "initial_empty": false},
+    {"case_id": "E2E-003", "question": "Research AlphaCo's 2024 employees and revenue when the initial search has no evidence.", "retry_result": "empty", "initial_empty": true}
+  ]
+}

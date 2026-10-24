@@ -1,0 +1,19 @@
+{
+  "dataset_version": "p7-paired-synthetic-v1",
+  "provenance": "Explicit fictional AlphaCo HTTP fixtures; no source visited. Independent proposed annotations, not model verdicts. Separate from the held-out classification corpus.",
+  "review_status": "UNREVIEWED",
+  "reviewer": "",
+  "rules": [
+    {"claim_text": "AlphaCo employed 42 people in 2024.", "required_exact_evidence": "AlphaCo employed 42 people in 2024.", "present_verdict": "SUPPORTED"},
+    {"claim_text": "AlphaCo employed 99 people in 2024.", "required_exact_evidence": "AlphaCo employed 42 people in 2024.", "present_verdict": "CONTRADICTED"},
+    {"claim_text": "AlphaCo did not employ 42 people in 2024.", "required_exact_evidence": "AlphaCo employed 42 people in 2024.", "present_verdict": "CONTRADICTED"},
+    {"claim_text": "AlphaCo reported revenue of 5 million dollars in 2024.", "required_exact_evidence": "AlphaCo reported revenue of 5 million dollars in 2024.", "present_verdict": "SUPPORTED"}
+  ],
+  "cases": [
+    {"case_id": "PAIR-001", "question": "Research AlphaCo's 2024 employees and revenue using original disclosures.", "retry_result": "new", "expected_subtopics": ["AlphaCo employed 42 people in 2024.", "AlphaCo reported revenue of 5 million dollars in 2024."]},
+    {"case_id": "PAIR-002", "question": "What can be established about AlphaCo's 2024 employees and revenue if follow-up records omit revenue?", "retry_result": "unresolved", "expected_subtopics": ["AlphaCo employed 42 people in 2024.", "AlphaCo reported revenue of 5 million dollars in 2024."]},
+    {"case_id": "PAIR-003", "question": "Research AlphaCo's 2024 employees and revenue when source searches return nothing.", "retry_result": "empty", "initial_empty": true, "expected_subtopics": ["AlphaCo employed 42 people in 2024.", "AlphaCo reported revenue of 5 million dollars in 2024."]},
+    {"case_id": "PAIR-004", "question": "Research AlphaCo's 2024 employees and revenue while preserving negation accurately.", "retry_result": "new", "fault": "negation", "expected_subtopics": ["AlphaCo employed 42 people in 2024.", "AlphaCo reported revenue of 5 million dollars in 2024."]},
+    {"case_id": "PAIR-005", "question": "Research AlphaCo's 2024 employees and revenue without presenting conditional statements as settled facts.", "retry_result": "empty", "fault": "conditional", "expected_subtopics": ["AlphaCo employed 42 people in 2024.", "AlphaCo reported revenue of 5 million dollars in 2024."]}
+  ]
+}

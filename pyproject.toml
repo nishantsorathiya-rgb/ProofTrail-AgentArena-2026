@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools==82.0.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deepdive-prooftrail"
+version = "0.1.0"
+description = "ProofTrail foundation and Tavily evidence collection for a research analyst"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "fastapi==0.143.0",
+  "uvicorn==0.54.0",
+  "pydantic-settings==2.15.0",
+  "SQLAlchemy[asyncio]==2.0.54",
+  "aiosqlite==0.22.1",
+  "alembic==1.20.0",
+  "openai==2.54.0",
+  "httpx==0.28.1",
+  "langgraph==1.2.15",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1", "pytest-asyncio==1.4.0", "ruff==0.17.0"]
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.setuptools.package-data]
+"app.infrastructure.migrations" = ["script.py.mako"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+filterwarnings = ["error"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "ASYNC"]

@@ -1,0 +1,14 @@
+{
+  "id": "offline-fixture-1",
+  "object": "chat.completion",
+  "created": 0,
+  "model": "offline-fixture-model",
+  "choices": [
+    {
+      "index": 0,
+      "message": {"role": "assistant", "content": "Offline fixture response."},
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {"prompt_tokens": 7, "completion_tokens": 4, "total_tokens": 11}
+}

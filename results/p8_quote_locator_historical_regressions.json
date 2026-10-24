@@ -1,0 +1,60 @@
+{
+  "mode": "PURE_OFFLINE_REPRODUCTION_AND_EXPLICIT_NEW_CONTRACT_TEST",
+  "live_provider_requests": 0,
+  "historical_files_unchanged": true,
+  "cases": [
+    {
+      "evidence_id": "084519d2-d532-5047-84eb-c0384f21c21f",
+      "legacy_strict_rejection": "verification_quote_mismatch",
+      "explicit_new_contract": "exact_quotes_v2",
+      "trusted_absolute_span": [
+        165,
+        330
+      ],
+      "source_id": "7e4008b1-4a24-55e7-83d2-47bd152f620c",
+      "source_content_sha256": "856073d9a107bef84068365b13b11c497a33045c67b2a00eea29f1682f35e234",
+      "locator": "extracted_text:chars:165-330",
+      "semantic_support_certified_by_locator": false
+    },
+    {
+      "evidence_id": "28e3be83-2bc4-50a0-be80-0ac1de8b6d89",
+      "legacy_strict_rejection": "verification_quote_mismatch",
+      "explicit_new_contract": "exact_quotes_v2",
+      "trusted_absolute_span": [
+        324,
+        396
+      ],
+      "source_id": "42872c7a-c5d8-508a-8893-1f53b5fe38f7",
+      "source_content_sha256": "c698a6f4de1c4526bb86c53314e45f8cdb4a8fdc034ed61945c207181d415849",
+      "locator": "extracted_text:chars:324-396",
+      "semantic_support_certified_by_locator": false
+    },
+    {
+      "evidence_id": "436b4ea4-9aad-55e2-96e9-359977a52ee0",
+      "legacy_strict_rejection": "verification_quote_mismatch",
+      "explicit_new_contract": "exact_quotes_v2",
+      "trusted_absolute_span": [
+        353,
+        425
+      ],
+      "source_id": "aafb4849-36d3-5ab3-a439-6d14b3258989",
+      "source_content_sha256": "9c9506bdcf33672afc475a14cb1f1951830f91d146e810a9c71443e4b0fb2fce",
+      "locator": "extracted_text:chars:353-425",
+      "semantic_support_certified_by_locator": false
+    },
+    {
+      "evidence_id": "4d232bac-cc8a-5444-bb5b-f04de019988b",
+      "legacy_strict_rejection": "verification_quote_mismatch",
+      "explicit_new_contract": "exact_quotes_v2",
+      "trusted_absolute_span": [
+        351,
+        423
+      ],
+      "source_id": "731cf98c-71df-5628-a0ea-bb9a8f023611",
+      "source_content_sha256": "90c63f349037603ab2c33cf53eea9789a017b1a845acd78e93181b722bb89ef1",
+      "locator": "extracted_text:chars:351-423",
+      "semantic_support_certified_by_locator": false
+    }
+  ],
+  "note": "The legacy response was rejected unchanged; a separate explicitly coordinate-free fixture selected the same exact strings. No stored verdict was repaired or promoted."
+}

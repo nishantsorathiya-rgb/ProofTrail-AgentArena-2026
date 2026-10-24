@@ -1,0 +1,1 @@
+"""ProofTrail modular monolith."""
