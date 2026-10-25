@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "deepdive-prooftrail"
 version = "0.1.0"
-description = "ProofTrail foundation and Tavily evidence collection for a research analyst"
+description = "Evidence-grounded research with claim verification and auditable reports"
 readme = "README.md"
 requires-python = ">=3.11,<3.13"
 dependencies = [

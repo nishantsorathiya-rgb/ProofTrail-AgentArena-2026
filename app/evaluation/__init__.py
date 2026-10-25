@@ -1,1 +1,1 @@
-"""P4 evaluation interface; the human-reviewed evaluation remains a future phase."""
+"""Evaluation schemas, metrics and review tools; human approval is always explicit."""

@@ -42,7 +42,7 @@ Use the unchanged existing 60-case dataset and the interactive local reviewer:
 
 Each case exposes the unchanged claim, exact evidence, explicit provenance, proposed label and reasoning. Controls accept, correct, mark ambiguous, exclude with a reason, skip or save/quit. Nothing is marked reviewed without an explicit owner decision and named reviewer. Existing worksheet versions are backed up before saving. The original corpus stays 20/20/20; genuine owner label corrections are retained and reported even if the reviewed subset becomes imbalanced, rather than falsifying labels to preserve balance.
 
-Held-out review needs an explicit `--split held_out --allow-held-out` and stays separate from development diagnosis/tuning. Do not use held-out results to revise prompts or select models. The existing P6 worksheet importer and quote-level semantic review remain available. No review session was executed by Codex and zero repository cases have been auto-approved.
+Held-out review needs an explicit `--split held_out --allow-held-out` and stays separate from development diagnosis/tuning. Do not use held-out results to revise prompts or select models. The existing P6 worksheet importer and quote-level semantic review remain available. No human review session was completed for these measurements, and no repository case was automatically approved.
 
 ## Versioning and replay
 

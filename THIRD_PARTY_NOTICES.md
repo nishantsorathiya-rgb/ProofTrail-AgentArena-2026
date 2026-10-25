@@ -57,10 +57,13 @@ proprietary code, SDK source or account credential is bundled. Provider names,
 integration instructions and factual links do not imply endorsement.
 https://meshapi.ai/terms
 
-Tavily Platform Terms §3.2(x) restrict disclosure of service performance information.
-Selected live journals contain actual retrieval timings. Whether an overriding
-account agreement or written permission permits publication is unconfirmed.
-This proposal is **not cleared for publication** until that gate is resolved.
+The earlier, broader proposal identified a Tavily Platform Terms §3.2(x)
+restriction on disclosure of service performance information. Its live journals
+contained actual retrieval timings; those journals and actual provider-performance
+records are excluded from the current public selection. Whether an overriding
+account agreement or written permission would permit their future publication
+remains unconfirmed. The historical restriction is not a claim that excluded
+telemetry is present in this repository.
 Tavily does not replace the source publishers' rights; its §10.2 also addresses
 third-party terms. No inference that a free plan grants redistribution rights is made.
 https://www.tavily.com/terms
@@ -85,9 +88,12 @@ compatibility is not a copyright warranty or general accuracy measurement.
 
 1. Confirm current contest licensing/IP/AI-assistance clauses; do not assume
    public means an explicit open-source license is required or that all rights
-   reserved is accepted. Registration and updated deadlines are owner-confirmed
-   in docs/p8d_owner_updates_004.md; those do not settle licensing eligibility.
-2. Resolve applicable Tavily telemetry-disclosure permission or approve a separate
-   versioned publication treatment. The frozen B002 inputs are unchanged here.
-3. Review the exact staged tree and public commit identity before any local commit;
-   separately authorize repository publication, CI credentials/budget and submission.
+   reserved is accepted. Owner-confirmed registration and deadlines do not settle
+   licensing eligibility; the detailed dashboard observations remain private.
+2. Obtain applicable permission before adding actual Tavily performance telemetry
+   in any future public selection. The private B001/B002 originals remain unchanged;
+   their omission and the retained regression excerpt are documented in the
+   [public release scope](docs/public_release_projection_001.md).
+3. Review each subsequent release diff and commit identity. Publication has already
+   occurred; later pushes, CI execution and competition submission remain separate
+   actions subject to their actual authorization and budget requirements.

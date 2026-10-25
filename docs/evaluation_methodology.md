@@ -18,7 +18,7 @@ Default CLI execution selects development only. Held-out execution requires `--a
 
 ## What actually executes
 
-The evaluation composition root creates a temporary database and applies existing Alembic migrations through 0005. It seeds exact source snapshots/passages through the P2 repository, assigns a P3 research task, persists immutable P4 candidates and invokes the real VerifierAgent via BudgetedModel and MeshLLMAdapter. The Mesh SDK uses an explicit HTTP MockTransport offline. Each candidate has one model-request reservation; retries and graph research are not silently added to classifier evaluation.
+The evaluation composition root creates a temporary database and applies existing Alembic migrations through 0005. It seeds exact source snapshots/passages through the P2 repository, assigns a P3 research task, persists immutable P4 candidates and invokes the real VerifierAgent via BudgetedModel and MeshLLMAdapter. The Mesh SDK uses an explicit HTTP MockTransport offline. Historical P6 classification used one model request per candidate. Current classification reserves capacity for a primary verification and, for proposed support, a separate blind review. Conditional research retries are not part of classifier evaluation.
 
 The offline provider parses only the unchanged claim and persisted evidence in the actual verifier request. It receives no expected label, reviewer status, explanation or split. Its deliberately narrow controlled-sentence grammar can compare matching entity/period/measure records. This is a fixture interpreter, **not an independent semantic judge**. Agreement with generated labels only checks plumbing and controlled behavior. Fault modes deliberately emit wrong or malformed model output to exercise the actual rejection gates.
 
@@ -50,7 +50,7 @@ Each unique proposed evidence reference per prediction is checked for existing s
 
 A correct classification label also does **not** establish that each selected quotation semantically supports a claim. The initial semantic-citation correctness metric remains N/A until independent quote review. `p6_citation_owner_review.csv` supplies the unchanged claim, full evidence context, proposed exact quotations and structural checks for that review. Owner judgments SUPPORTS_CLAIM, CONTRADICTS_CLAIM or DOES_NOT_ESTABLISH are separate from class labels. The review command reports semantic support precision on owner-reviewed citations attached to SUPPORTED predictions; it does not infer judgments from a URL, matching words or model confidence. A multi-source claim may require joint context beyond any single quotation; individual-quote review does not replace reviewing the full claim/evidence pair.
 
-The attack suite intentionally supplies two malicious SUPPORTED outputs for a negation reversal and a conditional statement. Both carry real, exact quotations with valid IDs. The production structural gates accept those outputs. They are recorded as false semantic approvals under proposed labels, demonstrating a remaining dependence on the semantic model. This is injected provider behavior, **not a measured Mesh false-approval rate**. Fabricated IDs, invented quotes, incorrect offsets and wrong claim IDs are tested separately against the real rejection logic.
+The historical P6 attack suite intentionally supplied two malicious SUPPORTED outputs for a negation reversal and a conditional statement. Both carried real, exact quotations with valid IDs and passed the then-current structural checks. Those saved false approvals remain unchanged. P7 added blind semantic review and an evidence-bound receipt; its regression traces withhold both claims from verified findings. Structural validity still does not establish semantic support, and the two model passes can share errors. These are injected provider scenarios, **not a measured Mesh false-approval rate**. See [the semantic integrity investigation](p7_semantic_integrity.md). Fabricated IDs, invented quotes, incorrect offsets and wrong claim IDs remain separate rejection tests.
 
 ## End-to-end and retry measurements
 
@@ -64,15 +64,13 @@ Each retry preserves its initial verdict, trigger, assigned query, search/extrac
 
 ## Reproduction and interpretation
 
-Use Python 3.12 and the existing pinned environment. From the repository root:
+Use Python 3.11 or 3.12 and the pinned environment. From the repository root, choose new output paths to preserve the supplied historical results:
 
 ```powershell
-& .\.venv\Scripts\python.exe -m scripts.evaluate_p6
-& .\.venv\Scripts\python.exe -m scripts.evaluate_p6 --split all --allow-held-out
-& .\.venv\Scripts\python.exe -m scripts.check_p6
+& .\.venv\Scripts\python.exe -m scripts.evaluate_p6 --output results/my_development_001.json --markdown results/my_development_001.md --citation-worksheet results/my_development_001_citations.csv
 ```
 
-The default output files are `results/p6_evaluation_offline.json`, `results/p6_metrics.md` and the quote-review worksheet. The JSON includes every selected prediction, separate split metrics, attack failures, full graph/report/audit traces, environment/dependency versions, prompt/policy/configuration hashes, API metadata and measured duration. No Git revision is invented when the repository has no commits. Preserve the JSON and its matching quote worksheet together; review IDs belong to that exact session.
+The default output files are `results/p6_evaluation_offline.json`, `results/p6_metrics.md` and the quote-review worksheet; do not use those defaults when preserving the committed historical session. The JSON includes every selected prediction, separate split metrics, attack failures, full graph/report/audit traces, environment/dependency versions, prompt/policy/configuration hashes, API metadata and measured duration. Explicit `--split all --allow-held-out` includes both splits; held-out results must not guide tuning. No Git revision is invented when the repository has no commits. Preserve the JSON and its matching quote worksheet together; review IDs belong to that exact session.
 
 Actual verification, persistence and graph-stage durations are measured locally. Estimated input tokens use the existing character-count heuristic; returned offline token/credit numbers are explicitly mock metadata, not Mesh consumption or billing. Live calls and actual API cost in the supplied offline session are zero. No baseline comparison or speedup claim is made; paired benchmarking belongs to P7.
 

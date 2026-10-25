@@ -1,6 +1,6 @@
 # Owner review worksheet
 
-The supplied 60 cases and their proposed labels are **UNREVIEWED synthetic drafts**. No case, label, source provenance or semantic citation has been marked human-reviewed by Codex. The original blank organizer-style template remains unchanged. P6 code is ready for review; human-reviewed accuracy and live Mesh evaluation are still unmeasured.
+The supplied 60 cases and their proposed labels are **UNREVIEWED synthetic drafts**. No case, label, source provenance or semantic citation has been approved as human-reviewed. The original project-specific blank template remains unchanged. The evaluation tools are ready for owner review; human-reviewed accuracy and live classifier evaluation remain unmeasured.
 
 ## Review the claim/evidence pairs
 
@@ -30,7 +30,7 @@ Set `semantic_judgment` to SUPPORTS_CLAIM, CONTRADICTS_CLAIM or DOES_NOT_ESTABLI
 & .\.venv\Scripts\python.exe -m scripts.review_p6_citations --evaluation results/p6_evaluation_offline.json --worksheet citation_review.local.csv --output results/p6_citation_review_scored.json
 ```
 
-Only individual citations attached to SUPPORTED predictions enter the semantic support-precision denominator. This explicit owner judgment is distinct from model verdict agreement. The two intentionally false semantic approvals in the adversarial suite should help inspect the difference between structural and semantic validity; they are fault-injected model responses, not measured Mesh errors.
+Only individual citations attached to SUPPORTED predictions enter the semantic support-precision denominator. This explicit owner judgment is distinct from model verdict agreement. The two intentionally false semantic approvals in the saved P6 adversarial results illustrate the difference between structural and semantic validity. They are fault-injected model responses, not measured Mesh errors. The later [P7 regression tests](p7_semantic_integrity.md) verify that blind review withholds both claims from final verified findings.
 
 ## Review workflow coverage and retries
 
@@ -43,10 +43,10 @@ Inspect each workflow trace, final findings, exclusions, gaps and retry history.
 After you have explicitly approved a bounded billable session and privately configured Mesh, the optional command supports a hard cap. Do not execute merely to inspect the project; `--help` is read-only. The current supplied dataset has no HUMAN_REVIEWED cases, so live evaluation refuses it.
 
 ```powershell
-# ONLY after a future explicit approval; P7 remains offline. Two slots cover one support review:
+# ONLY after separate live-evaluation approval. Two slots cover primary and blind review:
 & .\.venv\Scripts\python.exe -m scripts.evaluate_p6_live --approved-live --max-calls 2 --review-worksheet owner_review.local.csv --output results/p6_live_session_001.json
 ```
 
 The flag records caller authorization; it cannot prove account credits or pricing. This command makes no Tavily calls and loads existing evidence snapshots. The selected IDs are deterministic reviewed cases in dataset order, capped before execution. Held-out live evaluation needs its separate flag and must not feed tuning. Existing output files are rejected before calls. Actual monetary billing remains owner-checked; unknown cost stays null.
 
-No live run, push, deployment, P7 benchmark or contest submission has been performed. Owner review is the stopping point for P6.
+P6 itself performed no live run, push, deployment, P7 benchmark or contest submission. Later integration and publication work does not approve this dataset or establish human-reviewed accuracy; review status remains explicit in each versioned worksheet.

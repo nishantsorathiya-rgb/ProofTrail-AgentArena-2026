@@ -62,3 +62,42 @@ The first publication-scope validation attempt omitted state.original_question,
 causing six replay failures on each Python version. The exact original field was
 restored. The failures remain in the release-validation record. No application
 code, original test or assertion was changed to repair this excerpt.
+
+## Maintenance proposal 002 — 25 October 2026
+
+The preceding sections describe publication projection 001, including its original
+manifest comparison. This explicitly versioned maintenance proposal retains the
+same 217 public paths. It corrects documentation, configuration comments, two
+outdated docstrings, package description and the public API description. It makes
+no workflow, verification, budget, schema or dependency-version change.
+
+The complete maintenance diff is limited to:
+
+- `.env.example`
+- `pyproject.toml`
+- `app/main.py`
+- `app/application/runs.py`
+- `app/evaluation/__init__.py`
+- `docs/evaluation_methodology.md`
+- `docs/evaluation_owner_review.md`
+- `docs/p7_benchmark_methodology.md`
+- `docs/organizer_ci_readiness_001.md`
+- `THIRD_PARTY_NOTICES.md`
+- `tests/evaluation/README.md`
+- `docs/public_release_projection_001.md` (this maintenance record)
+
+Five additional files covered by the original frozen B002 source manifest now
+differ: `.env.example`, `pyproject.toml`, `app/main.py`,
+`app/application/runs.py` and `app/evaluation/__init__.py`. Together with the
+earlier README and B001 trace derivatives, there are seven documented differences.
+The manifest's original bytes and all recorded hashes are retained. Its refusal
+to launch this changed public tree remains intentional; no old session may be
+replayed or silently reauthorized.
+
+Historical result files, source quotations, B001/B002 records, all test assertions,
+evaluation datasets and held-out examples remain unchanged. The original
+organizer workflow and third-party license texts remain unchanged. Revised
+guidance distinguishes historical P6 output from current blind-review policy,
+uses new evaluation output paths, and records the organizer's failed result
+reporting without presenting it as a successful competition check. Project
+provenance and applicable attribution remain disclosed.

@@ -1,5 +1,34 @@
 # Organizer CI: approval boundary
 
+## Status update — 25 October 2026
+
+The [first organizer run](https://github.com/nishantsorathiya-rgb/ProofTrail-AgentArena-2026/actions/runs/40071997199)
+completed with an overall failure. Its diagnostics reported that the technical
+checks passed, but the organizer rejected result recording with HTTP 403 because
+no competition submission entry existed. That attempt did **not** count as a
+recorded organizer result. Do not treat successful local tests or secret creation
+as a substitute for recorded competition checks.
+
+Actions are enabled according to the owner, and `MESH_API_KEY` and
+`SUBMISSION_TOKEN` have been configured privately. The connector cannot inspect
+their values or independently verify the repository's Actions permission setting.
+Before another push, confirm that the submission entry now exists, the dedicated
+CI key has sufficient remaining quota, and a new execution's request, spending
+and external-reporting effects are authorized. The first attempt's authorization
+is consumed. No automatic rerun or provider-limit increase is approved here.
+
+The following sections preserve the original preparation and budget proposal.
+They are not an observation of current balances, current remaining quota or a
+guarantee of a free checker run.
+
+The [current public organizer instructions](https://career.krishnaik.in/hackathons/agent-arena-2026)
+describe Mesh key validation as a metadata call that spends no credits. The
+workflow still downloads the checker at execution time and does not pin its
+request count or implementation. This published description does not establish
+the key's current remaining quota or authorize another execution.
+
+## Workflow and original budget proposal
+
 The preserved organizer workflow triggers on every push. Permissions are
 contents:read and id-token:write. It obtains a GitHub OIDC token with the specified
 audience, uses SUBMISSION_TOKEN to download protected checks, passes MESH_API_KEY
@@ -8,8 +37,9 @@ cancel a superseded run; cancellation does not prove no request was charged.
 
 The supplied brief describes metadata key validation. The workflow itself does
 not reveal the downloaded checker's current model endpoints, request count,
-retries, output-token limit or inference requirement. That code has not been
-downloaded or executed here. No exact zero-cost envelope can be certified.
+retries, output-token limit or inference requirement. During original preparation,
+that code had not been downloaded or executed. The later run above does not
+establish the checker's future request behavior or an exact zero-cost envelope.
 
 Proposed dedicated key label: ProofTrail-Organizer-CI-001. Never reuse B002 or a
 general-purpose key. Prefer verified metadata-only scope if Mesh actually offers

@@ -5,7 +5,7 @@ from app.domain.runs import ResearchRun
 
 
 class ResearchRunService:
-    """P1 persistence use case. No execution or HTTP submission yet."""
+    """Create and retrieve persisted research runs without starting a workflow."""
 
     def __init__(self, repository: RunRepository) -> None:
         self._repository = repository

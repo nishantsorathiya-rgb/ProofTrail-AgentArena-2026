@@ -63,7 +63,7 @@ def create_app(
     application = FastAPI(
         title="ProofTrail",
         version="0.1.0",
-        description="P5 bounded research, claim verification and evidence-grounded reports.",
+        description="Bounded research, claim verification and evidence-grounded reports.",
         lifespan=lifespan,
     )
     application.add_middleware(RequestLoggingMiddleware)
